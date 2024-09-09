@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div>
+    <footer>
       <p>
         Created by
         <a
@@ -11,7 +11,7 @@ const Footer = () => {
           Magdalena Kuśmierczak
         </a>
       </p>
-    </div>
+    </footer>
   );
 };
 export default Footer;
