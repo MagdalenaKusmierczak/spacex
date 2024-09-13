@@ -1,0 +1,22 @@
+import { useState, useEffect } from "react";
+import { getRockets } from "service/API/RocketsAPI";
+
+const HomePage = () => {
+  const [rocketsData, setRocketsData] = useState({});
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const rockets = await getRockets();
+        setRockersData(rockets);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, []);
+    return <div>
+        <h1></hi>
+        <ul><li></li>
+        <li></li></ul>
+  </div>;
+};
