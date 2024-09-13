@@ -1,8 +1,10 @@
 import axios from "axios";
 
-const ROCKETS_URL = "https://api.spacexdata.com/v3/rockets";
-const ROCKET_URL = "https://api.spacexdata.com/v3/rockets/{{rocket_id}}";
+//Axios settings
+const ROCKETS_URL = "https://api.spacexdata.com/v3/";
+axios.defaults.baseURL = ROCKETS_URL;
 
+//Setting interface
 interface Rocket {
   id: number;
   active: boolean;
@@ -99,3 +101,15 @@ interface Rocket {
   rocket_name: string;
   rocket_type: string;
 }
+
+//Function to get all rockets
+export const getRockets = async () => {
+  const response: Rocket[] = await axios.get(`/rockets`);
+  return response;
+};
+
+//Function to get rocket by id
+export const getRocketDetails = async (rocketId: string) => {
+  const response: Rocket[] = await axios.get(`/rockets/{${rocketId}}`);
+  return response;
+};
