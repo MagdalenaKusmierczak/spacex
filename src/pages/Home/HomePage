@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { getRockets } from "service/API/RocketsAPI";
+import RocketsList from "../../components/RocketsList/RocketsList";
 
 const HomePage = () => {
   const [rocketsData, setRocketsData] = useState({});
@@ -16,11 +17,8 @@ const HomePage = () => {
   }, []);
   return (
     <div>
-      <h1></h1>
-      <ul>
-        <li></li>
-        <li></li>
-      </ul>
+      <RocketsList rockets={rocketsData} />
     </div>
   );
 };
+export default HomePage;
