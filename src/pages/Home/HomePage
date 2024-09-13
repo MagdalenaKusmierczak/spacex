@@ -14,9 +14,13 @@ const HomePage = () => {
     };
     fetchData();
   }, []);
-    return <div>
-        <h1></hi>
-        <ul><li></li>
-        <li></li></ul>
-  </div>;
+  return (
+    <div>
+      <h1></h1>
+      <ul>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  );
 };
