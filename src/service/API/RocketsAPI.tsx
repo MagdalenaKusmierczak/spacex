@@ -7,12 +7,14 @@ axios.defaults.baseURL = ROCKETS_URL;
 
 //Function to get all rockets
 export const getRockets = async () => {
-  const response: Rocket[] = await axios.get(`/rockets`);
-  return response;
+  const response = await axios.get(`rockets`);
+  const rockets: Rocket[] = response.data;
+  return rockets;
 };
 
 //Function to get rocket by id
 export const getRocketDetails = async (rocketId: string) => {
-  const response: Rocket[] = await axios.get(`/rockets/{${rocketId}}`);
-  return response;
+  const response = await axios.get(`rockets/${rocketId}`);
+  const rocket: Rocket[]= response.data;
+  return rocket;
 };
