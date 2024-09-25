@@ -2,6 +2,7 @@ import React, { lazy } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Sharedlayout from "./components/Sharedlayout/Sharedlayout";
 import HomePage from "./pages/Home/HomePage";
+import RocketPage from "./pages/Rocket/RocketPage";
 import "./App.css";
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Sharedlayout />}>
         <Route index element={<HomePage />} />
-        {/* <Route path="/rocket/:id" element={<RocketPage />}> */}
+        <Route path="/rocket/:id" element={<RocketPage />} />
       </Route>
     </Routes>
   );
