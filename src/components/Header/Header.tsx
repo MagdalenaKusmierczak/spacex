@@ -1,5 +1,11 @@
+import Navigation from "../Navigation/Navigation";
+
 const Header = () => {
-  return <header></header>;
+  return (
+    <header>
+      <Navigation/>
+    </header>
+  );
 };
 
 export default Header;
