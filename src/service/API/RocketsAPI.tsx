@@ -15,6 +15,6 @@ export const getRockets = async () => {
 //Function to get rocket by id
 export const getRocket = async (rocketId: string) => {
   const response = await axios.get(`rockets/${rocketId}`);
-  const rocket: Rocket[]= response.data;
+  const rocket: Rocket= response.data;
   return rocket;
 };
