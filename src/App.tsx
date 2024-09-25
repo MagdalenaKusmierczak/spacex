@@ -1,9 +1,12 @@
 import React, { lazy } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
+
 import Sharedlayout from "./components/Sharedlayout/Sharedlayout";
-import HomePage from "./pages/Home/HomePage";
-import RocketPage from "./pages/Rocket/RocketPage";
+
 import "./App.css";
+
+const HomePage = lazy(() => import("./pages/Home/HomePage"));
+const RocketPage = lazy(() => import("./pages/Rocket/RocketPage"));
 
 function App() {
   return (
@@ -12,6 +15,7 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path="/rocket/:id" element={<RocketPage />} />
       </Route>
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 }
