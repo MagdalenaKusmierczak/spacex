@@ -18,9 +18,9 @@ const HomePage = () => {
     fetchData();
   }, []);
   return (
-    <div>
+    <section>
       <RocketsList rockets={rocketsData} />
-    </div>
+    </section>
   );
 };
 export default HomePage;
