@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getRocket } from "../../service/API/RocketsAPI";
 import Rocket from "../../service/Interfaces/RocketInterface";
+import IntroSection from "../../components/RocketSections/IntroSection";
 import GeneralSection from "../../components/RocketSections/GeneralSection";
 import DimensionsSection from "../../components/RocketSections/DimensionsSection";
 import StagesSection from "../../components/RocketSections/StagesSection";
@@ -28,13 +29,14 @@ const RocketPage = () => {
 
   return rocketData ? (
     <main>
+      <IntroSection rocketData={rocketData} />
+      <GallerySection rocketData={rocketData} />
       <GeneralSection rocketData={rocketData} />
       <DimensionsSection rocketData={rocketData} />
       <EnginesSection rocketData={rocketData} />
       <LandingLegsSection rocketData={rocketData} />
-      <StagesSection rocketData={rocketData} />
       <PayloadsSection rocketData={rocketData} />
-      <GallerySection rocketData={rocketData} />
+      <StagesSection rocketData={rocketData} />
       <MoreSection rocketData={rocketData} />
     </main>
   ) : null;
