@@ -88,7 +88,7 @@ export default interface Rocket {
     number: number;
     material: string;
   };
-  flickr_images: [string];
+  flickr_images: string[];
   wikipedia: string;
   description: string;
   rocket_id: string;
