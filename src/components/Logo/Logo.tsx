@@ -1,13 +1,10 @@
 import logo from "../../assets/logo.png";
-
+import { ImageWrapper } from "./Logo.styled";
 const Logo = () => {
   return (
-    <img
-      alt="Rocket logo"
-      src={logo}
-      height="256"
-      width="256"
-    />
+    <ImageWrapper>
+      <img alt="Rocket logo" src={logo} height="70" width="70" />
+    </ImageWrapper>
   );
 };
 export default Logo;
