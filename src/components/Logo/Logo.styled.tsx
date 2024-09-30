@@ -9,4 +9,8 @@ export const ImageWrapper = styled.div`
   border-radius: 50px;
   background-color: #f0ff3836;
   box-shadow: 0px 0px 8px 8px #f0ff3836;
+  &:hover {
+    background-color: #ffc41f;
+    box-shadow: 0px 0px 8px 8px #fada7e;
+  }
 `;
