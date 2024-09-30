@@ -9,7 +9,6 @@ const HomePage = () => {
     const fetchData = async () => {
       try {
         const rockets = await getRockets();
-        console.log(rockets);
         setRocketsData(rockets);
       } catch (error) {
         console.log(error);
