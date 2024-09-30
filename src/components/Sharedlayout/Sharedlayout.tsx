@@ -6,14 +6,16 @@ import Footer from "../Footer/Footer";
 import AnimatedStars from "../AnimatedStart/AnimatedStars";
 
 const Sharedlayout = () => {
-  return (<>
-    <Container><AnimatedStars/><Header/>
-      <Suspense
-      //   fallback={<Loader />}
-      ></Suspense>
-          <Outlet />
-          <Footer/>
-    </Container></>
+  return (
+    <>
+      <Container>
+        <AnimatedStars />
+        <Header />
+        <Suspense fallback={<div>Loading...</div>}>
+        <Outlet /></Suspense>
+        <Footer />
+      </Container>
+    </>
   );
 };
 
