@@ -50,39 +50,38 @@ export const DefaultSpan = styled.span`
   }
 `;
 // .span
-export const StarOne = styled(DefaultSpan)<{ isShooting: boolean }>`
+export const StarOne = styled(DefaultSpan)<{ $shoot: boolean }>`
   top: 0;
   right: 0;
   left: initial;
   animation-delay: 0.5s;
-  animation-duration:${(star) => (star.isShooting ? "2s" : "0s")};
- 
+  animation-duration: ${(props) => (props.$shoot ? "2s" : "0s")};
 `;
-export const StarTwo = styled(DefaultSpan)<{ isShooting: boolean }>`
+export const StarTwo = styled(DefaultSpan)<{ $shoot: boolean }>`
   top: 0;
   right: 80px;
   left: initial;
   animation-delay: 2.5s;
-  animation-duration: ${(star) => (star.isShooting ? "3s" : "0s")};
+  animation-duration: ${(props) => (props.$shoot ? "3s" : "0s")};
 `;
-export const StarThree = styled(DefaultSpan)<{ isShooting: boolean }>`
+export const StarThree = styled(DefaultSpan)<{ $shoot: boolean }>`
   top: 80;
   right: -10px;
   left: initial;
   animation-delay: 1s;
-  animation-duration: ${(star) => (star.isShooting ? "2.5s" : "0s")};
+  animation-duration: ${(props) => (props.$shoot ? "2.5s" : "0s")};
 `;
-export const StarFour = styled(DefaultSpan)<{ isShooting: boolean }>`
+export const StarFour = styled(DefaultSpan)<{$shoot: boolean }>`
   top: 0;
   right: 180px;
   left: initial;
   animation-delay: 1.5s;
-  animation-duration: ${(star) => (star.isShooting ? "2s" : "0s")};
+  animation-duration: ${(props) => (props.$shoot ? "2s" : "0s")};
 `;
-export const StarFive = styled(DefaultSpan)<{ isShooting: boolean }>`
+export const StarFive = styled(DefaultSpan)<{ $shoot: boolean }>`
   top: 0;
   right: 400px;
   left: initial;
   animation-delay: 2s;
-  animation-duration: ${(star) => (star.isShooting ? "3s" : "0s")};
+  animation-duration: ${(props) => (props.$shoot ? "3s" : "0s")};
 `;

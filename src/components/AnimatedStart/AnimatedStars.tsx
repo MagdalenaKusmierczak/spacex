@@ -10,16 +10,19 @@ import {
 } from "./AnimatedStars.styled";
 const AnimatedStars = () => {
   const [isShooting, setIsShooting] = useState(true);
-  const shootTimer = setInterval(() => {
-    setIsShooting(!isShooting);
-  }, 15000);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIsShooting(!isShooting);
+    }, 15000);
+    return () => clearInterval(timer);
+  }, []);
   return (
     <Sky>
-      <StarOne isShooting={isShooting} />
-      <StarTwo isShooting={isShooting} />
-      <StarThree isShooting={isShooting} />
-      <StarFour isShooting={isShooting} />
-      <StarFive isShooting={isShooting} />
+      <StarOne $shoot={isShooting} />
+      <StarTwo $shoot={isShooting} />
+      <StarThree $shoot={isShooting} />
+      <StarFour $shoot={isShooting} />
+      <StarFive $shoot={isShooting} />
     </Sky>
   );
 };
