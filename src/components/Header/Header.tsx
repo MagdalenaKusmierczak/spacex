@@ -1,11 +1,13 @@
 import Navigation from "../Navigation/Navigation";
 import Logo from "../Logo/Logo";
+import { HeaderContainer } from "./Header.styled";
+
 const Header = () => {
   return (
-    <header>
+    <HeaderContainer>
       <Logo />
       <Navigation />
-    </header>
+    </HeaderContainer>
   );
 };
 
