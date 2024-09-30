@@ -38,7 +38,7 @@ export const DefaultSpan = styled.span`
   border-radius: 50%;
   box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
     0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 0.1);
-  animation: ${shooting} 5s linear infinite;
+  animation: ${shooting} infinite linear 30s;
   &: before {
     content: "";
     position: absolute;
@@ -67,7 +67,7 @@ export const StarTwo = styled(DefaultSpan)<{ isShooting: boolean }>`
 `;
 export const StarThree = styled(DefaultSpan)<{ isShooting: boolean }>`
   top: 80;
-  right: 0px;
+  right: -10px;
   left: initial;
   animation-delay: 1s;
   animation-duration: ${(star) => (star.isShooting ? "2.5s" : "0s")};
