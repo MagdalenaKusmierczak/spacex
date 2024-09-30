@@ -15,7 +15,7 @@ const AnimatedStars = () => {
       setIsShooting(!isShooting);
     }, 15000);
     return () => clearInterval(timer);
-  }, []);
+  }, [isShooting]);
   return (
     <Sky>
       <StarOne $shoot={isShooting} />
