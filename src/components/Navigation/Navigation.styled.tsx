@@ -17,6 +17,7 @@ export const NavItem = styled(NavLink)`
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
+  text-decoration: none;
   @media screen and (min-width: 768px) {
     font-size: 16px;
   }
