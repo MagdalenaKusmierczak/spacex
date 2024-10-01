@@ -8,6 +8,7 @@ export const Container = styled.div`
   width: 320px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   box-shadow: 1px 3px 21px 11px rgba(50, 50, 50, 0.3);
   background-color: rgba(50, 50, 50, 0.3);
   overflow: hidden;
