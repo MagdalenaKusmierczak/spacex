@@ -11,6 +11,8 @@ import GallerySection from "../../components/RocketSections/GallerySection";
 import PayloadsSection from "../../components/RocketSections/PayloadsSection";
 import LandingLegsSection from "../../components/RocketSections/LandingLegsSection";
 import MoreSection from "../../components/RocketSections/MoreSection";
+import { Main } from "../Main.styled";
+
 
 const RocketPage = () => {
   const [rocketData, setRocketData] = useState<Rocket | null>(null);
@@ -28,7 +30,7 @@ const RocketPage = () => {
   }, [id]);
 
   return rocketData ? (
-    <main>
+    <Main>
       <IntroSection rocketData={rocketData} />
       <GallerySection rocketData={rocketData} />
       <GeneralSection rocketData={rocketData} />
@@ -38,7 +40,7 @@ const RocketPage = () => {
       <PayloadsSection rocketData={rocketData} />
       <StagesSection rocketData={rocketData} />
       <MoreSection rocketData={rocketData} />
-    </main>
+    </Main>
   ) : null;
 };
 export default RocketPage;
