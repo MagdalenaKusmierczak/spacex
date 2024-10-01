@@ -38,8 +38,7 @@ export const Icon = styled.img`
 border-radius:50%;
   transition: all 0.3s ease-in-out 0s;
   &:hover {
-    transform: rotate(360deg);
-    transition: all 0.3s ease-in-out 0s;
+    transform: rotateY(360deg);
     box-shadow: 0px 0px 4px 4px #f0ff3836;
   }
 `;
