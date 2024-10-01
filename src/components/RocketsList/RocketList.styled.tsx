@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const List = styled.ul`
   margin: 0;
-  margin-top: 20px;
+  margin-top: 35px;
   padding: 0;
   list-style: none;
   display: flex;
@@ -26,6 +26,10 @@ export const RocketImage = styled.img`
   height: auto;
   @media screen and (min-width: 768px) {
     width: 600px;
+    &:hover {
+      transform: rotateY(360deg);
+      box-shadow: 0px 0px 30px 30px #f0ff3836;
+    }
   }
   @media screen and (min-width: 1280px) {
     width: 700px;
