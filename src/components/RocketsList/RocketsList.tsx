@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Rocket from "../../service/Interfaces/RocketInterface";
 import { Link } from "react-router-dom";
+import { List, ListItem, RocketImage, RocketHeader } from "./RocketList.styled";
 
 const RocketsList: FC<{ rockets: Rocket[] }> = ({ rockets }) => {
   //Randomizng selection of images
@@ -11,17 +12,19 @@ const RocketsList: FC<{ rockets: Rocket[] }> = ({ rockets }) => {
   };
 
   return (
-    <ul>
+    <List>
       {rockets.map((rocket: Rocket) => (
-        <li key={rocket.id}>
-          <h2>{rocket.rocket_name}</h2>
-         <Link to={`/rocket/${rocket.rocket_id}`}><img
-            alt={rocket.rocket_name}
-            src={rocket.flickr_images[randomIndex(rocket.flickr_images)]}
-          /></Link> 
-        </li>
+        <ListItem key={rocket.id}>
+          <Link to={`/rocket/${rocket.rocket_id}`}>
+            <RocketImage
+              alt={rocket.rocket_name}
+              src={rocket.flickr_images[randomIndex(rocket.flickr_images)]}
+            />
+          </Link>
+          <RocketHeader>{rocket.rocket_name}</RocketHeader>
+        </ListItem>
       ))}
-    </ul>
+    </List>
   );
 };
 export default RocketsList;
