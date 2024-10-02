@@ -1,14 +1,14 @@
 import { FC } from "react";
 import Rocket from "../../service/Interfaces/RocketInterface";
-
+import { IntroWrapper,FirstHeader, Description } from "./RocketSections.styled";
 
 const IntroSection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
   return (
-    <section>
-      <h1>{rocket.rocket_name}</h1>
-      <h2>{rocket.description}</h2>
-    </section>
+    <IntroWrapper>
+      <FirstHeader>{rocket.rocket_name}</FirstHeader>
+      <Description>{rocket.description}</Description>
+    </IntroWrapper>
   );
 };
 
