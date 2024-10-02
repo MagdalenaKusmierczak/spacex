@@ -5,13 +5,13 @@ export const FooterContainer = styled.footer`
   flex-direction: column;
   align-items: center;
   position: fixed;
-  bottom: 0;
+  bottom: -1px;
   margin: 0 auto;
 
   width: 260px;
   color: white;
-  background-color: rgba(80, 103, 103, 1);
-  box-shadow: 0px 0px 15px 20px rgba(80, 103, 103, 1);
+  background-color: rgba(41, 55, 60, 0.99);
+  box-shadow: 0px 0px 15px 20px rgba(41, 55, 60, 0.99);
 
   @media screen and (min-width: 768px) {
     width: 708px;
