@@ -60,6 +60,6 @@ export const Description = styled.p`
   }
   @media screen and (min-width: 1280px) {
     font-size: 22px;
-    width: 65%;
+    width: 75%;
   }
 `;

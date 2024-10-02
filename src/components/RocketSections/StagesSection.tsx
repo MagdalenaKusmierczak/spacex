@@ -1,12 +1,14 @@
 import { FC } from "react";
 import Rocket from "../../service/Interfaces/RocketInterface";
 import setParagraph from "../../utils/setParagraph";
+import { SecondHeader, Summary } from "./RocketSections.styled";
+
 
 const StagesSection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
   return (
-    <section>
-      <h3>Stages</h3>
+    <section><details>
+      <Summary><SecondHeader>Stages</SecondHeader></Summary>
       <ul>
         <li>
           <h4>First stage</h4>
@@ -124,7 +126,7 @@ const StagesSection: FC<{ rocketData: Rocket }> = (props) => {
             </li>
           </ul>
         </li>
-      </ul>
+      </ul></details>
     </section>
   );
 };
