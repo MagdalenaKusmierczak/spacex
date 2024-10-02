@@ -48,8 +48,8 @@ export const Paragraph = styled.p`
   align-items: center;
   margin: 0;
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size: 12px;
   @media screen and (min-width: 768px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 `;
