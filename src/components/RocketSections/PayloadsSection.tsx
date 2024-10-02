@@ -1,31 +1,30 @@
 import { FC } from "react";
 import Rocket from "../../service/Interfaces/RocketInterface";
 import setParagraph from "../../utils/setParagraph";
+import { SecondHeader, Summary } from "./RocketSections.styled";
 
 const PayloadsSection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
   return (
-      <section>
-        <h3>Payloads</h3>
+    <section>
+      <details>
+        <Summary>
+          <SecondHeader>Payloads</SecondHeader>
+        </Summary>
         <ul>
           {rocket.payload_weights.map((payload) => (
             <li key={payload.id}>
-              <p>
-                Name: <span>{payload.name}</span>
-              </p>
+              {setParagraph("Name", payload.name)}
               <p>Weight:</p>
               <ul>
-                <li>
-                  Kilograms: <span>{payload.kg}</span>
-                </li>
-                <li>
-                  Pounds: <span>{payload.lb}</span>
-                </li>
+                <li>{setParagraph("Kilograms", payload.kg, "kg")}</li>
+                <li>{setParagraph("Pounds", payload.lb, "lb")}</li>
               </ul>
             </li>
           ))}
         </ul>
-      </section>
+      </details>
+    </section>
   );
 };
 
