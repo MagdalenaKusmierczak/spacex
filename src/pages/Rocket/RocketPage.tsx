@@ -12,7 +12,7 @@ import PayloadsSection from "../../components/RocketSections/PayloadsSection";
 import LandingLegsSection from "../../components/RocketSections/LandingLegsSection";
 import MoreSection from "../../components/RocketSections/MoreSection";
 import { Main } from "../Main.styled";
-
+import RocketDetails from "../../components/RocketDetails/RocketDetails";
 
 const RocketPage = () => {
   const [rocketData, setRocketData] = useState<Rocket | null>(null);
@@ -32,14 +32,8 @@ const RocketPage = () => {
   return rocketData ? (
     <Main>
       <IntroSection rocketData={rocketData} />
-      <GallerySection rocketData={rocketData} />
-      <GeneralSection rocketData={rocketData} />
-      <DimensionsSection rocketData={rocketData} />
-      <EnginesSection rocketData={rocketData} />
-      <LandingLegsSection rocketData={rocketData} />
-      <PayloadsSection rocketData={rocketData} />
-      <StagesSection rocketData={rocketData} />
-      <MoreSection rocketData={rocketData} />
+      <RocketDetails rocketData={rocketData} />
+  
     </Main>
   ) : null;
 };
