@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState} from "react";
 import Rocket from "../../service/Interfaces/RocketInterface";
 import { SectionsWrapper } from "./RocketDetails.styled";
 import ButtonsList from "../ButtonsList/ButtonsList";
@@ -13,18 +13,44 @@ import MoreSection from "../../components/RocketSections/MoreSection";
 
 const RocketDetails: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
+  const [activeSection, setActiveSection] = useState("");
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    // Get the `data-target` attribute from the clicked button
+    const dataTarget =
+      event.currentTarget.getAttribute("data-target") ??
+      "";
+    // Set the `activeSection` state to the `data-target` value
+    setActiveSection(dataTarget);
+    //Returning expected data
+  };
+
+    const getActiveSection = () => {
+      switch (activeSection) {
+        case "gallery":
+          return <GallerySection rocketData={rocket} />;
+        case "general-info":
+          return <GeneralSection rocketData={rocket} />;
+        case "dimnensions":
+          return <DimensionsSection rocketData={rocket} />;
+        case "engines":
+          return <EnginesSection rocketData={rocket} />;
+        case "landing-legs":
+          return <LandingLegsSection rocketData={rocket} />;
+        case "payloads":
+          return <PayloadsSection rocketData={rocket} />;
+        case "stages":
+          return <StagesSection rocketData={rocket} />;
+        case "more":
+          return <MoreSection rocketData={rocket} />;
+        default:
+          return <></>;
+      }
+    };
   return (
     <>
-      <ButtonsList />
+      <ButtonsList handleClick={handleClick} />
       <SectionsWrapper>
-        <GallerySection rocketData={rocket} />
-        <GeneralSection rocketData={rocket} />
-        <DimensionsSection rocketData={rocket} />
-        <EnginesSection rocketData={rocket} />
-        <LandingLegsSection rocketData={rocket} />
-        <PayloadsSection rocketData={rocket} />
-        <StagesSection rocketData={rocket} />
-        <MoreSection rocketData={rocket} />
+       {getActiveSection()}
       </SectionsWrapper>
     </>
   );
