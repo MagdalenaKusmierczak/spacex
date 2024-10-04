@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import arrow from "../../assets/down-arrow.png";
 
 export const Button = styled.button`
   position: relative;
@@ -19,8 +18,24 @@ export const Button = styled.button`
     box-shadow: 0 0 40px 40px #29373ce6 inset, 0 0 0 0 #29373ce6;
   }
 `;
-export const MenuButton = styled(Button)`
+export const MenuButton = styled.div`
   text-transform: capitalize;
+  position: relative;
+  background: none;
+  color: inherit;
+  padding: 0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-color: #ffc41f;
+  transition: all 150ms ease-in-out;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #ffc41f inset, 0 0 10px 4px #ffc41f;
+  &:hover {
+    box-shadow: 0 0 40px 40px #29373ce6 inset, 0 0 0 0 #29373ce6;
+  }
 `;
 export const SectionName = styled.span`
   margin: 10px;
@@ -39,9 +54,10 @@ export const ButtonsWrapper = styled.div`
   margin-right: 10px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   @media screen and (min-width: 768px) {
-    margin-top: 20px;
+    gap: 20px;
+    margin-block: 20px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
