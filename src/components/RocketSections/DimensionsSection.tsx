@@ -5,7 +5,7 @@ import setParagraph from "../../utils/setParagraph";
 const DimensionsSection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
   return (
-    <section id="dimnensions">
+    <section id="dimensions">
       <p>Height</p>
       <ul>
         <li>{setParagraph("Meter", rocket.height.meters)}</li>

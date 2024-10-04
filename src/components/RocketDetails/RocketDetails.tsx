@@ -28,13 +28,13 @@ const RocketDetails: FC<{ rocketData: Rocket }> = (props) => {
       switch (activeSection) {
         case "gallery":
           return <GallerySection rocketData={rocket} />;
-        case "general-info":
+        case "general information":
           return <GeneralSection rocketData={rocket} />;
-        case "dimnensions":
+        case "dimensions":
           return <DimensionsSection rocketData={rocket} />;
         case "engines":
           return <EnginesSection rocketData={rocket} />;
-        case "landing-legs":
+        case "landing legs":
           return <LandingLegsSection rocketData={rocket} />;
         case "payloads":
           return <PayloadsSection rocketData={rocket} />;
@@ -48,7 +48,7 @@ const RocketDetails: FC<{ rocketData: Rocket }> = (props) => {
     };
   return (
     <>
-      <ButtonsList handleClick={handleClick} />
+      <ButtonsList handleClick={handleClick} activeSection={activeSection} />
       <SectionsWrapper>
        {getActiveSection()}
       </SectionsWrapper>

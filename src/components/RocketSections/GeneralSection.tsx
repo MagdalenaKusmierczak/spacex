@@ -5,7 +5,7 @@ import setParagraph from "../../utils/setParagraph";
 const GeneralSection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
   return (
-    <section id="general-info">
+    <section id="general information">
       {setParagraph("Rocket type", rocket.rocket_type)}
       {setParagraph("Active", rocket.active.toString())}
       {setParagraph("Number of stages", rocket.stages)}
