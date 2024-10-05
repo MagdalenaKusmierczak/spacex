@@ -1,3 +1,5 @@
+import { StyledParagraph } from "../components/RocketSections/RocketSections.styled";
+
 //Setting default paragraph for data
 const setParagraph = (
   name: string,
@@ -5,12 +7,12 @@ const setParagraph = (
   units?: string
 ) => {
   return (
-    <p>
+    <StyledParagraph>
       {name}:{' '}
       <span>
         {data} {units ? units : ""}
       </span>
-    </p>
+    </StyledParagraph>
   );
 };
 export default setParagraph;

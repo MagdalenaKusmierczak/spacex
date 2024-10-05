@@ -6,7 +6,7 @@ export const IntroWrapper = styled.section`
   flex-direction: column;
   align-items: center;
 `;
-
+export const SectionWrapper = styled.section``;
 //Headers
 export const FirstHeader = styled.h1`
   margin-block: 1em;
@@ -15,6 +15,19 @@ export const FirstHeader = styled.h1`
 
   @media screen and (min-width: 768px) {
     font-size: 24px;
+  }
+`;
+export const SecondHeader = styled.h2`
+  margin: 10px;
+  text-align: center;
+  font-size: 18px;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+    font-size: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 22px;
   }
 `;
 
@@ -33,3 +46,11 @@ export const Description = styled.p`
     width: 75%;
   }
 `;
+
+export const StyledParagraph = styled.p`
+  color: red;
+`;
+//List style
+export const List = styled.ul``;
+
+export const ListItem = styled.li``;
