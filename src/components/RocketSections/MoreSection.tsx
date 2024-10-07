@@ -9,7 +9,7 @@ const MoreSection: FC<{ rocketData: Rocket }> = (props) => {
       <MoreParagraph>
         For more information go to: 
         <a href={rocket.wikipedia} rel="noopener" target="_blank">
-          Wikipedia page for {rocket.rocket_name} 
+          {rocket.rocket_name} Wikipedia
         </a>
       </MoreParagraph>
     </SectionWrapper>
