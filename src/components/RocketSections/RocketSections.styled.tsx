@@ -30,7 +30,8 @@ export const SecondHeader = styled.h2`
   margin: 10px;
   text-align: center;
   font-size: 18px;
-
+  color: #f4bf69;
+  display:inline:
   @media screen and (min-width: 768px) {
     text-align: left;
     font-size: 20px;
@@ -63,6 +64,7 @@ export const StyledParagraph = styled.p`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 8px;
   @media screen and (min-width: 768px) {
     font-size: 20px;
     margin-left: 35%;
@@ -83,6 +85,13 @@ export const StyledSpan = styled.span`
   }
 `;
 //List style
-export const List = styled.ul``;
+export const List = styled.ul`
+  list-style: none;
+  padding: 0;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+    padding-left: 40px;
+  }
+`;
 
 export const ListItem = styled.li``;
