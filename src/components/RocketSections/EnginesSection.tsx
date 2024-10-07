@@ -1,11 +1,12 @@
 import { FC } from "react";
 import Rocket from "../../service/Interfaces/RocketInterface";
 import setParagraph from "../../utils/setParagraph";
+import { SectionWrapper } from "./RocketSections.styled";
 
 const EnginesSection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
   return (
-    <section id="engines">
+    <SectionWrapper id="engines">
       {setParagraph("Number of engines", rocket.engines.number)}
       {setParagraph("Type", rocket.engines.type)}
       {setParagraph("Version", rocket.engines.version)}
@@ -40,7 +41,7 @@ const EnginesSection: FC<{ rocketData: Rocket }> = (props) => {
         </li>
       </ul>
       {setParagraph("Thrust to weight", rocket.engines.thrust_to_weight)}
-    </section>
+    </SectionWrapper>
   );
 };
 
