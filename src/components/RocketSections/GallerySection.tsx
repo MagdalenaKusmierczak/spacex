@@ -1,13 +1,13 @@
 import { FC } from "react";
 import Rocket from "../../service/Interfaces/RocketInterface";
-import { SectionWrapper } from "./RocketSections.styled";
+import { SectionWrapper, List } from "./RocketSections.styled";
 
 
 const GallerySection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
   return (
     <SectionWrapper id="gallery">
-      <ul>
+      <List>
         {rocket.flickr_images.map((image) => (
           <li key={rocket.flickr_images.indexOf(image)}>
             <img
@@ -18,7 +18,7 @@ const GallerySection: FC<{ rocketData: Rocket }> = (props) => {
             />
           </li>
         ))}
-      </ul>
+      </List>
     </SectionWrapper>
   );
 };
