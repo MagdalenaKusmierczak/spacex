@@ -6,7 +6,16 @@ export const IntroWrapper = styled.section`
   flex-direction: column;
   align-items: center;
 `;
-export const SectionWrapper = styled.section``;
+export const SectionWrapper = styled.section`
+  margin-top: 25px;
+  @media screen and (min-width: 768px) {
+    margin-top: 30px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-top: 35px;
+  }
+`;
+
 //Headers
 export const FirstHeader = styled.h1`
   margin-block: 1em;
@@ -48,7 +57,30 @@ export const Description = styled.p`
 `;
 
 export const StyledParagraph = styled.p`
-  color: red;
+  font-weight: 400;
+  color: rgb(250, 249, 246);
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    margin-left: 35%;
+    display: block;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 22px;
+    margin-left: 40%;
+  }
+`;
+export const StyledSpan = styled.span`
+  font-weight: 600;
+  padding-left: 10px;
+  text-transform: capitalize;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 `;
 //List style
 export const List = styled.ul``;
