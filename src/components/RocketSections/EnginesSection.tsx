@@ -1,7 +1,13 @@
 import { FC } from "react";
 import Rocket from "../../service/Interfaces/RocketInterface";
 import setParagraph from "../../utils/setParagraph";
-import { SectionWrapper } from "./RocketSections.styled";
+import {
+  SectionWrapper,
+  List,
+  ThirdHeader,
+  StyledSpan,
+  StyledParagraph
+} from "./RocketSections.styled";
 
 const EnginesSection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
@@ -14,8 +20,8 @@ const EnginesSection: FC<{ rocketData: Rocket }> = (props) => {
       {setParagraph("Maximum engine loss", rocket.engines.engine_loss_max)}
       {setParagraph("First propellant", rocket.engines.propellant_1)}
       {setParagraph("Second propellant", rocket.engines.propellant_2)}
-      <h4>Thrust sea level</h4>
-      <ul>
+      <ThirdHeader>Thrust sea level</ThirdHeader>
+      <List>
         <li>
           {setParagraph(
             "KiloNewtons",
@@ -30,17 +36,22 @@ const EnginesSection: FC<{ rocketData: Rocket }> = (props) => {
             "lbf"
           )}
         </li>
-      </ul>
-      <h4>Thrust vacuum</h4>
-      <ul>
+      </List>
+      <ThirdHeader>Thrust vacuum</ThirdHeader>
+      <List>
         <li>
           {setParagraph("KiloNewtons", rocket.engines.thrust_vacuum.kN, "kN")}
         </li>
         <li>
           {setParagraph("Pound-force", rocket.engines.thrust_vacuum.lbf, "lbf")}
         </li>
-      </ul>
-      {setParagraph("Thrust to weight", rocket.engines.thrust_to_weight)}
+      </List>
+      <List>
+        <li>
+          <ThirdHeader>Thrust to weight</ThirdHeader>
+          <StyledParagraph><StyledSpan>{rocket.engines.thrust_to_weight}</StyledSpan></StyledParagraph>
+        </li>
+      </List>
     </SectionWrapper>
   );
 };

@@ -40,6 +40,20 @@ export const SecondHeader = styled.h2`
     font-size: 22px;
   }
 `;
+export const ThirdHeader = styled.h3`
+  margin: 10px;
+  text-align: center;
+  font-size: 18px;
+  color: #f4bf69;
+  margin: 0 auto;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+    font-size: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 22px;
+  }
+`;
 
 //Paragraphs
 export const Description = styled.p`
@@ -82,7 +96,7 @@ export const MoreParagraph = styled(StyledParagraph)`
   a {
     color: #f4bf69;
     text-decoration: none;
-    padding-inline:8px;
+    padding-inline: 8px;
   }
 `;
 
@@ -100,14 +114,16 @@ export const List = styled.ul`
   list-style: none;
   padding: 0;
   margin-bottom: 40px;
-  border-bottom: 2px solid #ffc41f;
+  border-bottom: 5px dotted #ffc41f;
+  border-radius: 25%;
   @media screen and (min-width: 768px) {
     text-align: left;
-    padding-left: 40px;
   }
 `;
 export const OutsideList = styled(List)`
   border-bottom: none;
 `;
 
-export const ListItem = styled.li``;
+export const ListItem = styled.li`
+  display: flex;
+`;
