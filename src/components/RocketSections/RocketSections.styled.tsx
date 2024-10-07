@@ -29,15 +29,13 @@ export const FirstHeader = styled.h1`
 export const SecondHeader = styled.h2`
   margin: 10px;
   text-align: center;
-  font-size: 18px;
+  font-size: 19px;
   color: #f4bf69;
-  display:inline:
   @media screen and (min-width: 768px) {
-    text-align: left;
-    font-size: 20px;
+    font-size: 21px;
   }
   @media screen and (min-width: 1280px) {
-    font-size: 22px;
+    font-size: 23px;
   }
 `;
 export const ThirdHeader = styled.h3`
@@ -46,8 +44,8 @@ export const ThirdHeader = styled.h3`
   font-size: 18px;
   color: #f4bf69;
   margin: 0 auto;
+  font-style: italic;
   @media screen and (min-width: 768px) {
-    text-align: left;
     font-size: 20px;
   }
   @media screen and (min-width: 1280px) {
@@ -123,7 +121,12 @@ export const List = styled.ul`
 export const OutsideList = styled(List)`
   border-bottom: none;
 `;
+export const StagesList = styled(List)`
+  border-bottom: 1px solid #ffc41f;
+  border-radius: 0px;
+`;
 
-export const ListItem = styled.li`
-  display: flex;
+export const StagesItem = styled.li`
+  border-bottom: 2px solid #ffc41f;
+  padding-block: 10px;
 `;
