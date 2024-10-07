@@ -88,10 +88,15 @@ export const StyledSpan = styled.span`
 export const List = styled.ul`
   list-style: none;
   padding: 0;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #ffc41f;
   @media screen and (min-width: 768px) {
     text-align: left;
     padding-left: 40px;
   }
+`;
+export const OutsideList = styled(List)`
+  border-bottom: none;
 `;
 
 export const ListItem = styled.li``;
