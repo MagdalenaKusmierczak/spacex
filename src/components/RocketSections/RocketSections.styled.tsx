@@ -75,6 +75,17 @@ export const StyledParagraph = styled.p`
     margin-left: 40%;
   }
 `;
+
+export const MoreParagraph = styled(StyledParagraph)`
+  margin-left: 0;
+  text-align: center;
+  a {
+    color: #f4bf69;
+    text-decoration: none;
+    padding-inline:8px;
+  }
+`;
+
 export const StyledSpan = styled.span`
   font-weight: 600;
   padding-left: 10px;
