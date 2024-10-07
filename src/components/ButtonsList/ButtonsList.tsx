@@ -43,7 +43,7 @@ const ButtonsList = ({ handleClick, activeSection }: ButtonsListProps) => {
               <SectionName>Landing legs</SectionName>
             </Button>
             <Button data-target="payloads" onClick={handleClick}>
-              <SectionName>Payloads</SectionName>
+              <SectionName>Payloads weights</SectionName>
             </Button>
             <Button data-target="stages" onClick={handleClick}>
               <SectionName>Stages</SectionName>
