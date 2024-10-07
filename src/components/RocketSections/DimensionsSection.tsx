@@ -5,7 +5,6 @@ import {
   SectionWrapper,
   SecondHeader,
   List,
-  ListItem,
 } from "./RocketSections.styled";
 
 const DimensionsSection: FC<{ rocketData: Rocket }> = (props) => {
@@ -14,18 +13,18 @@ const DimensionsSection: FC<{ rocketData: Rocket }> = (props) => {
     <SectionWrapper id="dimensions">
       <SecondHeader>Height</SecondHeader>
       <List>
-        <ListItem>{setParagraph("Meters", rocket.height.meters)}</ListItem>
-        <ListItem>{setParagraph("Feet", rocket.height.feet)}</ListItem>
+        <li>{setParagraph("Meters", rocket.height.meters)}</li>
+        <li>{setParagraph("Feet", rocket.height.feet)}</li>
       </List>
       <SecondHeader>Diameter</SecondHeader>
       <List>
-        <ListItem>{setParagraph("Meters", rocket.diameter.meters)}</ListItem>
-        <ListItem>{setParagraph("Feet", rocket.diameter.feet)}</ListItem>
+        <li>{setParagraph("Meters", rocket.diameter.meters)}</li>
+        <li>{setParagraph("Feet", rocket.diameter.feet)}</li>
       </List>
       <SecondHeader>Mass</SecondHeader>
       <List>
-        <ListItem>{setParagraph("Kilograms", rocket.mass.kg)}</ListItem>
-        <ListItem>{setParagraph("Pounds", rocket.mass.lb)}</ListItem>
+        <li>{setParagraph("Kilograms", rocket.mass.kg)}</li>
+        <li>{setParagraph("Pounds", rocket.mass.lb)}</li>
       </List>
     </SectionWrapper>
   );
