@@ -1,4 +1,7 @@
-import { StyledParagraph } from "../components/RocketSections/RocketSections.styled";
+import {
+  StyledParagraph,
+  StyledSpan,
+} from "../components/RocketSections/RocketSections.styled";
 
 //Setting default paragraph for data
 const setParagraph = (
@@ -8,10 +11,10 @@ const setParagraph = (
 ) => {
   return (
     <StyledParagraph>
-      {name}:{' '}
-      <span>
+      {name}:{" "}
+      <StyledSpan>
         {data} {units ? units : ""}
-      </span>
+      </StyledSpan>
     </StyledParagraph>
   );
 };
