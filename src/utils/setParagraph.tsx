@@ -6,7 +6,7 @@ import { ReactNode } from "react";
 
 //Setting default paragraph for data
 const setParagraph = (
-  name: string | ReactNode,
+  name: string,
   data: number | string | boolean | null,
   units?: string
 ) => {
@@ -14,7 +14,8 @@ const setParagraph = (
     <StyledParagraph>
       {name}:{" "}
       <StyledSpan>
-        {data} {units ? units : ""}
+        {data !== null && data !== undefined ? data : "Unknown"}{" "}
+        {units ? units : ""}
       </StyledSpan>
     </StyledParagraph>
   );
