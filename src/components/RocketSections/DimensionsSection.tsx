@@ -14,7 +14,7 @@ const DimensionsSection: FC<{ rocketData: Rocket }> = (props) => {
     <SectionWrapper id="dimensions">
       <SecondHeader>Height</SecondHeader>
       <List>
-        <ListItem>{setParagraph("Meter", rocket.height.meters)}</ListItem>
+        <ListItem>{setParagraph("Meters", rocket.height.meters)}</ListItem>
         <ListItem>{setParagraph("Feet", rocket.height.feet)}</ListItem>
       </List>
       <SecondHeader>Diameter</SecondHeader>
