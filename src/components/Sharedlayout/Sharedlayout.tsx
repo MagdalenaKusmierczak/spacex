@@ -4,6 +4,7 @@ import { Container } from "./Sharedlayout.styled";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import AnimatedStars from "../AnimatedStart/AnimatedStars";
+import Loader from "../../utils/Loader/Loader";
 
 const Sharedlayout = () => {
   return (
@@ -11,8 +12,9 @@ const Sharedlayout = () => {
       <Container>
         <AnimatedStars />
         <Header />
-        <Suspense fallback={<div>Loading...</div>}>
-        <Outlet /></Suspense>
+        <Suspense fallback={<Loader />}>
+          <Outlet />
+        </Suspense>
         <Footer />
       </Container>
     </>
