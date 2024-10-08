@@ -21,7 +21,6 @@ export const ListItem = styled.li`
 `;
 export const RocketImage = styled.img`
   border-radius: 50%;
-  border: 10px solid #fffff;
   width: 250px;
   height: auto;
   @media screen and (min-width: 768px) {

@@ -5,7 +5,6 @@ import { SectionWrapper } from "./RocketSections.styled";
 
 const LandingLegsSection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
-  console.log(rocket);
   return (
     <SectionWrapper id="landing legs">
       {setParagraph("Number of legs", rocket.landing_legs.number)}

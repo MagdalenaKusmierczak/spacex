@@ -52,7 +52,7 @@ const GallerySection: FC<{ rocketData: Rocket }> = (props) => {
             <Image
               src={image}
               alt={rocket.rocket_name}
-              onClick={() => handleImageClick(image)}
+              onClick={() => handleImageClick(image)} 
             />
           </ImageWrapper>
         ))}
