@@ -5,8 +5,6 @@ import {
   StarOne,
   StarTwo,
   StarThree,
-  StarFour,
-  StarFive,
 } from "./AnimatedStars.styled";
 const AnimatedStars = () => {
   const [isShooting, setIsShooting] = useState(true);
@@ -21,8 +19,6 @@ const AnimatedStars = () => {
       <StarOne $shoot={isShooting} />
       <StarTwo $shoot={isShooting} />
       <StarThree $shoot={isShooting} />
-      <StarFour $shoot={isShooting} />
-      <StarFive $shoot={isShooting} />
     </Sky>
   );
 };
