@@ -1,24 +1,37 @@
 import { FC } from "react";
 import Rocket from "../../service/Interfaces/RocketInterface";
-import { SectionWrapper, List } from "./RocketSections.styled";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { SectionWrapper, ImageWrapper, Image } from "./RocketSections.styled";
+import PrevArrow from "../GalleryArrows/PrevArrow";
+import NextArrow from "../GalleryArrows/NextArrow";
 
 const GallerySection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
+  // Carousel settings
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    centerMode: true,
+    centerPadding: "0px",
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
+  };
+
   return (
     <SectionWrapper id="gallery">
-      <List>
+      <Slider {...settings}>
         {rocket.flickr_images.map((image) => (
-          <li key={rocket.flickr_images.indexOf(image)}>
-            <img
-              src={image}
-              alt={rocket.rocket_name}
-              height="256"
-              width="256"
-            />
-          </li>
+          <ImageWrapper key={rocket.flickr_images.indexOf(image)}>
+            <Image src={image} alt={rocket.rocket_name} />
+          </ImageWrapper>
         ))}
-      </List>
+      </Slider>
     </SectionWrapper>
   );
 };
