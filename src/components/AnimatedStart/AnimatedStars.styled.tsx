@@ -64,24 +64,10 @@ export const StarTwo = styled(DefaultSpan)<{ $shoot: boolean }>`
   animation-delay: 2.5s;
   animation-duration: ${(props) => (props.$shoot ? "3s" : "0s")};
 `;
-export const StarThree = styled(DefaultSpan)<{ $shoot: boolean }>`
-  top: 80;
-  right: -10px;
-  left: initial;
-  animation-delay: 1s;
-  animation-duration: ${(props) => (props.$shoot ? "2.5s" : "0s")};
-`;
-export const StarFour = styled(DefaultSpan)<{$shoot: boolean }>`
+export const StarThree = styled(DefaultSpan)<{$shoot: boolean }>`
   top: 0;
   right: 180px;
   left: initial;
   animation-delay: 1.5s;
   animation-duration: ${(props) => (props.$shoot ? "2s" : "0s")};
-`;
-export const StarFive = styled(DefaultSpan)<{ $shoot: boolean }>`
-  top: 0;
-  right: 400px;
-  left: initial;
-  animation-delay: 2s;
-  animation-duration: ${(props) => (props.$shoot ? "3s" : "0s")};
 `;
