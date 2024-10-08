@@ -5,6 +5,7 @@ body {
   justify-content: center;
   min-width: 320px;
   min-height: 100vh;
+  user-select: none;
   background: url("./assets/pexels-virat-verma-468191852-27605793.jpg")
     no-repeat center center fixed;
   background-size: cover;
