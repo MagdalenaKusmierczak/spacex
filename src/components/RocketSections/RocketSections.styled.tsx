@@ -15,7 +15,7 @@ export const SectionWrapper = styled.section`
     margin-top: 35px;
   }
 `;
-
+export const ImageWrapper = styled.div``;
 //Headers
 export const FirstHeader = styled.h1`
   margin-block: 1em;
@@ -129,4 +129,11 @@ export const StagesList = styled(List)`
 export const StagesItem = styled.li`
   border-bottom: 2px solid #ffc41f;
   padding-block: 10px;
+`;
+//Images
+export const Image = styled.img`
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
 `;
