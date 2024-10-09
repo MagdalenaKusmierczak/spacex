@@ -52,8 +52,8 @@ export default interface Rocket {
   };
   engines: {
     isp: {
-      kN: number;
-      lbf: number;
+      sea_level: number;
+      vacuum: number;
     };
     thrust_sea_level: {
       kN: number;

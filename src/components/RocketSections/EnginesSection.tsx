@@ -6,7 +6,7 @@ import {
   List,
   ThirdHeader,
   StyledSpan,
-  StyledParagraph
+  StyledParagraph,
 } from "./RocketSections.styled";
 
 const EnginesSection: FC<{ rocketData: Rocket }> = (props) => {
@@ -22,20 +22,8 @@ const EnginesSection: FC<{ rocketData: Rocket }> = (props) => {
       {setParagraph("Second propellant", rocket.engines.propellant_2)}
       <ThirdHeader>ISP</ThirdHeader>
       <List>
-        <li>
-          {setParagraph(
-            "KiloNewtons",
-            rocket.engines.isp.kN,
-            "kN"
-          )}
-        </li>
-        <li>
-          {setParagraph(
-            "Pound-force",
-            rocket.engines.isp.lbf,
-            "lbf"
-          )}
-        </li>
+        <li>{setParagraph("Sea level", rocket.engines.isp.sea_level)}</li>
+        <li>{setParagraph("Vaccum", rocket.engines.isp.vacuum)}</li>
       </List>
       <ThirdHeader>Thrust sea level</ThirdHeader>
       <List>
