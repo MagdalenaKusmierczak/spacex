@@ -136,11 +136,11 @@ export const Image = styled.img`
   height: auto;
   margin: 0 auto;
   object-fit: contain;
-  // width: 260px;
-  // height: 195px;
+  width: 260px;
+  height: 195px;
   @media screen and (min-width: 768px) {
-    // width: 700px;
-    // height: 500px;
+    width: 700px;
+    height: 500px;
   }
   @media screen and (min-width: 1280px) {
     width: 1024px;
