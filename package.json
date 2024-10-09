@@ -5,26 +5,22 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "ts && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "vite": "^5.4.1",
-    "@types/react": "^18.3.5",
-    "@types/react-dom": "^18.3.0",
-    "@types/react-slick": "^0.23.13",
-    "@vitejs/plugin-react": "^4.3.1",
     "axios": "^1.7.7",
     "modern-normalize": "^3.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.1",
     "react-loader-spinner": "^6.1.6",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.13",
-    "yet-another-react-lightbox": "^3.21.6",
-    "react-router-dom": "^6.26.1"
+    "yet-another-react-lightbox": "^3.21.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
@@ -32,7 +28,10 @@
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
-    "globals": "^15.9.0"
-    
+    "globals": "^15.9.0",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@types/react-slick": "^0.23.13",
+    "@vitejs/plugin-react": "^4.3.1"
   }
 }
