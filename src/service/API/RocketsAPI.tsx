@@ -9,7 +9,6 @@ axios.defaults.baseURL = ROCKETS_URL;
 export const getRockets = async () => {
   const response = await axios.get(`rockets`);
   const rockets: Rocket[] = response.data;
-  console.log(rockets);
   return rockets;
 };
 
