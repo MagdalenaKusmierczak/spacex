@@ -8,16 +8,16 @@ import Loader from "../../utils/Loader/Loader";
 
 const Sharedlayout = () => {
   return (
-    <>
+  <Suspense fallback={<Loader />}>
       <Container>
         <AnimatedStars />
         <Header />
-        <Suspense fallback={<Loader />}>
+     
           <Outlet />
-        </Suspense>
+       
         <Footer />
       </Container>
-    </>
+    </Suspense>
   );
 };
 
