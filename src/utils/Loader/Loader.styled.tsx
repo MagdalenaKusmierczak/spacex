@@ -6,12 +6,5 @@ export const LoaderWrapper = styled.div`
   min-height: 90vh;
   display: flex;
   justify-content: center;
- margin-top:20vh;
-  @media screen and (min-width: 768px) {
- margin-top: 25vh;
-    }
-  }
-  @media screen and (min-width: 1280px) {
- margin-top: 30vh; 
-  }
+  margin-top: 40vh;
 `;
