@@ -38,7 +38,7 @@ const GallerySection: FC<{ rocketData: Rocket }> = (props) => {
   const handleImageClick = (image: string) => {
     const slide: Slide = {
       src: image,
-      alt: rocket.rocket_name,
+      alt: rocket.name,
     };
     setSlides([slide]);
     setOpen(true);
@@ -51,7 +51,7 @@ const GallerySection: FC<{ rocketData: Rocket }> = (props) => {
           <ImageWrapper key={rocket.flickr_images.indexOf(image)}>
             <Image
               src={image}
-              alt={rocket.rocket_name}
+              alt={rocket.name}
               onClick={() => handleImageClick(image)} 
             />
           </ImageWrapper>

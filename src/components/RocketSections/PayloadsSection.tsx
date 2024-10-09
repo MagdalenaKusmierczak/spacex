@@ -11,6 +11,7 @@ const PayloadsSection: FC<{ rocketData: Rocket }> = (props) => {
         {rocket.payload_weights.map((payload) => (
           <li key={payload.id}>
             {setParagraph("Name", payload.name)}
+            {setParagraph("ID", payload.id)}
             <List>
               <li>{setParagraph("Kilograms", payload.kg, "kg")}</li>
               <li>{setParagraph("Pounds", payload.lb, "lb")}</li>

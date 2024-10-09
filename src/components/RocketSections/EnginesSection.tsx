@@ -20,6 +20,23 @@ const EnginesSection: FC<{ rocketData: Rocket }> = (props) => {
       {setParagraph("Maximum engine loss", rocket.engines.engine_loss_max)}
       {setParagraph("First propellant", rocket.engines.propellant_1)}
       {setParagraph("Second propellant", rocket.engines.propellant_2)}
+      <ThirdHeader>ISP</ThirdHeader>
+      <List>
+        <li>
+          {setParagraph(
+            "KiloNewtons",
+            rocket.engines.isp.kN,
+            "kN"
+          )}
+        </li>
+        <li>
+          {setParagraph(
+            "Pound-force",
+            rocket.engines.isp.lbf,
+            "lbf"
+          )}
+        </li>
+      </List>
       <ThirdHeader>Thrust sea level</ThirdHeader>
       <List>
         <li>
@@ -49,7 +66,9 @@ const EnginesSection: FC<{ rocketData: Rocket }> = (props) => {
       <List>
         <li>
           <ThirdHeader>Thrust to weight</ThirdHeader>
-          <StyledParagraph><StyledSpan>{rocket.engines.thrust_to_weight}</StyledSpan></StyledParagraph>
+          <StyledParagraph>
+            <StyledSpan>{rocket.engines.thrust_to_weight}</StyledSpan>
+          </StyledParagraph>
         </li>
       </List>
     </SectionWrapper>

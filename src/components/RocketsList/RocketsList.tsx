@@ -15,13 +15,13 @@ const RocketsList: FC<{ rockets: Rocket[] }> = ({ rockets }) => {
     <List>
       {rockets.map((rocket: Rocket) => (
         <ListItem key={rocket.id}>
-          <Link to={`/rocket/${rocket.rocket_id}`}>
+          <Link to={`/rocket/${rocket.id}`}>
             <RocketImage
-              alt={rocket.rocket_name}
+              alt={rocket.name}
               src={rocket.flickr_images[randomIndex(rocket.flickr_images)]}
             />
           </Link>
-          <RocketHeader>{rocket.rocket_name}</RocketHeader>
+          <RocketHeader>{rocket.name}</RocketHeader>
         </ListItem>
       ))}
     </List>

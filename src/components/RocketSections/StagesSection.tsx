@@ -59,6 +59,7 @@ const StagesSection: FC<{ rocketData: Rocket }> = (props) => {
         </StagesItem>
         <StagesItem>
           <SecondHeader>Second stage</SecondHeader>
+          {setParagraph("Reusable", rocket.second_stage.reusable.toString())}
           {setParagraph("Number of engines", rocket.second_stage.engines)}
           {setParagraph(
             "Fuel amount",

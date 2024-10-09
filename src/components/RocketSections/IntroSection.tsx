@@ -6,7 +6,7 @@ const IntroSection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
   return (
     <IntroWrapper>
-      <FirstHeader>{rocket.rocket_name}</FirstHeader>
+      <FirstHeader>{rocket.name}</FirstHeader>
       <Description>{rocket.description}</Description>
     </IntroWrapper>
   );

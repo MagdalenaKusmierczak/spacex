@@ -1,14 +1,5 @@
 //Setting interface
 export default interface Rocket {
-  id: number;
-  active: boolean;
-  stages: number;
-  boosters: number;
-  cost_per_launch: number;
-  success_rate_pct: number;
-  first_flight: string;
-  country: string;
-  company: string;
   height: {
     meters: number;
     feet: number;
@@ -21,19 +12,7 @@ export default interface Rocket {
     kg: number;
     lb: number;
   };
-  payload_weights: [
-    {
-      id: string;
-      name: string;
-      kg: number;
-      lb: number;
-    }
-  ];
   first_stage: {
-    reusable: boolean;
-    engines: number;
-    fuel_amount_tons: number;
-    burn_time_sec: number;
     thrust_sea_level: {
       kN: number;
       lbf: number;
@@ -42,18 +21,17 @@ export default interface Rocket {
       kN: number;
       lbf: number;
     };
-  };
-  second_stage: {
+    reusable: boolean;
     engines: number;
     fuel_amount_tons: number;
     burn_time_sec: number;
+  };
+  second_stage: {
     thrust: {
       kN: number;
       lbf: number;
     };
     payloads: {
-      option_1: string;
-      option_2: string;
       composite_fairing: {
         height: {
           meters: number;
@@ -64,16 +42,19 @@ export default interface Rocket {
           feet: number;
         };
       };
+      option_1: string;
+      option_2: string;
     };
+    reusable: boolean;
+    engines: number;
+    fuel_amount_tons: number;
+    burn_time_sec: number;
   };
   engines: {
-    number: number;
-    type: string;
-    version: string;
-    layout: string;
-    engine_loss_max: number;
-    propellant_1: string;
-    propellant_2: string;
+    isp: {
+      kN: number;
+      lbf: number;
+    };
     thrust_sea_level: {
       kN: number;
       lbf: number;
@@ -82,16 +63,39 @@ export default interface Rocket {
       kN: number;
       lbf: number;
     };
+    number: number;
+    type: string;
+    version: string;
+    layout: string;
+    engine_loss_max: number;
+    propellant_1: string;
+    propellant_2: string;
     thrust_to_weight: number;
   };
   landing_legs: {
     number: number;
     material: string;
   };
+  payload_weights: [
+    {
+      id: string;
+      name: string;
+      kg: number;
+      lb: number;
+    }
+  ];
   flickr_images: string[];
+  name: string;
+  type: string;
+  active: boolean;
+  stages: number;
+  boosters: number;
+  cost_per_launch: number;
+  success_rate_pct: number;
+  first_flight: string;
+  country: string;
+  company: string;
   wikipedia: string;
   description: string;
-  rocket_id: string;
-  rocket_name: string;
-  rocket_type: string;
+  id: string;
 }

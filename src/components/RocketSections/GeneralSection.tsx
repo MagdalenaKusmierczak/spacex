@@ -8,7 +8,7 @@ const GeneralSection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
   return (
     <SectionWrapper id="general information">
-      {setParagraph("Rocket type", rocket.rocket_type)}
+      {setParagraph("Rocket type", rocket.type)}
       {setParagraph("First flight", rocket.first_flight)}
       {setParagraph("Company", rocket.company)}
       {setParagraph("Country", rocket.country)}
