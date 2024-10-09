@@ -13,18 +13,21 @@ export const NavWrapper = styled.nav`
 `;
 export const NavItem = styled(NavLink)`
   color: rgb(250, 249, 246);
-  font-size: 14px;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
+  font-size: 16px;
   @media screen and (min-width: 768px) {
-    font-size: 16px;
+    font-size: 18px;
   }
   &.active {
     color: #ffc41f;
   }
   &:hover {
     color: #fada7e;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
   }
 `;
