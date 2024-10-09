@@ -26,14 +26,14 @@ export const ArrowPre = styled(Arrow)`
     z-index: 1;
     position: absolute;
     content: "←";
-    top: 80px;
+    top: 90px;
     left: -30px;
     @media screen and (min-width: 768px) {
       top: 250px;
       left: -30px;
     }
     @media screen and (min-width: 1280px) {
-      top: 365px;
+      top: 350px;
       left: 0px;
     }
   }
@@ -46,12 +46,12 @@ export const ArrowNext = styled(Arrow)`
     bottom: 95px;
     content: "→";
     @media screen and (min-width: 768px) {
-      bottom: 250px;
+      bottom: 245px;
       right: -30px;
     }
     @media screen and (min-width: 1280px) {
       right: 0px;
-      bottom: 370px;
+      bottom: 350px;
     }
   }
 `;
