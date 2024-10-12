@@ -2,9 +2,7 @@ import {
   StyledParagraph,
   StyledSpan,
 } from "../components/RocketSections/RocketSections.styled";
-import { ReactNode } from "react";
 
-//Setting default paragraph for data
 const setParagraph = (
   name: string,
   data: number | string | boolean | null,
@@ -20,4 +18,5 @@ const setParagraph = (
     </StyledParagraph>
   );
 };
+
 export default setParagraph;
