@@ -1,4 +1,3 @@
-//Setting interface
 export default interface Rocket {
   height: {
     meters: number;
