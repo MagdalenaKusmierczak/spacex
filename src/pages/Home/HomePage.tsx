@@ -6,6 +6,7 @@ import { Main } from "../Main.styled";
 
 const HomePage = () => {
   const [rocketsData, setRocketsData] = useState<Rocket[]>([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -17,10 +18,14 @@ const HomePage = () => {
     };
     fetchData();
   }, []);
+
   return (
-    <Main>
-      <RocketsList rockets={rocketsData} />
-    </Main>
+    rocketsData && (
+      <Main>
+        <RocketsList rockets={rocketsData} />
+      </Main>
+    )
   );
 };
+
 export default HomePage;
