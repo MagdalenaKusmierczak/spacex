@@ -5,19 +5,18 @@ import {
   FooterContainer,
   AddressContainer,
   AddressList,
-  AddressItem,
   Icon,
-  Paragraph,
-  Link
+  Paragraph
 } from "./Footer.styled";
+
 const Footer = () => {
   return (
     <FooterContainer>
       <Paragraph>Created by: <span>Magdalena Kuśmierczak</span></Paragraph>
       <AddressContainer>
         <AddressList>
-          <AddressItem>
-            <Link
+          <li>
+            <a
               href="https://github.com/MagdalenaKusmierczak"
               rel="noopener"
               target="_blank"
@@ -28,9 +27,9 @@ const Footer = () => {
                 width="25px"
                 height="25px"
               />
-            </Link>
-          </AddressItem>
-          <AddressItem>
+            </a>
+          </li>
+          <li>
             <a
               href="https://linkedin.com/in/magdalena-kusmierczak-4b94a7303"
               rel="noopener"
@@ -43,8 +42,8 @@ const Footer = () => {
                 height="25px"
               />
             </a>
-          </AddressItem>
-          <AddressItem>
+          </li>
+          <li>
             <a href="mailto:magdalenaxjare@gmail.com">
               <Icon
                 src={emailIcon}
@@ -53,10 +52,11 @@ const Footer = () => {
                 height="25px"
               />
             </a>
-          </AddressItem>
+          </li>
         </AddressList>
       </AddressContainer>
     </FooterContainer>
   );
 };
+
 export default Footer;
