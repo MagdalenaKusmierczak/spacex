@@ -1,10 +1,11 @@
 import { FC } from "react";
-import Rocket from "../../service/interfaces/RocketInterface";
 import setParagraph from "../../utils/setParagraph";
+import Rocket from "../../service/interfaces/RocketInterface";
 import { SectionWrapper, SecondHeader, List } from "./RocketSections.styled";
 
 const DimensionsSection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
+  
   return (
     <SectionWrapper>
       <SecondHeader>Height</SecondHeader>
