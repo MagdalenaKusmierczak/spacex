@@ -1,6 +1,6 @@
 import { FC } from "react";
-import setParagraph from "utils/setParagraph";
-import Rocket from "service/types/RocketInterface";
+import setParagraph from "../../utils/setParagraph";
+import Rocket from "../../service/types/RocketInterface";
 import { SectionWrapper } from "./RocketSections.styled";
 
 const LandingLegsSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {

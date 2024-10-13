@@ -1,6 +1,6 @@
 import { FC } from "react";
-import setParagraph from "utils/setParagraph";
-import Rocket from "service/types/RocketInterface";
+import setParagraph from "../../utils/setParagraph";
+import Rocket from "../../service/types/RocketInterface";
 import { SectionWrapper, SecondHeader, List } from "./RocketSections.styled";
 
 const DimensionsSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {

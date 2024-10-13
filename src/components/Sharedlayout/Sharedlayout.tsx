@@ -1,9 +1,9 @@
 import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
-import Header from "components/Header/Header";
-import Footer from "components/Footer/Footer";
-import AnimatedStars from "components/AnimatedStart/AnimatedStars";
-import Loader from "utils/Loader/Loader";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import AnimatedStars from "../AnimatedStart/AnimatedStars";
+import Loader from "../../utils/Loader/Loader";
 import { Container } from "./Sharedlayout.styled";
 
 const Sharedlayout = () => {

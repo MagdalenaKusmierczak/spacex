@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Rocket from "service/types/RocketInterface";
+import Rocket from "../../service/types/RocketInterface";
 import {
   IntroWrapper,
   FirstHeader,

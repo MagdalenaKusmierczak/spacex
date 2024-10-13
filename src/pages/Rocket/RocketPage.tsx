@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
-import { useRocket } from "service/API/RocketsAPI";
-import Loader from "utils/Loader/Loader";
-import IntroSection from "components/RocketSections/IntroSection";
-import RocketDetails from "components/RocketDetails/RocketDetails";
+import { useRocket } from "../../service/API/RocketsAPI";
+import Loader from "../../utils/Loader/Loader";
+import IntroSection from "../../components/RocketSections/IntroSection";
+import RocketDetails from "../../components/RocketDetails/RocketDetails";
 import { Main } from "../Main.styled";
 
 const RocketPage = () => {
