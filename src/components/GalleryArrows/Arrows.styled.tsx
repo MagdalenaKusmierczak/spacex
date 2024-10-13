@@ -34,7 +34,7 @@ export const ArrowPre = styled(Arrow)`
     }
     @media screen and (min-width: 1280px) {
       top: 350px;
-      left: 0px;
+      left: 0;
     }
   }
 `;
@@ -50,7 +50,7 @@ export const ArrowNext = styled(Arrow)`
       right: -30px;
     }
     @media screen and (min-width: 1280px) {
-      right: 0px;
+      right: 0;
       bottom: 350px;
     }
   }

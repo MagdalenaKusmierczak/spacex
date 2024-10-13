@@ -126,7 +126,7 @@ export const OutsideList = styled(List)`
 
 export const StagesList = styled(List)`
   border-bottom: 1px solid #ffc41f;
-  border-radius: 0px;
+  border-radius: 0;
 `;
 
 export const StagesItem = styled.li`

@@ -11,6 +11,6 @@ export const HeaderContainer = styled.header`
   box-shadow: 0px 0px 15px 20px rgba(41, 55, 60, 0.9);
   @media screen and (min-width: 768px) {
     justify-content: space-between;
-    gap: 0px;
+    gap: 0;
   }
 `;
