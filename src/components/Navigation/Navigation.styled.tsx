@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 
 export const NavWrapper = styled.nav`
   display: flex;
@@ -11,6 +11,7 @@ export const NavWrapper = styled.nav`
     gap: 20px;
   }
 `;
+
 export const NavItem = styled(NavLink)`
   color: rgb(250, 249, 246);
   font-family: "Poppins", sans-serif;
