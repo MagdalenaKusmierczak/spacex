@@ -1,21 +1,16 @@
 import styled, { keyframes } from "styled-components";
-//Animations
 
 const shooting = keyframes`
-
-    0%
-    {
-        transform: rotate(315deg) translateX(0);
-        opacity: 1;
+    0% {
+    transform: rotate(315deg) translateX(0);
+    opacity: 1;
     }
-    70%
-    {
-        opacity: 1;
+    70% {
+    opacity: 1;
     }
-    100%
-    {
-        transform: rotate(315deg) translateX(-1000px);
-        opacity: 0;
+    100% {
+    transform: rotate(315deg) translateX(-1000px);
+    opacity: 0;
     }
 `;
 
@@ -49,7 +44,7 @@ export const DefaultSpan = styled.span`
     background: linear-gradient(90deg, #fff, transparent);
   }
 `;
-// .span
+
 export const StarOne = styled(DefaultSpan)<{ $shoot: boolean }>`
   top: 0;
   right: 0;
@@ -57,6 +52,7 @@ export const StarOne = styled(DefaultSpan)<{ $shoot: boolean }>`
   animation-delay: 0.5s;
   animation-duration: ${(props) => (props.$shoot ? "2s" : "0s")};
 `;
+
 export const StarTwo = styled(DefaultSpan)<{ $shoot: boolean }>`
   top: 0;
   right: 80px;
@@ -64,7 +60,8 @@ export const StarTwo = styled(DefaultSpan)<{ $shoot: boolean }>`
   animation-delay: 2.5s;
   animation-duration: ${(props) => (props.$shoot ? "3s" : "0s")};
 `;
-export const StarThree = styled(DefaultSpan)<{$shoot: boolean }>`
+
+export const StarThree = styled(DefaultSpan)<{ $shoot: boolean }>`
   top: 0;
   right: 180px;
   left: initial;
