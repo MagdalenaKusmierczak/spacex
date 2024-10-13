@@ -1,14 +1,10 @@
-import { ArrowPre } from "./Arrows.styled";
 import { FC } from "react";
+import ArrowProps from "../../service/Types/ArrowsTypes";
+import { ArrowPre } from "./Arrows.styled";
 
-type Props = {
-  onClick?: () => void;
+const PrevArrow: FC<ArrowProps> = (props) => {
+  const { onClick } = props;
+  return <ArrowPre onClick={onClick} />;
 };
 
-const PrevArrow: FC<Props> = (props) => {
-  const {onClick} = props;
-  return (
-    <ArrowPre onClick={onClick} />
-  );
-};
 export default PrevArrow;

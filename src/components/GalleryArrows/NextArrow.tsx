@@ -1,15 +1,10 @@
-import { ArrowNext } from "./Arrows.styled";
 import { FC } from "react";
+import ArrowProps from "../../service/Types/ArrowsTypes";
+import { ArrowNext } from "./Arrows.styled";
 
-type Props = {
-  onClick?: () => void;
-};
-
-const NextArrow: FC<Props> = (props) => {
-  const {onClick } = props;
-  return (
-    <ArrowNext onClick={onClick} />
-  );
+const NextArrow: FC<ArrowProps> = (props) => {
+  const { onClick } = props;
+  return <ArrowNext onClick={onClick} />;
 };
 
 export default NextArrow;
