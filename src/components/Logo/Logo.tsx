@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { ImageWrapper } from "./Logo.styled";
-import { Link } from "react-router-dom";
+
 const Logo = () => {
   return (
     <ImageWrapper>
@@ -10,4 +11,5 @@ const Logo = () => {
     </ImageWrapper>
   );
 };
+
 export default Logo;

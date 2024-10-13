@@ -12,9 +12,8 @@ export const ImageWrapper = styled.div`
   border-radius: 50%;
   transition: all 0.3s ease-in-out 0s;
     &:hover {
-      transform: rotate(260deg);
+    transform: rotate(260deg);
     background-color: #ffc41f;
     box-shadow: 0px 0px 8px 8px #fada7e;}
-    
   }
 `;
