@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Rocket from "../../service/Interfaces/RocketInterface";
+import Rocket from "../../service/interfaces/RocketInterface";
 import setParagraph from "../../utils/setParagraph";
 import { SectionWrapper } from "./RocketSections.styled";
 
@@ -8,10 +8,7 @@ const LandingLegsSection: FC<{ rocketData: Rocket }> = (props) => {
   return (
     <SectionWrapper>
       {setParagraph("Number of legs", rocket.landing_legs.number)}
-      {setParagraph(
-        "Material",
-        rocket.landing_legs.material
-      )}
+      {setParagraph("Material", rocket.landing_legs.material)}
     </SectionWrapper>
   );
 };

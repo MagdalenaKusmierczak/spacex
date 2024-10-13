@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import Rocket from "../../service/Interfaces/RocketInterface";
+import Rocket from "../../service/interfaces/RocketInterface";
 import { SectionWrapper, ImageWrapper, Image } from "./RocketSections.styled";
 //Carousel imports
 import Slider from "react-slick";
@@ -52,7 +52,7 @@ const GallerySection: FC<{ rocketData: Rocket }> = (props) => {
             <Image
               src={image}
               alt={rocket.name}
-              onClick={() => handleImageClick(image)} 
+              onClick={() => handleImageClick(image)}
             />
           </ImageWrapper>
         ))}

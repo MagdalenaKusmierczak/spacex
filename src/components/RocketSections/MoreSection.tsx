@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Rocket from "../../service/Interfaces/RocketInterface";
+import Rocket from "../../service/interfaces/RocketInterface";
 import { SectionWrapper, MoreParagraph } from "./RocketSections.styled";
 
 const MoreSection: FC<{ rocketData: Rocket }> = (props) => {
@@ -7,7 +7,7 @@ const MoreSection: FC<{ rocketData: Rocket }> = (props) => {
   return (
     <SectionWrapper>
       <MoreParagraph>
-        For more information go to: 
+        For more information go to:
         <a href={rocket.wikipedia} rel="noopener" target="_blank">
           {rocket.name} Wikipedia
         </a>

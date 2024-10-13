@@ -1,7 +1,7 @@
 import { FC } from "react";
-import Rocket from "../../service/Interfaces/RocketInterface";
+import Rocket from "../../service/interfaces/RocketInterface";
 import setParagraph from "../../utils/setParagraph";
-import { List, SectionWrapper, OutsideList} from "./RocketSections.styled";
+import { List, SectionWrapper, OutsideList } from "./RocketSections.styled";
 
 const PayloadsSection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;

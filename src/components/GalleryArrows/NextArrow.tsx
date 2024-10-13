@@ -1,5 +1,5 @@
 import { FC } from "react";
-import ArrowProps from "../../service/Types/ArrowsTypes";
+import ArrowProps from "../../service/types/ArrowsTypes";
 import { ArrowNext } from "./Arrows.styled";
 
 const NextArrow: FC<ArrowProps> = (props) => {

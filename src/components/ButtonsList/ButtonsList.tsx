@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ButtonsListProps from "../../service/Interfaces/ButtonsListProps";
+import ButtonsListProps from "../../service/interfaces/ButtonsListProps";
 import {
   Button,
   MenuButton,
