@@ -1,8 +1,8 @@
 import { lazy } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import Sharedlayout from "./components/Sharedlayout/Sharedlayout";
-const HomePage = lazy(() => import("./pages/Home/HomePage"));
-const RocketPage = lazy(() => import("./pages/Rocket/RocketPage"));
+import Sharedlayout from "components/Sharedlayout/Sharedlayout";
+const HomePage = lazy(() => import("pages/Home/HomePage"));
+const RocketPage = lazy(() => import("pages/Rocket/RocketPage"));
 
 function App() {
   return (

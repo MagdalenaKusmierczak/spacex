@@ -1,10 +1,10 @@
 import { FC, useState } from "react";
 import Slider from "react-slick";
 import Lightbox from "yet-another-react-lightbox";
-import PrevArrow from "../GalleryArrows/PrevArrow";
-import NextArrow from "../GalleryArrows/NextArrow";
-import Rocket from "../../service/types/RocketInterface";
-import Slide from "../../service/types/Slide";
+import PrevArrow from "components/GalleryArrows/PrevArrow";
+import NextArrow from "components/GalleryArrows/NextArrow";
+import Rocket from "service/types/RocketInterface";
+import Slide from "service/types/Slide";
 import "yet-another-react-lightbox/styles.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

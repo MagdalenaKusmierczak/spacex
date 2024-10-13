@@ -1,6 +1,6 @@
-import githubIcon from "../../assets/github_icon.svg";
-import linkedInIcon from "../../assets/linkedin_icon.svg";
-import emailIcon from "../../assets/email_icon.svg";
+import githubIcon from "@/assets/github_icon.svg";
+import linkedInIcon from "@/assets/linkedin_icon.svg";
+import emailIcon from "@/assets/email_icon.svg";
 import {
   FooterContainer,
   AddressContainer,

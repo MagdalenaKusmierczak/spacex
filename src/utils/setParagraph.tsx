@@ -1,7 +1,7 @@
 import {
   StyledParagraph,
   StyledSpan,
-} from "../components/RocketSections/RocketSections.styled";
+} from "components/RocketSections/RocketSections.styled";
 
 const setParagraph = (
   name: string,

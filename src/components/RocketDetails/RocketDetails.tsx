@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import ButtonsList from "../ButtonsList/ButtonsList";
+import ButtonsList from "components/ButtonsList/ButtonsList";
 import {
   GeneralSection,
   DimensionsSection,
@@ -9,8 +9,8 @@ import {
   PayloadsSection,
   LandingLegsSection,
   MoreSection,
-} from "../../components/RocketSections/";
-import Rocket from "../../service/types/RocketInterface";
+} from "components/RocketSections/";
+import Rocket from "service/types/RocketInterface";
 import { SectionsWrapper } from "./RocketDetails.styled";
 
 const RocketDetails: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
