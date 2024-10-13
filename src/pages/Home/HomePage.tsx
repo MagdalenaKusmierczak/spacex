@@ -20,12 +20,14 @@ const HomePage = () => {
     fetchData();
   }, []);
 
+  if (!rocketsData) {
+    return <Loader />;
+  }
+
   return (
-    (rocketsData && (
       <Main>
         <RocketsList rockets={rocketsData} />
       </Main>
-    )) || <Loader />
   );
 };
 

@@ -23,13 +23,15 @@ const RocketPage = () => {
     fetchData();
   }, [id]);
 
+  if (!rocketData) {
+    return <Loader />;
+  }
+
   return (
-    (rocketData && (
-      <Main>
-        <IntroSection rocketData={rocketData} />
-        <RocketDetails rocketData={rocketData} />
-      </Main>
-    )) || <Loader />
+    <Main>
+      <IntroSection rocketData={rocketData} />
+      <RocketDetails rocketData={rocketData} />
+    </Main>
   );
 };
 
