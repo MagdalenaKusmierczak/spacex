@@ -1,34 +1,25 @@
-import { useState, useEffect } from "react";
-import { getRockets } from "../../service/API/RocketsAPI";
+import { useRockets } from "../../service/API/RocketsAPI";
 import Loader from "../../utils/Loader/Loader";
 import RocketsList from "../../components/RocketsList/RocketsList";
-import Rocket from "../../service/types/RocketInterface";
 import { Main } from "../Main.styled";
 
 const HomePage = () => {
-  const [rocketsData, setRocketsData] = useState<Rocket[]>([]);
+const { data, error } = useRockets();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const rockets = await getRockets();
-        setRocketsData(rockets);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchData();
-  }, []);
+ if (error) {
+   console.log(error);
+   return <Main>Error: {error.message}</Main>;
+ }
 
-  if (!rocketsData) {
-    return <Loader />;
-  }
+ if (!data) {
+   return <Loader />;
+ }
 
-  return (
-      <Main>
-        <RocketsList rockets={rocketsData} />
-      </Main>
-  );
+ return (
+   <Main>
+     <RocketsList rockets={data} />
+   </Main>
+ );
 };
 
 export default HomePage;

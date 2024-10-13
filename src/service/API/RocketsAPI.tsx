@@ -1,17 +1,14 @@
-import axios from "axios";
-import Rocket from "../types/RocketInterface";
+import useSWR from "swr";
+import http from "./http";
 
-const ROCKETS_URL = "https://api.spacexdata.com/v4/";
-axios.defaults.baseURL = ROCKETS_URL;
+const fetcher = (url: string) => http.get(url).then((res) => res.data);
 
-export const getRockets = async () => {
-  const response = await axios.get(`rockets`);
-  const rockets: Rocket[] = response.data;
-  return rockets;
+export const useRockets = () => {
+  const { data, error } = useSWR("rockets", fetcher);
+  return { data, error };
 };
 
-export const getRocket = async (rocketId: string) => {
-  const response = await axios.get(`rockets/${rocketId}`);
-  const rocket: Rocket = response.data;
-  return rocket;
+export const useRocket = (rocketId: string) => {
+  const { data, error } = useSWR(`rockets/${rocketId}`, fetcher);
+  return { data, error };
 };
