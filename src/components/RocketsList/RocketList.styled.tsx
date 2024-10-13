@@ -10,6 +10,7 @@ export const List = styled.ul`
   align-items: center;
   gap: 30px;
 `;
+
 export const ListItem = styled.li`
   display: flex;
   flex-direction: column;
@@ -19,6 +20,7 @@ export const ListItem = styled.li`
   margin-bottom: 10px;
   border-radius: 20%;
 `;
+
 export const RocketImage = styled.img`
   border-radius: 50%;
   width: 250px;
@@ -34,6 +36,7 @@ export const RocketImage = styled.img`
     width: 700px;
   }
 `;
+
 export const RocketHeader = styled.h2`
   margin: 0;
   width: 200px;
