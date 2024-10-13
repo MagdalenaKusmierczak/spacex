@@ -1,3 +1,5 @@
+import { useState } from "react";
+import ButtonsListProps from "../../service/Interfaces/ButtonsListProps";
 import {
   Button,
   MenuButton,
@@ -5,12 +7,6 @@ import {
   ButtonsWrapper,
   MenuWrapper,
 } from "./ButtonsList.styled";
-import { useState } from "react";
-
-interface ButtonsListProps {
-  handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  activeSection: string;
-}
 
 const ButtonsList = ({ handleClick, activeSection }: ButtonsListProps) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,9 +19,9 @@ const ButtonsList = ({ handleClick, activeSection }: ButtonsListProps) => {
     <MenuWrapper>
       <MenuButton data-target="details" onClick={handleToggle}>
         <SectionName>
-          {activeSection ? "Details" + ":" + " " + activeSection : "Details"}
+          {activeSection ? `Details: ${activeSection}` : "Details"}
         </SectionName>
-        {isOpen ? (
+        {isOpen && (
           <ButtonsWrapper>
             <Button data-target="gallery" onClick={handleClick}>
               <SectionName>Gallery</SectionName>
@@ -52,7 +48,7 @@ const ButtonsList = ({ handleClick, activeSection }: ButtonsListProps) => {
               <SectionName>More</SectionName>
             </Button>
           </ButtonsWrapper>
-        ) : null}
+        )}
       </MenuButton>
     </MenuWrapper>
   );

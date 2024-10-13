@@ -18,6 +18,7 @@ export const Button = styled.button`
     box-shadow: 0 0 40px 40px #29373ce6 inset, 0 0 0 0 #29373ce6;
   }
 `;
+
 export const MenuButton = styled.div`
   text-transform: capitalize;
   position: relative;
@@ -47,6 +48,7 @@ export const MenuButton = styled.div`
     font-size: 22px;
   }
 `;
+
 export const SectionName = styled.span`
   margin: 10px;
   text-align: center;
@@ -59,6 +61,7 @@ export const SectionName = styled.span`
     font-size: 22px;
   }
 `;
+
 export const ButtonsWrapper = styled.div`
   margin-block: 10px;
   margin-right: 10px;
@@ -73,6 +76,7 @@ export const ButtonsWrapper = styled.div`
     justify-content: center;
   }
 `;
+
 export const MenuWrapper = styled.div`
   margin-top: 15px;
   display: flex;
