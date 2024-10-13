@@ -1,8 +1,7 @@
 import { FC } from "react";
-import Rocket from "../../service/Interfaces/RocketInterface";
+import Rocket from "../../service/interfaces/RocketInterface";
 import setParagraph from "../../utils/setParagraph";
 import { SectionWrapper } from "./RocketSections.styled";
-
 
 const GeneralSection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
