@@ -6,13 +6,15 @@ import {
   AddressContainer,
   AddressList,
   Icon,
-  Paragraph
+  Paragraph,
 } from "./Footer.styled";
 
 const Footer = () => {
   return (
     <FooterContainer>
-      <Paragraph>Created by: <span>Magdalena Kuśmierczak</span></Paragraph>
+      <Paragraph>
+        Created by: <span>Magdalena Kuśmierczak</span>
+      </Paragraph>
       <AddressContainer>
         <AddressList>
           <li>
