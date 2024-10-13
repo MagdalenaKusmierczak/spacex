@@ -7,12 +7,10 @@ export const FooterContainer = styled.footer`
   position: fixed;
   bottom: -1px;
   margin: 0 auto;
-
   width: 260px;
   color: white;
   background-color: rgba(41, 55, 60, 0.99);
   box-shadow: 0px 0px 15px 20px rgba(41, 55, 60, 0.99);
-
   @media screen and (min-width: 768px) {
     width: 708px;
   }
@@ -20,10 +18,12 @@ export const FooterContainer = styled.footer`
     width: 1220px;
   }
 `;
+
 export const AddressContainer = styled.address`
   display: flex;
   justify-content: center;
 `;
+
 export const AddressList = styled.ul`
   list-style: none;
   display: flex;
@@ -32,8 +32,7 @@ export const AddressList = styled.ul`
   margin: 0;
   margin-bottom: 10px;
 `;
-export const AddressItem = styled.li``;
-export const Link = styled.a``;
+
 export const Icon = styled.img`
 border-radius:50%;
   transition: all 0.3s ease-in-out 0s;
@@ -42,6 +41,7 @@ border-radius:50%;
     box-shadow: 0px 0px 4px 4px #f0ff3836;
   }
 `;
+
 export const Paragraph = styled.p`
   display: flex;
   flex-direction: column;
