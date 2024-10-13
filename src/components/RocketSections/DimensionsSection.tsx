@@ -10,7 +10,7 @@ import {
 const DimensionsSection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
   return (
-    <SectionWrapper id="dimensions">
+    <SectionWrapper>
       <SecondHeader>Height</SecondHeader>
       <List>
         <li>{setParagraph("Meters", rocket.height.meters)}</li>

@@ -12,7 +12,7 @@ import {
 const EnginesSection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
   return (
-    <SectionWrapper id="engines">
+    <SectionWrapper>
       {setParagraph("Number of engines", rocket.engines.number)}
       {setParagraph("Type", rocket.engines.type)}
       {setParagraph("Version", rocket.engines.version)}

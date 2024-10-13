@@ -45,7 +45,7 @@ const GallerySection: FC<{ rocketData: Rocket }> = (props) => {
   };
 
   return (
-    <SectionWrapper id="gallery">
+    <SectionWrapper>
       <Slider {...settings}>
         {rocket.flickr_images.map((image) => (
           <ImageWrapper key={rocket.flickr_images.indexOf(image)}>

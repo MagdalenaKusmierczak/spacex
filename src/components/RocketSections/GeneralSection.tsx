@@ -7,7 +7,7 @@ import { SectionWrapper } from "./RocketSections.styled";
 const GeneralSection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
   return (
-    <SectionWrapper id="general information">
+    <SectionWrapper>
       {setParagraph("Rocket type", rocket.type)}
       {setParagraph("First flight", rocket.first_flight)}
       {setParagraph("Company", rocket.company)}

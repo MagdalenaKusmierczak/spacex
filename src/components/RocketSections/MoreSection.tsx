@@ -5,7 +5,7 @@ import { SectionWrapper, MoreParagraph } from "./RocketSections.styled";
 const MoreSection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
   return (
-    <SectionWrapper id="more">
+    <SectionWrapper>
       <MoreParagraph>
         For more information go to: 
         <a href={rocket.wikipedia} rel="noopener" target="_blank">

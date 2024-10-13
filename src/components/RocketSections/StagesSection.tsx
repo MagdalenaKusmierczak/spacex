@@ -6,7 +6,7 @@ import { SectionWrapper,StagesList,StagesItem, SecondHeader,ThirdHeader,OutsideL
 const StagesSection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
   return (
-    <SectionWrapper id="stages">
+    <SectionWrapper>
       <StagesList>
         <StagesItem>
           <SecondHeader>First stage</SecondHeader>
