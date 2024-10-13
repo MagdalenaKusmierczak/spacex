@@ -1,57 +1,54 @@
-import { FC, useState} from "react";
-import Rocket from "../../service/Interfaces/RocketInterface";
-import { SectionsWrapper } from "./RocketDetails.styled";
+import { FC, useState } from "react";
 import ButtonsList from "../ButtonsList/ButtonsList";
-import GeneralSection from "../../components/RocketSections/GeneralSection";
-import DimensionsSection from "../../components/RocketSections/DimensionsSection";
-import StagesSection from "../../components/RocketSections/StagesSection";
-import EnginesSection from "../../components/RocketSections/EnginesSection";
-import GallerySection from "../../components/RocketSections/GallerySection";
-import PayloadsSection from "../../components/RocketSections/PayloadsSection";
-import LandingLegsSection from "../../components/RocketSections/LandingLegsSection";
-import MoreSection from "../../components/RocketSections/MoreSection";
+import {
+  GeneralSection,
+  DimensionsSection,
+  StagesSection,
+  EnginesSection,
+  GallerySection,
+  PayloadsSection,
+  LandingLegsSection,
+  MoreSection,
+} from "../../components/RocketSections/";
+import Rocket from "../../service/interfaces/RocketInterface";
+import { SectionsWrapper } from "./RocketDetails.styled";
 
 const RocketDetails: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
   const [activeSection, setActiveSection] = useState("");
+
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    // Get the `data-target` attribute from the clicked button
-    const dataTarget =
-      event.currentTarget.getAttribute("data-target") ??
-      "";
-    // Set the `activeSection` state to the `data-target` value
+    const dataTarget = event.currentTarget.getAttribute("data-target") ?? "";
     setActiveSection(dataTarget);
-    //Returning expected data
   };
 
-    const getActiveSection = () => {
-      switch (activeSection) {
-        case "gallery":
-          return <GallerySection rocketData={rocket} />;
-        case "general-information":
-          return <GeneralSection rocketData={rocket} />;
-        case "dimensions":
-          return <DimensionsSection rocketData={rocket} />;
-        case "engines":
-          return <EnginesSection rocketData={rocket} />;
-        case "landing-legs":
-          return <LandingLegsSection rocketData={rocket} />;
-        case "payloads-weights":
-          return <PayloadsSection rocketData={rocket} />;
-        case "stages":
-          return <StagesSection rocketData={rocket} />;
-        case "more":
-          return <MoreSection rocketData={rocket} />;
-        default:
-          return <></>;
-      }
-    };
+  const getActiveSection = () => {
+    switch (activeSection) {
+      case "gallery":
+        return <GallerySection rocketData={rocket} />;
+      case "general-information":
+        return <GeneralSection rocketData={rocket} />;
+      case "dimensions":
+        return <DimensionsSection rocketData={rocket} />;
+      case "engines":
+        return <EnginesSection rocketData={rocket} />;
+      case "landing-legs":
+        return <LandingLegsSection rocketData={rocket} />;
+      case "payloads-weights":
+        return <PayloadsSection rocketData={rocket} />;
+      case "stages":
+        return <StagesSection rocketData={rocket} />;
+      case "more":
+        return <MoreSection rocketData={rocket} />;
+      default:
+        return <></>;
+    }
+  };
+
   return (
     <>
       <ButtonsList handleClick={handleClick} activeSection={activeSection} />
-      <SectionsWrapper>
-       {getActiveSection()}
-      </SectionsWrapper>
+      <SectionsWrapper>{getActiveSection()}</SectionsWrapper>
     </>
   );
 };
