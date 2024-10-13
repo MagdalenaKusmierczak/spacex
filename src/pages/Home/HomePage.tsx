@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { getRockets } from "../../service/API/RocketsAPI";
 import RocketsList from "../../components/RocketsList/RocketsList";
-import Rocket from "../../service/interfaces/RocketInterface";
+import Rocket from "../../service/types/RocketInterface";
 import { Main } from "../Main.styled";
 
 const HomePage = () => {

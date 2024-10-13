@@ -1,5 +1,5 @@
 import axios from "axios";
-import Rocket from "../interfaces/RocketInterface";
+import Rocket from "../types/RocketInterface";
 
 const ROCKETS_URL = "https://api.spacexdata.com/v4/";
 axios.defaults.baseURL = ROCKETS_URL;

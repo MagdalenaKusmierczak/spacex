@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Rocket from "../../service/interfaces/RocketInterface";
+import Rocket from "../../service/types/RocketInterface";
 import {
   IntroWrapper,
   FirstHeader,
@@ -8,7 +8,7 @@ import {
 
 const IntroSection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
-  
+
   return (
     <IntroWrapper>
       <FirstHeader>{rocket.name}</FirstHeader>

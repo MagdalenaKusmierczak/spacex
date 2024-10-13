@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Rocket from "../../service/interfaces/RocketInterface";
+import Rocket from "../../service/types/RocketInterface";
 import { Link } from "react-router-dom";
 import { List, ListItem, RocketImage, RocketHeader } from "./RocketList.styled";
 

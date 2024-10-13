@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { getRocket } from "../../service/API/RocketsAPI";
 import IntroSection from "../../components/RocketSections/IntroSection";
 import RocketDetails from "../../components/RocketDetails/RocketDetails";
-import Rocket from "../../service/interfaces/RocketInterface";
+import Rocket from "../../service/types/RocketInterface";
 import { Main } from "../Main.styled";
 
 const RocketPage = () => {
