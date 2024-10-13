@@ -2,8 +2,8 @@ import { FC } from "react";
 import Rocket from "../../service/types/RocketInterface";
 import { SectionWrapper, MoreParagraph } from "./RocketSections.styled";
 
-const MoreSection: FC<{ rocketData: Rocket }> = (props) => {
-  const rocket = props.rocketData;
+const MoreSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
+  const rocket = rocketData;
 
   return (
     <SectionWrapper>

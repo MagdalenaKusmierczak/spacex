@@ -10,11 +10,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { SectionWrapper, ImageWrapper, Image } from "./RocketSections.styled";
 
-const GallerySection: FC<{ rocketData: Rocket }> = (props) => {
+const GallerySection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
   const [open, setOpen] = useState(false);
   const [slides, setSlides] = useState<Slide[]>([]);
 
-  const rocket = props.rocketData;
+  const rocket = rocketData;
 
   const settings = {
     dots: false,

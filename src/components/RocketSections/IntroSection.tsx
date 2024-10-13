@@ -6,8 +6,8 @@ import {
   Description,
 } from "./RocketSections.styled";
 
-const IntroSection: FC<{ rocketData: Rocket }> = (props) => {
-  const rocket = props.rocketData;
+const IntroSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
+  const rocket = rocketData;
 
   return (
     <IntroWrapper>

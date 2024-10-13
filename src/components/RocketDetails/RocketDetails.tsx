@@ -13,8 +13,8 @@ import {
 import Rocket from "../../service/types/RocketInterface";
 import { SectionsWrapper } from "./RocketDetails.styled";
 
-const RocketDetails: FC<{ rocketData: Rocket }> = (props) => {
-  const rocket = props.rocketData;
+const RocketDetails: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
+  const rocket = rocketData;
   const [activeSection, setActiveSection] = useState("");
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {

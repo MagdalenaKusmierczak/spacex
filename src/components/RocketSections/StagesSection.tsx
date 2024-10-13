@@ -11,8 +11,8 @@ import {
   StyledParagraph,
 } from "./RocketSections.styled";
 
-const StagesSection: FC<{ rocketData: Rocket }> = (props) => {
-  const rocket = props.rocketData;
+const StagesSection: FC<{ rocketData: Rocket }> = ({rocketData}) => {
+  const rocket = rocketData;
 
   return (
     <SectionWrapper>

@@ -3,8 +3,8 @@ import setParagraph from "../../utils/setParagraph";
 import Rocket from "../../service/types/RocketInterface";
 import { SectionWrapper, SecondHeader, List } from "./RocketSections.styled";
 
-const DimensionsSection: FC<{ rocketData: Rocket }> = (props) => {
-  const rocket = props.rocketData;
+const DimensionsSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
+  const rocket = rocketData;
 
   return (
     <SectionWrapper>

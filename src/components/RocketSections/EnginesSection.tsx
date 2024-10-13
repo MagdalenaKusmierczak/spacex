@@ -9,8 +9,8 @@ import {
   StyledParagraph,
 } from "./RocketSections.styled";
 
-const EnginesSection: FC<{ rocketData: Rocket }> = (props) => {
-  const rocket = props.rocketData;
+const EnginesSection: FC<{ rocketData: Rocket }> = ({rocketData}) => {
+  const rocket = rocketData;
 
   return (
     <SectionWrapper>
