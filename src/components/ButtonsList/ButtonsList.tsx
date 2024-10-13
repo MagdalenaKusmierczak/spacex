@@ -15,6 +15,17 @@ const ButtonsList = ({ handleClick, activeSection }: ButtonsListProps) => {
     setIsOpen(!isOpen);
   };
 
+  const sections = [
+    { target: "gallery", name: "Gallery" },
+    { target: "general-information", name: "General information" },
+    { target: "dimensions", name: "Dimensions" },
+    { target: "engines", name: "Engines" },
+    { target: "landing-legs", name: "Landing legs" },
+    { target: "payloads-weights", name: "Payloads weights" },
+    { target: "stages", name: "Stages" },
+    { target: "more", name: "More" },
+  ];
+
   return (
     <MenuWrapper>
       <MenuButton data-target="details" onClick={handleToggle}>
@@ -25,30 +36,15 @@ const ButtonsList = ({ handleClick, activeSection }: ButtonsListProps) => {
         </SectionName>
         {isOpen && (
           <ButtonsWrapper>
-            <Button data-target="gallery" onClick={handleClick}>
-              <SectionName>Gallery</SectionName>
-            </Button>
-            <Button data-target="general-information" onClick={handleClick}>
-              <SectionName>General information</SectionName>
-            </Button>
-            <Button data-target="dimensions" onClick={handleClick}>
-              <SectionName>Dimensions</SectionName>
-            </Button>
-            <Button data-target="engines" onClick={handleClick}>
-              <SectionName>Engines</SectionName>
-            </Button>
-            <Button data-target="landing-legs" onClick={handleClick}>
-              <SectionName>Landing legs</SectionName>
-            </Button>
-            <Button data-target="payloads-weights" onClick={handleClick}>
-              <SectionName>Payloads weights</SectionName>
-            </Button>
-            <Button data-target="stages" onClick={handleClick}>
-              <SectionName>Stages</SectionName>
-            </Button>
-            <Button data-target="more" onClick={handleClick}>
-              <SectionName>More</SectionName>
-            </Button>
+            {sections.map((section) => (
+              <Button
+                key={section.target}
+                data-target={section.target}
+                onClick={handleClick}
+              >
+                <SectionName>{section.name}</SectionName>
+              </Button>
+            ))}
           </ButtonsWrapper>
         )}
       </MenuButton>
