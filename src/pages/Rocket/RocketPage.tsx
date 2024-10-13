@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getRocket } from "../../service/API/RocketsAPI";
+import Loader from "../../utils/Loader/Loader";
 import IntroSection from "../../components/RocketSections/IntroSection";
 import RocketDetails from "../../components/RocketDetails/RocketDetails";
 import Rocket from "../../service/types/RocketInterface";
@@ -23,12 +24,12 @@ const RocketPage = () => {
   }, [id]);
 
   return (
-    rocketData && (
+    (rocketData && (
       <Main>
         <IntroSection rocketData={rocketData} />
         <RocketDetails rocketData={rocketData} />
       </Main>
-    )
+    )) || <Loader />
   );
 };
 
