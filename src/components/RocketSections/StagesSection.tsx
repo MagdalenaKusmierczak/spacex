@@ -95,12 +95,6 @@ const StagesSection: FC<{ rocketData: Rocket }> = (props) => {
           </OutsideList>
           <ThirdHeader>Payloads</ThirdHeader>
           {setParagraph("First option", rocket.second_stage.payloads.option_1)}
-          {rocket.second_stage.payloads.option_2
-            ? setParagraph(
-                "Second option",
-                rocket.second_stage.payloads.option_2
-              )
-            : null}
           <ThirdHeader>Composite fairing</ThirdHeader>
           <StyledParagraph>Height</StyledParagraph>
           <OutsideList>
