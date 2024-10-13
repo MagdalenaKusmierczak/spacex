@@ -1,24 +1,21 @@
 import { FC, useState } from "react";
-import Rocket from "../../service/interfaces/RocketInterface";
-import { SectionWrapper, ImageWrapper, Image } from "./RocketSections.styled";
-//Carousel imports
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Lightbox from "yet-another-react-lightbox";
 import PrevArrow from "../GalleryArrows/PrevArrow";
 import NextArrow from "../GalleryArrows/NextArrow";
-//Lightbox imports
-import Lightbox from "yet-another-react-lightbox";
+import Rocket from "../../service/interfaces/RocketInterface";
+import Slide from "../../service/interfaces/Slide";
 import "yet-another-react-lightbox/styles.css";
-
-interface Slide {
-  src: string;
-  alt: string;
-}
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { SectionWrapper, ImageWrapper, Image } from "./RocketSections.styled";
 
 const GallerySection: FC<{ rocketData: Rocket }> = (props) => {
+  const [open, setOpen] = useState(false);
+  const [slides, setSlides] = useState<Slide[]>([]);
+
   const rocket = props.rocketData;
-  // Carousel settings
+
   const settings = {
     dots: false,
     infinite: true,
@@ -31,9 +28,6 @@ const GallerySection: FC<{ rocketData: Rocket }> = (props) => {
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
   };
-  //Lightbox settings
-  const [open, setOpen] = useState(false);
-  const [slides, setSlides] = useState<Slide[]>([]);
 
   const handleImageClick = (image: string) => {
     const slide: Slide = {

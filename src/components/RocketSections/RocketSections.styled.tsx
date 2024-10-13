@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-//Wrappers
 export const IntroWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
+
 export const SectionWrapper = styled.section`
   margin-top: 25px;
   @media screen and (min-width: 768px) {
@@ -15,17 +15,18 @@ export const SectionWrapper = styled.section`
     margin-top: 35px;
   }
 `;
+
 export const ImageWrapper = styled.div``;
-//Headers
+
 export const FirstHeader = styled.h1`
   margin-block: 1em;
   text-align: center;
   font-size: 20px;
-
   @media screen and (min-width: 768px) {
     font-size: 24px;
   }
 `;
+
 export const SecondHeader = styled.h2`
   margin: 10px;
   text-align: center;
@@ -38,6 +39,7 @@ export const SecondHeader = styled.h2`
     font-size: 23px;
   }
 `;
+
 export const ThirdHeader = styled.h3`
   margin: 10px;
   text-align: center;
@@ -53,7 +55,6 @@ export const ThirdHeader = styled.h3`
   }
 `;
 
-//Paragraphs
 export const Description = styled.p`
   margin-top: 0;
   margin-bottom: 1em;
@@ -107,7 +108,7 @@ export const StyledSpan = styled.span`
     text-align: left;
   }
 `;
-//List style
+
 export const List = styled.ul`
   list-style: none;
   padding: 0;
@@ -118,9 +119,11 @@ export const List = styled.ul`
     text-align: left;
   }
 `;
+
 export const OutsideList = styled(List)`
   border-bottom: none;
 `;
+
 export const StagesList = styled(List)`
   border-bottom: 1px solid #ffc41f;
   border-radius: 0px;
@@ -130,7 +133,7 @@ export const StagesItem = styled.li`
   border-bottom: 2px solid #ffc41f;
   padding-block: 10px;
 `;
-//Images
+
 export const Image = styled.img`
   max-width: 100%;
   height: auto;

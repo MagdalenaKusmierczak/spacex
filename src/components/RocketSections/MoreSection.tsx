@@ -4,6 +4,7 @@ import { SectionWrapper, MoreParagraph } from "./RocketSections.styled";
 
 const MoreSection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
+
   return (
     <SectionWrapper>
       <MoreParagraph>

@@ -8,6 +8,7 @@ import {
 
 const IntroSection: FC<{ rocketData: Rocket }> = (props) => {
   const rocket = props.rocketData;
+  
   return (
     <IntroWrapper>
       <FirstHeader>{rocket.name}</FirstHeader>
