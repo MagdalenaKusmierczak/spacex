@@ -9,7 +9,7 @@ import {
   StyledParagraph,
 } from "./RocketSections.styled";
 
-const EnginesSection: FC<{ rocketData: Rocket }> = ({rocketData}) => {
+const EnginesSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
   const rocket = rocketData;
 
   return (
@@ -32,14 +32,14 @@ const EnginesSection: FC<{ rocketData: Rocket }> = ({rocketData}) => {
           {setParagraph(
             "KiloNewtons",
             rocket.engines.thrust_sea_level.kN,
-            "kN"
+            "kN",
           )}
         </li>
         <li>
           {setParagraph(
             "Pound-force",
             rocket.engines.thrust_sea_level.lbf,
-            "lbf"
+            "lbf",
           )}
         </li>
       </List>

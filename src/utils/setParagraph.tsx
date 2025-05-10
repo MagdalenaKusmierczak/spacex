@@ -7,7 +7,7 @@ import {
 const setParagraph = (
   name: string,
   data: number | string | boolean | null,
-  units?: string
+  units?: string,
 ) => {
   return (
     <StyledParagraph>

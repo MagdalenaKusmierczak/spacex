@@ -9,7 +9,12 @@ export const FooterContainer = styled.footer`
   margin: 0 auto;
   width: 260px;
   color: white;
-  background-color: rgba(41, 55, 60, 0.99); // You can think about extracting some colors that are repeating to e.g. string variables and share them (or CSS variables, but that's more advanced)
+  background-color: rgba(
+    41,
+    55,
+    60,
+    0.99
+  ); // You can think about extracting some colors that are repeating to e.g. string variables and share them (or CSS variables, but that's more advanced)
   box-shadow: 0px 0px 15px 20px rgba(41, 55, 60, 0.99);
   @media screen and (min-width: 768px) {
     width: 708px;
@@ -30,11 +35,11 @@ export const AddressList = styled.ul`
   gap: 20px;
   padding: 0;
   margin: 0;
-  margin-bottom: 10px; // 
+  margin-bottom: 10px; //
 `;
 
 export const Icon = styled.img`
-border-radius:50%;
+  border-radius: 50%;
   transition: all 0.3s ease-in-out 0s;
   &:hover {
     transform: rotateY(360deg);

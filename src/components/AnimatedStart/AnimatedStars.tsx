@@ -1,10 +1,5 @@
 import { useState, useEffect } from "react";
-import {
-  Sky,
-  StarOne,
-  StarTwo,
-  StarThree,
-} from "./AnimatedStars.styled";
+import { Sky, StarOne, StarTwo, StarThree } from "./AnimatedStars.styled";
 
 const AnimatedStars = () => {
   const [isShooting, setIsShooting] = useState(true);

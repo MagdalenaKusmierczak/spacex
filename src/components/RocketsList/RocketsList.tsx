@@ -5,7 +5,7 @@ import { List, ListItem, RocketImage, RocketHeader } from "./RocketList.styled";
 
 const RocketsList: FC<{ rockets: Rocket[] }> = ({ rockets }) => {
   //Randomizng selection of images
-  const randomIndex = (arr: Array<string>) => {
+  const randomIndex = (arr: string[]) => {
     const arrLength = arr.length;
     const randomizedIndex = Math.floor(Math.random() * arrLength);
     return randomizedIndex;
