@@ -1,21 +1,21 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import react from 'eslint-plugin-react'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
+import js from '@eslint/js';
+import globals from 'globals';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import tsEslint from 'typescript-eslint';
+import eslintPluginPrettier from "eslint-plugin-prettier/recommended";
 
-export default [
+// I'm not sure if your ESLint config works with project files properly, due to how it was set up
+// I changed it a bit
+export default tsEslint.config([
   { ignores: ['dist'] },
   {
-    files: ['**/*.{js,jsx}'],
+    extends: [js.configs.recommended, ...tsEslint.configs.recommended],
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
-      globals: globals.browser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        ecmaFeatures: { jsx: true },
-        sourceType: 'module',
-      },
+      globals: globals.browser
     },
     settings: { react: { version: '18.3' } },
     plugins: {
@@ -35,4 +35,4 @@ export default [
       ],
     },
   },
-]
+]).concat(eslintPluginPrettier);
