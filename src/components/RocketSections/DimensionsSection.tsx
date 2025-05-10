@@ -4,7 +4,7 @@ import Rocket from "../../service/types/RocketInterface";
 import { SectionWrapper, SecondHeader, List } from "./RocketSections.styled";
 
 const DimensionsSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
-  const rocket = rocketData;
+  const rocket = rocketData; // Why such reassignment?
 
   return (
     <SectionWrapper>

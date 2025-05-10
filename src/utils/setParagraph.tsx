@@ -3,6 +3,7 @@ import {
   StyledSpan,
 } from "../components/RocketSections/RocketSections.styled";
 
+// Why not just using the component with props? 🙂
 const setParagraph = (
   name: string,
   data: number | string | boolean | null,

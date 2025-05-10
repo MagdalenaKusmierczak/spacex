@@ -26,6 +26,14 @@ const ButtonsList = ({ handleClick, activeSection }: ButtonsListProps) => {
     { target: "more", name: "More" },
   ];
 
+  // Here you should parse the click and call the click from the parent component, but with extracted section info.
+  // You can use closure for that, e.g.:
+  /*
+      <-- In the "map" below, as a Button prop
+                onClick={() => handleClick(section)}
+   */
+  // Then you don't need to use `data-target` at all
+
   return (
     <MenuWrapper>
       <MenuButton data-target="details" onClick={handleToggle}>

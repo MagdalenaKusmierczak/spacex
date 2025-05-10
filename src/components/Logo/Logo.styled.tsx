@@ -9,7 +9,7 @@ export const ImageWrapper = styled.div`
   border-radius: 50px;
   background-color: #f0ff3836;
   box-shadow: 0px 0px 8px 8px #f0ff3836;
-  border-radius: 50%;
+  border-radius: 50%; // Repeated border-radius
   transition: all 0.3s ease-in-out 0s;
     &:hover {
     transform: rotate(260deg);

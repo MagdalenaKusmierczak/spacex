@@ -18,6 +18,7 @@ export const SectionWrapper = styled.section`
 
 export const ImageWrapper = styled.div``;
 
+// Primary/Secondary/Ternary would be better for these names
 export const FirstHeader = styled.h1`
   margin-block: 1em;
   text-align: center;

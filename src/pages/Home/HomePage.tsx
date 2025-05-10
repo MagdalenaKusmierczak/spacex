@@ -11,9 +11,7 @@ const { data, error } = useRockets();
    return <Main>Error: {error.message}</Main>;
  }
 
- if (!data) {
-   return <Loader />;
- }
+ if (!data) {return <Loader />;}
 
  return (
    <Main>

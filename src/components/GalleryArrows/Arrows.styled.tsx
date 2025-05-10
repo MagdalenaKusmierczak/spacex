@@ -6,7 +6,7 @@ export const Arrow = styled.div`
   color: #ffc41f;
   font-size: 20px;
   line-height: 1;
-  font-family: "slick";
+  font-family: "slick"; // Always provide meaningful font fallbacks, e.g. arial etc.
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   display: flex;
@@ -21,6 +21,8 @@ export const Arrow = styled.div`
   }
 `;
 
+// Both arrows look very similar - what about merging them into one component with a prop of Enum type, e.g. enum Direction { LEFT, RIGHT }
+// And then rendering the chosen arrow?
 export const ArrowPre = styled(Arrow)`
   &:before {
     z-index: 1;

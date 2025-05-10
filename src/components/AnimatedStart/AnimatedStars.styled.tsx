@@ -45,6 +45,7 @@ export const DefaultSpan = styled.span`
   }
 `;
 
+// These stars are very similar to each other. Try using component props to customize them.
 export const StarOne = styled(DefaultSpan)<{ $shoot: boolean }>`
   top: 0;
   right: 0;
