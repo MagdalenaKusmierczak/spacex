@@ -13,9 +13,13 @@ export const Button = styled.button`
   border-color: #ffc41f;
   transition: all 150ms ease-in-out;
   border-radius: 10px;
-  box-shadow: 0 0 10px 0 #ffc41f inset, 0 0 10px 4px #ffc41f;
+  box-shadow:
+    0 0 10px 0 #ffc41f inset,
+    0 0 10px 4px #ffc41f;
   &:hover {
-    box-shadow: 0 0 40px 40px #29373ce6 inset, 0 0 0 0 #29373ce6;
+    box-shadow:
+      0 0 40px 40px #29373ce6 inset,
+      0 0 0 0 #29373ce6;
   }
 `;
 
@@ -33,12 +37,16 @@ export const MenuButton = styled.div`
   border-color: #ffc41f;
   transition: all 150ms ease-in-out;
   border-radius: 10px;
-  box-shadow: 0 0 10px 0 #ffc41f inset, 0 0 10px 4px #ffc41f;
+  box-shadow:
+    0 0 10px 0 #ffc41f inset,
+    0 0 10px 4px #ffc41f;
   min-width: 150px;
   min-height: 50px;
   border-radius: 20px;
   &:hover {
-    box-shadow: 0 0 40px 40px #29373ce6 inset, 0 0 0 0 #29373ce6;
+    box-shadow:
+      0 0 40px 40px #29373ce6 inset,
+      0 0 0 0 #29373ce6;
   }
   @media screen and (min-width: 768px) {
     min-height: 60px;

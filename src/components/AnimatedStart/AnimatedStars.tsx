@@ -1,10 +1,5 @@
 import { useState, useEffect } from "react";
-import {
-  Sky,
-  StarOne,
-  StarTwo,
-  StarThree,
-} from "./AnimatedStars.styled";
+import { Sky, StarOne, StarTwo, StarThree } from "./AnimatedStars.styled";
 
 const AnimatedStars = () => {
   const [isShooting, setIsShooting] = useState(true);
@@ -12,7 +7,7 @@ const AnimatedStars = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setIsShooting(!isShooting);
-    }, 15000);
+    }, 15000); // I'd add some random behaviour here, may make it even cooler!, e.g. Math.floor(Math.random() * 15000)
     return () => clearInterval(timer);
   }, [isShooting]);
 

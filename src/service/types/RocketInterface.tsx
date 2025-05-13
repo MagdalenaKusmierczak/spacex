@@ -81,7 +81,7 @@ export default interface Rocket {
       name: string;
       kg: number;
       lb: number;
-    }
+    },
   ];
   flickr_images: string[];
   name: string;

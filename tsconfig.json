@@ -1,4 +1,6 @@
 {
+  // Generally it's a good idea to simplify configs as much as possible.
+  // This is applicable for TSConfigs, ESLint/Prettier/Vite configs and similar as well
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,

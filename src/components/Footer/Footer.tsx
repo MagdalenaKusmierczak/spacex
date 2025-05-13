@@ -20,7 +20,7 @@ const Footer = () => {
           <li>
             <a
               href="https://github.com/MagdalenaKusmierczak"
-              rel="noopener"
+              rel="noopener noreferrer"
               target="_blank"
             >
               <Icon
@@ -34,7 +34,7 @@ const Footer = () => {
           <li>
             <a
               href="https://linkedin.com/in/magdalena-kusmierczak-4b94a7303"
-              rel="noopener"
+              rel="noopener noreferrer"
               target="_blank"
             >
               <Icon

@@ -19,4 +19,6 @@ const Sharedlayout = () => {
   );
 };
 
+// This is only a suggestion, but pretty common in big projects - use named exports instead of default ones
+// This way, most IDEs can use the names in imports predictably - it makes refactoring easier as well.
 export default Sharedlayout;
