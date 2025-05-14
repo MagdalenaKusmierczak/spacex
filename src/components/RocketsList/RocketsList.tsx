@@ -3,8 +3,15 @@ import { Link } from "react-router-dom";
 import Rocket from "../../service/types/RocketInterface";
 import { List, ListItem, RocketImage, RocketHeader } from "./RocketList.styled";
 
+  //Randomizng selection of images
+  const randomIndex = (arr: string[]) => {
+    const arrLength = arr.length;
+    const randomizedIndex = Math.floor(Math.random() * arrLength);
+    return randomizedIndex;
+  };
+
 const RocketsList: FC<{ rockets: Rocket[] }> = ({ rockets }) => {
-//Preloading images
+  //Preloading images
   useEffect(() => {
     rockets.forEach((rocket) => {
       rocket.flickr_images.forEach((image) => {
@@ -14,12 +21,6 @@ const RocketsList: FC<{ rockets: Rocket[] }> = ({ rockets }) => {
     });
   }, [rockets]);
 
-  //Randomizng selection of images
-  const randomIndex = (arr: string[]) => {
-    const arrLength = arr.length;
-    const randomizedIndex = Math.floor(Math.random() * arrLength);
-    return randomizedIndex;
-  };
 
   return (
     <List>
