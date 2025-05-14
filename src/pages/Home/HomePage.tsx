@@ -1,5 +1,5 @@
 import { useRockets } from "../../service/API/RocketsAPI";
-import Loader from "../../utils/Loader/Loader";
+import Loader from "../../components/Loader/Loader";
 import RocketsList from "../../components/RocketsList/RocketsList";
 import { Main } from "../Main.styled";
 

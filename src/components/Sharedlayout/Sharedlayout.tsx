@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import AnimatedStars from "../AnimatedStart/AnimatedStars";
-import Loader from "../../utils/Loader/Loader";
+import Loader from "../Loader/Loader";
 import { Container } from "./Sharedlayout.styled";
 
 const Sharedlayout = () => {
