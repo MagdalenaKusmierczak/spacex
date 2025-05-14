@@ -14,6 +14,10 @@ const randomIndex = (arr: string[]) => {
   return randomizedIndex;
 };
 
+const stringStripe = (str: string) => {
+  return str.replace(/\s+/g, "");
+};
+
 export const RocketItem: FC<{ rocket: Rocket }> = ({ rocket }) => {
   //Preloading images
   useEffect(() => {
@@ -24,12 +28,8 @@ export const RocketItem: FC<{ rocket: Rocket }> = ({ rocket }) => {
   }, [rocket]);
 
   return (
-    <ListItem key={rocket.id}>
-      {/* Think here on how to create meaningful links without basing on IDs (or using meaningful IDs)
-     You can e.g. create a mapping between API ID and URL ID
-     This makes sense as there are not so many rocket items here and human-readable URLs are always nice ;)
-    */}
-      <Link to={`../rocket/${rocket.id}`}>
+    <ListItem key={`${rocket.id}/${rocket.name}`}>
+      <Link to={`../rocket/${stringStripe(rocket.name)}`}>
         <RocketImage
           alt={rocket.name}
           src={rocket.flickr_images[randomIndex(rocket.flickr_images)]}

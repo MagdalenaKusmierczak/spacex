@@ -14,7 +14,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Sharedlayout />}>
         <Route index element={<HomePage />} />
-        <Route path="/rocket/:id" element={<RocketPage />} />
+        <Route path="/rocket/:shipName" element={<RocketPage />} />
       </Route>
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
