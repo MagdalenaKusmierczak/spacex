@@ -5,7 +5,7 @@ import { ImageWrapper } from "./Logo.styled";
 const Logo = () => {
   return (
     <ImageWrapper>
-      <Link to="/">
+      <Link to="../">
         <img alt="Rocket logo" src={logo} height="70" width="70" />
       </Link>
     </ImageWrapper>
