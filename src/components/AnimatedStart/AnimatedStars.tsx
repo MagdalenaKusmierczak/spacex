@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Sky, StarOne, StarTwo, StarThree } from "./AnimatedStars.styled";
+import { Sky, Star } from "./AnimatedStars.styled";
 
 export const AnimatedStars = () => {
   const [isShooting, setIsShooting] = useState(true);
@@ -16,9 +16,36 @@ export const AnimatedStars = () => {
 
   return (
     <Sky>
-      <StarOne $shoot={isShooting} />
-      <StarTwo $shoot={isShooting} />
-      <StarThree $shoot={isShooting} />
+      <Star
+        $shoot={isShooting}
+        $shootTime="2s"
+        $shootDelay="0.5s"
+        $position="0px"
+      />
+      <Star
+        $shoot={isShooting}
+        $shootTime="2.5s"
+        $shootDelay="2.5s"
+        $position="80px"
+      />
+      <Star
+        $shoot={isShooting}
+        $shootTime="2s"
+        $shootDelay="1.5s"
+        $position="180px"
+      />
+      <Star
+        $shoot={isShooting}
+        $shootTime="2.5s"
+        $shootDelay="2.5s"
+        $position="-280px"
+      />
+      <Star
+        $shoot={isShooting}
+        $shootTime="2s"
+        $shootDelay="3s"
+        $position="-180px"
+      />
     </Sky>
   );
 };

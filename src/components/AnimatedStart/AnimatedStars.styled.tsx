@@ -47,27 +47,15 @@ export const DefaultSpan = styled.span`
   }
 `;
 
-// These stars are very similar to each other. Try using component props to customize them.
-export const StarOne = styled(DefaultSpan)<{ $shoot: boolean }>`
+export const Star = styled(DefaultSpan)<{
+  $shoot: boolean;
+  $shootTime: string;
+  $shootDelay: string;
+  $position: string;
+}>`
   top: 0;
-  right: 0;
+  right: ${(props) => props.$position};
   left: initial;
-  animation-delay: 0.5s;
-  animation-duration: ${(props) => (props.$shoot ? "2s" : "0s")};
-`;
-
-export const StarTwo = styled(DefaultSpan)<{ $shoot: boolean }>`
-  top: 0;
-  right: 80px;
-  left: initial;
-  animation-delay: 2.5s;
-  animation-duration: ${(props) => (props.$shoot ? "3s" : "0s")};
-`;
-
-export const StarThree = styled(DefaultSpan)<{ $shoot: boolean }>`
-  top: 0;
-  right: 180px;
-  left: initial;
-  animation-delay: 1.5s;
-  animation-duration: ${(props) => (props.$shoot ? "2s" : "0s")};
+  animation-delay: ${(props) => (props.$shoot ? props.$shootDelay : "0s")};
+  animation-duration: ${(props) => (props.$shoot ? props.$shootTime : "0s")};
 `;
