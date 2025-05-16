@@ -7,6 +7,4 @@ const httpOptions: AxiosRequestConfig = {
   responseType: "json" as ResponseType,
 };
 
-const http: AxiosInstance = axios.create(httpOptions);
-
-export default http;
+export const http: AxiosInstance = axios.create(httpOptions);

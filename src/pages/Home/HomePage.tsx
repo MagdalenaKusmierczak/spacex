@@ -1,9 +1,9 @@
 import { useRockets } from "../../service/API/RocketsAPI";
-import Loader from "../../components/Loader/Loader";
-import RocketsList from "../../components/RocketsList/RocketsList";
+import { Loader } from "../../components/Loader/Loader";
+import { RocketsList } from "../../components/RocketsList/RocketsList";
 import { Main } from "../Main.styled";
 
-const HomePage = () => {
+export const HomePage = () => {
   const { data, error } = useRockets();
 
   if (error) {
@@ -21,5 +21,3 @@ const HomePage = () => {
     </Main>
   );
 };
-
-export default HomePage;

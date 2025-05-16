@@ -1,6 +1,6 @@
 import { NavItem, NavWrapper } from "./Navigation.styled";
 
-const Navigation = () => {
+export const Navigation = () => {
   return (
     <NavWrapper>
       <NavItem to="../rocket/Falcon1">Falcon 1</NavItem>
@@ -10,5 +10,3 @@ const Navigation = () => {
     </NavWrapper>
   );
 };
-
-export default Navigation;

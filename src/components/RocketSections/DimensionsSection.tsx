@@ -1,9 +1,9 @@
 import { FC } from "react";
-import setParagraph from "../../utils/setParagraph";
-import Rocket from "../../service/types/RocketInterface";
+import { setParagraph } from "../../utils/setParagraph";
+import { Rocket } from "../../service/types/RocketInterface";
 import { SectionWrapper, SecondHeader, List } from "./RocketSections.styled";
 
-const DimensionsSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
+export const DimensionsSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
   const rocket = rocketData; // Why such reassignment?
 
   return (
@@ -26,5 +26,3 @@ const DimensionsSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
     </SectionWrapper>
   );
 };
-
-export default DimensionsSection;

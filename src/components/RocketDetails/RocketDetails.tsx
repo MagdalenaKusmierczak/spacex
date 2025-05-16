@@ -1,5 +1,5 @@
-import React, { FC, useState } from "react";
-import ButtonsList from "../ButtonsList/ButtonsList";
+import { FC, useState } from "react";
+import { ButtonsList } from "../ButtonsList/ButtonsList";
 import {
   GeneralSection,
   DimensionsSection,
@@ -10,10 +10,10 @@ import {
   LandingLegsSection,
   MoreSection,
 } from "../../components/RocketSections/";
-import Rocket from "../../service/types/RocketInterface";
+import { Rocket } from "../../service/types/RocketInterface";
 import { SectionsWrapper } from "./RocketDetails.styled";
 
-const RocketDetails: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
+export const RocketDetails: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
   const rocket = rocketData;
   const [activeSection, setActiveSection] = useState("");
 
@@ -60,5 +60,3 @@ const RocketDetails: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
     </>
   );
 };
-
-export default RocketDetails;

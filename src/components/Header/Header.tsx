@@ -1,8 +1,8 @@
-import Navigation from "../Navigation/Navigation";
-import Logo from "../Logo/Logo";
+import { Navigation } from "../Navigation/Navigation";
+import { Logo } from "../Logo/Logo";
 import { HeaderContainer } from "./Header.styled";
 
-const Header = () => {
+export const Header = () => {
   return (
     <HeaderContainer>
       <Logo />
@@ -10,5 +10,3 @@ const Header = () => {
     </HeaderContainer>
   );
 };
-
-export default Header;

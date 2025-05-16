@@ -1,8 +1,8 @@
 import { FC } from "react";
-import Rocket from "../../service/types/RocketInterface";
+import { Rocket } from "../../service/types/RocketInterface";
 import { SectionWrapper, MoreParagraph } from "./RocketSections.styled";
 
-const MoreSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
+export const MoreSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
   const rocket = rocketData;
 
   return (
@@ -17,4 +17,3 @@ const MoreSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
   );
 };
 
-export default MoreSection;

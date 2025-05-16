@@ -4,7 +4,7 @@ import {
 } from "../components/RocketSections/RocketSections.styled";
 
 // Why not just using the component with props? 🙂
-const setParagraph = (
+export const setParagraph = (
   name: string,
   data: number | string | boolean | null,
   units?: string,
@@ -19,5 +19,3 @@ const setParagraph = (
     </StyledParagraph>
   );
 };
-
-export default setParagraph;

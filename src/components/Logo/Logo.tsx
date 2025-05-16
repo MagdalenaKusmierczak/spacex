@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { ImageWrapper } from "./Logo.styled";
 
-const Logo = () => {
+export const Logo = () => {
   return (
     <ImageWrapper>
       <Link to="../">
@@ -11,5 +11,3 @@ const Logo = () => {
     </ImageWrapper>
   );
 };
-
-export default Logo;

@@ -1,5 +1,5 @@
 import useSWR from "swr";
-import http from "./http";
+import { http } from "./http";
 
 // It's a good idea to abstract the data fetching into a separate file 🙂
 // I'd only think about moving hooks into e.g. `hooks` catalog and only leave the data fetcher here.

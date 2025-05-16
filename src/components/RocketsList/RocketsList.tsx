@@ -1,11 +1,9 @@
-import { FC} from "react";
-import Rocket from "../../service/types/RocketInterface";
+import { FC } from "react";
+import { Rocket } from "../../service/types/RocketInterface";
 import { RocketItem } from "../RocketItem/RocketItem";
-import { List} from "./RocketList.styled";
+import { List } from "./RocketList.styled";
 
-
-const RocketsList: FC<{ rockets: Rocket[] }> = ({ rockets }) => {
-
+export const RocketsList: FC<{ rockets: Rocket[] }> = ({ rockets }) => {
   return (
     <List>
       {rockets.map((rocket: Rocket) => (
@@ -14,4 +12,3 @@ const RocketsList: FC<{ rockets: Rocket[] }> = ({ rockets }) => {
     </List>
   );
 };
-export default RocketsList;

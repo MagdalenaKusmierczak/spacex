@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Sky, StarOne, StarTwo, StarThree } from "./AnimatedStars.styled";
 
-const AnimatedStars = () => {
+export const AnimatedStars = () => {
   const [isShooting, setIsShooting] = useState(true);
 
   useEffect(() => {
@@ -19,5 +19,3 @@ const AnimatedStars = () => {
     </Sky>
   );
 };
-
-export default AnimatedStars;

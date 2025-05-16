@@ -1,6 +1,6 @@
 import React from "react";
 
-export default interface ButtonsListProps {
+export interface ButtonsListProps {
   handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
   activeSection: string;
 }

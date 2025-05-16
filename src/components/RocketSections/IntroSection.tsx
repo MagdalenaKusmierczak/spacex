@@ -1,12 +1,12 @@
 import { FC } from "react";
-import Rocket from "../../service/types/RocketInterface";
+import { Rocket } from "../../service/types/RocketInterface";
 import {
   IntroWrapper,
   FirstHeader,
   Description,
 } from "./RocketSections.styled";
 
-const IntroSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
+export const IntroSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
   const rocket = rocketData;
 
   return (
@@ -16,5 +16,3 @@ const IntroSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
     </IntroWrapper>
   );
 };
-
-export default IntroSection;

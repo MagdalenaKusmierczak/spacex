@@ -1,9 +1,11 @@
 import { FC } from "react";
-import setParagraph from "../../utils/setParagraph";
-import Rocket from "../../service/types/RocketInterface";
+import { setParagraph } from "../../utils/setParagraph";
+import { Rocket } from "../../service/types/RocketInterface";
 import { SectionWrapper } from "./RocketSections.styled";
 
-const LandingLegsSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
+export const LandingLegsSection: FC<{ rocketData: Rocket }> = ({
+  rocketData,
+}) => {
   const rocket = rocketData;
 
   return (
@@ -13,5 +15,3 @@ const LandingLegsSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
     </SectionWrapper>
   );
 };
-
-export default LandingLegsSection;

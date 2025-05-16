@@ -6,8 +6,6 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import tsEslint from "typescript-eslint";
 import eslintPluginPrettier from "eslint-plugin-prettier/recommended";
 
-// I'm not sure if your ESLint config works with project files properly, due to how it was set up
-// I changed it a bit
 export default tsEslint
   .config([
     { ignores: ["dist"] },

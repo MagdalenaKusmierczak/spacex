@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useRocket } from "../../service/API/RocketsAPI";
-import Loader from "../../components/Loader/Loader";
-import IntroSection from "../../components/RocketSections/IntroSection";
-import RocketDetails from "../../components/RocketDetails/RocketDetails";
+import { Loader } from "../../components/Loader/Loader";
+import { IntroSection } from "../../components/RocketSections/IntroSection";
+import { RocketDetails } from "../../components/RocketDetails/RocketDetails";
 import { Main } from "../Main.styled";
 
 const shipsIds = {
@@ -14,7 +14,7 @@ const shipsIds = {
 
 type ShipName = keyof typeof shipsIds;
 
-const RocketPage = () => {
+export const RocketPage = () => {
   const { shipName } = useParams<{ shipName: ShipName }>();
   const id = shipName ? shipsIds[shipName] : "";
   const { data, error } = useRocket(id as string);
