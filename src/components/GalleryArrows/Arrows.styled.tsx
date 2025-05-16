@@ -21,39 +21,39 @@ export const Arrow = styled.div`
   }
 `;
 
-// Both arrows look very similar - what about merging them into one component with a prop of Enum type, e.g. enum Direction { LEFT, RIGHT }
-// And then rendering the chosen arrow?
-export const ArrowPre = styled(Arrow)`
+export const ArrowStyled = styled(Arrow)<{ $direction: "prev" | "next" }>`
   &:before {
     z-index: 1;
     position: absolute;
-    content: "←";
-    top: 90px;
-    left: -30px;
-    @media screen and (min-width: 768px) {
-      top: 250px;
-      left: -30px;
-    }
-    @media screen and (min-width: 1280px) {
-      top: 350px;
-      left: 0;
-    }
-  }
-`;
+    content: ${({ $direction }) => ($direction === "prev" ? '"←"' : '"→"')};
 
-export const ArrowNext = styled(Arrow)`
-  &:before {
-    position: absolute;
-    right: -30px;
-    bottom: 95px;
-    content: "→";
-    @media screen and (min-width: 768px) {
-      bottom: 245px;
+    ${({ $direction }) =>
+      $direction === "prev" &&
+      `
+      top: 90px;
+      left: -30px;
+      @media screen and (min-width: 768px) {
+        top: 250px;
+        left: -30px;
+      }
+      @media screen and (min-width: 1280px) {
+        top: 350px;
+        left: 0;
+      }
+    `}
+    ${({ $direction }) =>
+      $direction === "next" &&
+      `
       right: -30px;
-    }
-    @media screen and (min-width: 1280px) {
-      right: 0;
-      bottom: 350px;
-    }
+      top: -115px;
+      @media screen and (min-width: 768px) {
+        top:-250px;
+        right: -30px;
+      }
+      @media screen and (min-width: 1280px) {
+        right: 0;
+         top: -340px;
+      }
+      `}
   }
 `;

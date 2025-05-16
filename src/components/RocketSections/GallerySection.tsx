@@ -1,8 +1,7 @@
 import { FC, useState } from "react";
 import Slider from "react-slick";
 import Lightbox from "yet-another-react-lightbox";
-import { PrevArrow } from "../GalleryArrows/PrevArrow";
-import { NextArrow } from "../GalleryArrows/NextArrow";
+import { Arrow } from "../GalleryArrows/Arrow";
 import { Rocket } from "../../service/interfaces/RocketInterface";
 import "yet-another-react-lightbox/styles.css";
 import "slick-carousel/slick/slick.css";
@@ -29,8 +28,8 @@ export const GallerySection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
     autoplay: true,
     centerMode: true,
     centerPadding: "0px",
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
+    prevArrow: <Arrow $direction="prev" />,
+    nextArrow: <Arrow $direction="next" />,
   };
 
   const handleImageClick = (image: string) => {
