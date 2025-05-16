@@ -5,9 +5,12 @@ export const AnimatedStars = () => {
   const [isShooting, setIsShooting] = useState(true);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setIsShooting(!isShooting);
-    }, 15000); // I'd add some random behaviour here, may make it even cooler!, e.g. Math.floor(Math.random() * 15000)
+    const timer = setInterval(
+      () => {
+        setIsShooting(!isShooting);
+      },
+      15000 * Math.floor(Math.random() * 3),
+    );
     return () => clearInterval(timer);
   }, [isShooting]);
 
