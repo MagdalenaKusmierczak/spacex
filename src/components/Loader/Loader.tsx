@@ -5,8 +5,8 @@ export const Loader = () => {
   return (
     <LoaderWrapper>
       <BallTriangle
-        height={100}
-        width={100}
+        height={80}
+        width={80}
         radius={5}
         color="#f4bf69"
         ariaLabel="ball-triangle-loading"
