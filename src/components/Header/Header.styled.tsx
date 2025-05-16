@@ -6,9 +6,9 @@ export const HeaderContainer = styled.header`
   justify-content: space-evenly;
   gap: 30px;
   align-items: center;
+  padding: 15px 20px;
   margin-bottom: 30px;
-  background-color: rgba(41, 55, 60, 0.9);
-  box-shadow: 0px 0px 15px 20px rgba(41, 55, 60, 0.9);
+  border-bottom: 1px solid #faf9f6;
   @media screen and (min-width: 768px) {
     justify-content: space-between;
     gap: 0;

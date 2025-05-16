@@ -4,18 +4,12 @@ export const FooterContainer = styled.footer`
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: fixed;
-  bottom: -1px; // Why is this needed? Seems sketchy
-  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
   width: 260px;
-  color: white;
-  background-color: rgba(
-    41,
-    55,
-    60,
-    0.99
-  ); // You can think about extracting some colors that are repeating to e.g. string variables and share them (or CSS variables, but that's more advanced)
-  box-shadow: 0px 0px 15px 20px rgba(41, 55, 60, 0.99);
+  color: #faf9f6;
+  padding: 15px 20px;
+  border-top: 1px solid #faf9f6;
   @media screen and (min-width: 768px) {
     width: 708px;
   }
@@ -34,8 +28,7 @@ export const AddressList = styled.ul`
   display: flex;
   gap: 20px;
   padding: 0;
-  margin: 0;
-  margin-bottom: 10px; //
+  margin: 0 15px;
 `;
 
 export const Icon = styled.img`

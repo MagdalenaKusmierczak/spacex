@@ -6,7 +6,7 @@ export const ImageWrapper = styled.div`
   justify-content: center;
   width: 80px;
   height: 80px;
-   background-color:rgb(216, 198, 154);
+   background-color:#908058;
   box-shadow: 0px 0px 8px 8px #f0ff3836;
   border-radius: 50%; // Repeated border-radius
   transition: all 0.3s ease-in-out 0s;
