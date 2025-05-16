@@ -17,10 +17,12 @@ const shooting = keyframes`
 export const Sky = styled.div`
   z-index: -1;
   position: absolute;
-  top: -20px;
-  left: 0;
-  width: 100%;
+  top: -5px;
+  right: 30%;
+  width: 100vw;
   height: 100vh;
+  opacity: 30%;
+  overflow: hidden;
 `;
 
 export const DefaultSpan = styled.span`
