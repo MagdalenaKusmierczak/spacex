@@ -10,7 +10,7 @@ import {
   LandingLegsSection,
   MoreSection,
 } from "../../components/RocketSections/";
-import { Rocket } from "../../service/types/RocketInterface";
+import { Rocket } from "../../service/interfaces/RocketInterface";
 import { SectionsWrapper } from "./RocketDetails.styled";
 
 export const RocketDetails: FC<{ rocketData: Rocket }> = ({ rocketData }) => {

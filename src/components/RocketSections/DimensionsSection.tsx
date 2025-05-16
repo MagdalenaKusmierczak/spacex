@@ -1,9 +1,11 @@
 import { FC } from "react";
 import { setParagraph } from "../../utils/setParagraph";
-import { Rocket } from "../../service/types/RocketInterface";
+import { Rocket } from "../../service/interfaces/RocketInterface";
 import { SectionWrapper, SecondHeader, List } from "./RocketSections.styled";
 
-export const DimensionsSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
+export const DimensionsSection: FC<{ rocketData: Rocket }> = ({
+  rocketData,
+}) => {
   const rocket = rocketData; // Why such reassignment?
 
   return (

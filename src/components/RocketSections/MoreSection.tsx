@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Rocket } from "../../service/types/RocketInterface";
+import { Rocket } from "../../service/interfaces/RocketInterface";
 import { SectionWrapper, MoreParagraph } from "./RocketSections.styled";
 
 export const MoreSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
@@ -16,4 +16,3 @@ export const MoreSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
     </SectionWrapper>
   );
 };
-

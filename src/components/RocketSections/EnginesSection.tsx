@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { setParagraph } from "../../utils/setParagraph";
-import { Rocket } from "../../service/types/RocketInterface";
+import { Rocket } from "../../service/interfaces/RocketInterface";
 import {
   SectionWrapper,
   List,
@@ -32,14 +32,14 @@ export const EnginesSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
           {setParagraph(
             "KiloNewtons",
             rocket.engines.thrust_sea_level.kN,
-            "kN",
+            "kN"
           )}
         </li>
         <li>
           {setParagraph(
             "Pound-force",
             rocket.engines.thrust_sea_level.lbf,
-            "lbf",
+            "lbf"
           )}
         </li>
       </List>

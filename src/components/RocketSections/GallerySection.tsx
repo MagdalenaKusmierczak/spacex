@@ -3,12 +3,16 @@ import Slider from "react-slick";
 import Lightbox from "yet-another-react-lightbox";
 import { PrevArrow } from "../GalleryArrows/PrevArrow";
 import { NextArrow } from "../GalleryArrows/NextArrow";
-import { Rocket } from "../../service/types/RocketInterface";
-import { Slide } from "../../service/types/Slide";
+import { Rocket } from "../../service/interfaces/RocketInterface";
 import "yet-another-react-lightbox/styles.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { SectionWrapper, ImageWrapper, Image } from "./RocketSections.styled";
+
+export interface Slide {
+  src: string;
+  alt: string;
+}
 
 export const GallerySection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
   const [open, setOpen] = useState(false);

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { setParagraph } from "../../utils/setParagraph";
-import { Rocket } from "../../service/types/RocketInterface";
+import { Rocket } from "../../service/interfaces/RocketInterface";
 import { SectionWrapper } from "./RocketSections.styled";
 
 export const GeneralSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
@@ -20,4 +20,3 @@ export const GeneralSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
     </SectionWrapper>
   );
 };
-

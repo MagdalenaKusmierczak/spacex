@@ -1,9 +1,4 @@
 import { useState } from "react";
-
-// This line would break on Unix - check `types -> Types` 😉
-// I made similar mistakes many times on MacBooks (they're case-insensitive Unix-like systems) as well,
-// may be really problematic in some cases
-import { ButtonsListProps } from "../../service/types/ButtonsListProps";
 import {
   Button,
   MenuButton,
@@ -12,7 +7,15 @@ import {
   MenuWrapper,
 } from "./ButtonsList.styled";
 
-export const ButtonsList = ({ handleClick, activeSection }: ButtonsListProps) => {
+interface ButtonsListProps {
+  handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  activeSection: string;
+}
+
+export const ButtonsList = ({
+  handleClick,
+  activeSection,
+}: ButtonsListProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
@@ -63,4 +66,3 @@ export const ButtonsList = ({ handleClick, activeSection }: ButtonsListProps) =>
     </MenuWrapper>
   );
 };
-

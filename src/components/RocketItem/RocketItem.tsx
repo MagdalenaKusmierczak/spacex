@@ -1,6 +1,6 @@
 import { FC, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Rocket from "../../service/types/RocketInterface";
+import Rocket from "../../service/interfaces/RocketInterface";
 import {
   ListItem,
   RocketImage,
