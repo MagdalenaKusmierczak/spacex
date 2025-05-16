@@ -6,15 +6,12 @@ export const FooterContainer = styled.footer`
   align-items: center;
   position: absolute;
   bottom: 0;
-  width: 260px;
   color: #faf9f6;
   padding: 15px 20px;
   border-top: 1px solid #faf9f6;
-  @media screen and (min-width: 768px) {
-    width: 708px;
-  }
+  width: 100%;
   @media screen and (min-width: 1280px) {
-    width: 1220px;
+    width: 1280px;
   }
 `;
 

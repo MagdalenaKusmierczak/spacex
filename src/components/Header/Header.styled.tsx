@@ -12,4 +12,7 @@ export const HeaderContainer = styled.header`
     justify-content: space-between;
     gap: 0;
   }
+  @media screen and (min-width: 1280px) {
+    width: 1280px;
+  }
 `;

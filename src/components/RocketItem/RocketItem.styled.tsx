@@ -22,10 +22,10 @@ export const RocketImage = styled.img`
   height: auto;
   padding: 0 0;
   @media screen and (min-width: 768px) {
-    width: 600px;
+    width: 400px;
   }
   @media screen and (min-width: 1280px) {
-    width: 700px;
+    width: 450px;
   }
 `;
 
