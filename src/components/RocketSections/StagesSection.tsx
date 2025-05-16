@@ -11,9 +11,7 @@ import {
   StyledParagraph,
 } from "./RocketSections.styled";
 
-export const StagesSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
-  const rocket = rocketData;
-
+export const StagesSection: FC<{ rocket: Rocket }> = ({ rocket }) => {
   return (
     <SectionWrapper>
       <StagesList>
@@ -24,12 +22,12 @@ export const StagesSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
           {setParagraph(
             "Fuel amount",
             rocket.first_stage.fuel_amount_tons,
-            "tons"
+            "tons",
           )}
           {setParagraph(
             "Burn time",
             rocket.first_stage.burn_time_sec,
-            "seconds"
+            "seconds",
           )}
           <ThirdHeader>Thrust sea level</ThirdHeader>
           <OutsideList>
@@ -37,14 +35,14 @@ export const StagesSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
               {setParagraph(
                 "Kilonewtons",
                 rocket.first_stage.thrust_sea_level.kN,
-                "kN"
+                "kN",
               )}
             </li>
             <li>
               {setParagraph(
                 "Pound-force",
                 rocket.first_stage.thrust_sea_level.lbf,
-                "lbf"
+                "lbf",
               )}
             </li>
           </OutsideList>
@@ -54,14 +52,14 @@ export const StagesSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
               {setParagraph(
                 "Kilonewtons",
                 rocket.first_stage.thrust_vacuum.kN,
-                "kN"
+                "kN",
               )}
             </li>
             <li>
               {setParagraph(
                 "Pound-force",
                 rocket.first_stage.thrust_vacuum.lbf,
-                "lbf"
+                "lbf",
               )}
             </li>
           </OutsideList>
@@ -73,12 +71,12 @@ export const StagesSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
           {setParagraph(
             "Fuel amount",
             rocket.second_stage.fuel_amount_tons,
-            "tons"
+            "tons",
           )}
           {setParagraph(
             "Burn time",
             rocket.second_stage.burn_time_sec,
-            "seconds"
+            "seconds",
           )}
           <ThirdHeader>Thrust</ThirdHeader>
           <OutsideList>
@@ -89,7 +87,7 @@ export const StagesSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
               {setParagraph(
                 "Pound-force",
                 rocket.second_stage.thrust.kN,
-                "lbf"
+                "lbf",
               )}
             </li>
           </OutsideList>
@@ -101,13 +99,13 @@ export const StagesSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
             <li>
               {setParagraph(
                 "Meters",
-                rocket.second_stage.payloads.composite_fairing.height.meters
+                rocket.second_stage.payloads.composite_fairing.height.meters,
               )}
             </li>
             <li>
               {setParagraph(
                 "Feet",
-                rocket.second_stage.payloads.composite_fairing.height.feet
+                rocket.second_stage.payloads.composite_fairing.height.feet,
               )}
             </li>
           </OutsideList>
@@ -116,13 +114,13 @@ export const StagesSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
             <li>
               {setParagraph(
                 "Meters",
-                rocket.second_stage.payloads.composite_fairing.diameter.meters
+                rocket.second_stage.payloads.composite_fairing.diameter.meters,
               )}
             </li>
             <li>
               {setParagraph(
                 "Feet",
-                rocket.second_stage.payloads.composite_fairing.diameter.feet
+                rocket.second_stage.payloads.composite_fairing.diameter.feet,
               )}
             </li>
           </OutsideList>

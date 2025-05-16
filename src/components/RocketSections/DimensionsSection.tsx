@@ -3,11 +3,7 @@ import { setParagraph } from "../../utils/setParagraph";
 import { Rocket } from "../../service/interfaces/RocketInterface";
 import { SectionWrapper, SecondHeader, List } from "./RocketSections.styled";
 
-export const DimensionsSection: FC<{ rocketData: Rocket }> = ({
-  rocketData,
-}) => {
-  const rocket = rocketData; // Why such reassignment?
-
+export const DimensionsSection: FC<{ rocket: Rocket }> = ({ rocket }) => {
   return (
     <SectionWrapper>
       <SecondHeader>Height</SecondHeader>

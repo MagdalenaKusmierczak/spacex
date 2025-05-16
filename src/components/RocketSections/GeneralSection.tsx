@@ -3,9 +3,7 @@ import { setParagraph } from "../../utils/setParagraph";
 import { Rocket } from "../../service/interfaces/RocketInterface";
 import { SectionWrapper } from "./RocketSections.styled";
 
-export const GeneralSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
-  const rocket = rocketData;
-
+export const GeneralSection: FC<{ rocket: Rocket }> = ({ rocket }) => {
   return (
     <SectionWrapper>
       {setParagraph("Rocket type", rocket.type)}

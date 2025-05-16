@@ -13,11 +13,9 @@ export interface Slide {
   alt: string;
 }
 
-export const GallerySection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
+export const GallerySection: FC<{ rocket: Rocket }> = ({ rocket }) => {
   const [open, setOpen] = useState(false);
   const [slides, setSlides] = useState<Slide[]>([]);
-
-  const rocket = rocketData;
 
   const settings = {
     dots: false,

@@ -30,8 +30,8 @@ export const RocketPage = () => {
 
   return (
     <Main>
-      <IntroSection rocketData={data} />
-      <RocketDetails rocketData={data} />
+      <IntroSection rocket={data} />
+      <RocketDetails rocket={data} />
     </Main>
   );
 };

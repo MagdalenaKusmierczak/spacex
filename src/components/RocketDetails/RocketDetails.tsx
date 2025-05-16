@@ -13,8 +13,7 @@ import {
 import { Rocket } from "../../service/interfaces/RocketInterface";
 import { SectionsWrapper } from "./RocketDetails.styled";
 
-export const RocketDetails: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
-  const rocket = rocketData;
+export const RocketDetails: FC<{ rocket: Rocket }> = ({ rocket }) => {
   const [activeSection, setActiveSection] = useState("");
 
   // This seems incorrect - you don't actually have to pass the event here - you can parse the click directly in the ButtonsList
@@ -33,21 +32,21 @@ export const RocketDetails: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
   const getActiveSection = () => {
     switch (activeSection) {
       case "gallery":
-        return <GallerySection rocketData={rocket} />;
+        return <GallerySection rocket={rocket} />;
       case "general-information":
-        return <GeneralSection rocketData={rocket} />;
+        return <GeneralSection rocket={rocket} />;
       case "dimensions":
-        return <DimensionsSection rocketData={rocket} />;
+        return <DimensionsSection rocket={rocket} />;
       case "engines":
-        return <EnginesSection rocketData={rocket} />;
+        return <EnginesSection rocket={rocket} />;
       case "landing-legs":
-        return <LandingLegsSection rocketData={rocket} />;
+        return <LandingLegsSection rocket={rocket} />;
       case "payloads-weights":
-        return <PayloadsSection rocketData={rocket} />;
+        return <PayloadsSection rocket={rocket} />;
       case "stages":
-        return <StagesSection rocketData={rocket} />;
+        return <StagesSection rocket={rocket} />;
       case "more":
-        return <MoreSection rocketData={rocket} />;
+        return <MoreSection rocket={rocket} />;
       default:
         return <></>;
     }

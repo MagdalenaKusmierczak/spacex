@@ -6,9 +6,7 @@ import {
   Description,
 } from "./RocketSections.styled";
 
-export const IntroSection: FC<{ rocketData: Rocket }> = ({ rocketData }) => {
-  const rocket = rocketData;
-
+export const IntroSection: FC<{ rocket: Rocket }> = ({ rocket }) => {
   return (
     <IntroWrapper>
       <FirstHeader>{rocket.name}</FirstHeader>

@@ -1,4 +1,4 @@
-export {  GeneralSection } from "./GeneralSection";
+export { GeneralSection } from "./GeneralSection";
 export { DimensionsSection } from "./DimensionsSection";
 export { StagesSection } from "./StagesSection";
 export { EnginesSection } from "./EnginesSection";
