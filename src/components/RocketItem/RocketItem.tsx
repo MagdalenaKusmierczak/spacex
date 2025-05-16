@@ -1,13 +1,12 @@
 import { FC, useEffect } from "react";
-import { Link } from "react-router-dom";
-import Rocket from "../../service/interfaces/RocketInterface";
+import { Rocket } from "../../service/interfaces/RocketInterface";
 import {
   ListItem,
   RocketImage,
+  RocketLink,
   RocketHeader,
 } from "../RocketItem/RocketItem.styled";
 
-//Randomizng selection of images
 const randomIndex = (arr: string[]) => {
   const arrLength = arr.length;
   const randomizedIndex = Math.floor(Math.random() * arrLength);
@@ -19,7 +18,6 @@ const stringStripe = (str: string) => {
 };
 
 export const RocketItem: FC<{ rocket: Rocket }> = ({ rocket }) => {
-  //Preloading images
   useEffect(() => {
     rocket.flickr_images.forEach((image) => {
       const img = new Image();
@@ -29,13 +27,13 @@ export const RocketItem: FC<{ rocket: Rocket }> = ({ rocket }) => {
 
   return (
     <ListItem key={`${rocket.id}/${rocket.name}`}>
-      <Link to={`../rocket/${stringStripe(rocket.name)}`}>
+      <RocketHeader>{rocket.name}</RocketHeader>
+      <RocketLink to={`../rocket/${stringStripe(rocket.name)}`}>
         <RocketImage
           alt={rocket.name}
           src={rocket.flickr_images[randomIndex(rocket.flickr_images)]}
         />
-      </Link>
-      <RocketHeader>{rocket.name}</RocketHeader>
+      </RocketLink>
     </ListItem>
   );
 };

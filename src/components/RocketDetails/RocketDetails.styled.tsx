@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
 export const SectionsWrapper = styled.div`
-  margin-block: 25px;
+  margin: 20px 25px;
 `;
