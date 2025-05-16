@@ -36,7 +36,7 @@ export const Icon = styled.img`
   transition: all 0.3s ease-in-out 0s;
   &:hover {
     transform: rotateY(360deg);
-    box-shadow: 0px 0px 4px 4px #f0ff3836;
+    box-shadow: 0 0 4px 4px #f0ff3836;
   }
 `;
 

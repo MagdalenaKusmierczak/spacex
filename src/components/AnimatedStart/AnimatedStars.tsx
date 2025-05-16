@@ -20,7 +20,7 @@ export const AnimatedStars = () => {
         $shoot={isShooting}
         $shootTime="2s"
         $shootDelay="0.5s"
-        $position="0px"
+        $position="0"
       />
       <Star
         $shoot={isShooting}

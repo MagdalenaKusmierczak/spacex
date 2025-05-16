@@ -8,12 +8,12 @@ export const ListItem = styled.li`
   margin: 20px 0;
   box-shadow:
     0 0 5px 4px #f0ff3836 inset,
-    0px 0px 20px 10px #f0ff3836;
+    0 0 20px 10px #f0ff3836;
   overflow: hidden;
   &:hover {
     box-shadow:
       0 0 10px 3px #ffc41f inset,
-      0px 0px 20px 10px #ffc41f;
+      0 0 20px 10px #ffc41f;
   }
 `;
 
