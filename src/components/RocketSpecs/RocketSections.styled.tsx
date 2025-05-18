@@ -116,7 +116,7 @@ export const List = styled.ul`
   list-style: none;
   padding: 0;
   margin-bottom: 40px;
-  border-bottom: 5px dotted #ffc41f;
+  border-bottom: 1px solid #faf9f6;
   border-radius: 25%;
   @media screen and (min-width: 768px) {
     text-align: left;
@@ -128,12 +128,12 @@ export const OutsideList = styled(List)`
 `;
 
 export const StagesList = styled(List)`
-  border-bottom: 1px solid #ffc41f;
+  border-bottom: 1px solid #faf9f6;
   border-radius: 0;
 `;
 
 export const StagesItem = styled.li`
-  border-bottom: 2px solid #ffc41f;
+  border-bottom: 1px solid #faf9f6;
   padding-block: 10px;
 `;
 

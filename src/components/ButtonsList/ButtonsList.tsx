@@ -1,27 +1,16 @@
-import { useState } from "react";
 import {
   Button,
-  MenuButton,
+  Menu,
   SectionName,
   ButtonsWrapper,
   MenuWrapper,
 } from "./ButtonsList.styled";
 
 interface ButtonsListProps {
-  handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  activeSection: string;
+  handleClick: (section: string) => void;
 }
 
-export const ButtonsList = ({
-  handleClick,
-  activeSection,
-}: ButtonsListProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
-  };
-
+export const ButtonsList = ({ handleClick }: ButtonsListProps) => {
   const sections = [
     { target: "gallery", name: "Gallery" },
     { target: "general-information", name: "General information" },
@@ -43,26 +32,21 @@ export const ButtonsList = ({
 
   return (
     <MenuWrapper>
-      <MenuButton data-target="details" onClick={handleToggle}>
-        <SectionName>
-          {activeSection
-            ? `Details: ${activeSection.replace("-", " ")}`
-            : "Details"}
-        </SectionName>
-        {isOpen && (
-          <ButtonsWrapper>
-            {sections.map((section) => (
-              <Button
-                key={section.target}
-                data-target={section.target}
-                onClick={handleClick}
-              >
-                <SectionName>{section.name}</SectionName>
-              </Button>
-            ))}
-          </ButtonsWrapper>
-        )}
-      </MenuButton>
+      <Menu data-target="details">
+        <ButtonsWrapper>
+          {sections.map((section) => (
+            <Button
+              key={section.target}
+              data-target={section.target}
+              onClick={() => {
+                handleClick(section.target);
+              }}
+            >
+              <SectionName>{section.name}</SectionName>
+            </Button>
+          ))}
+        </ButtonsWrapper>
+      </Menu>
     </MenuWrapper>
   );
 };

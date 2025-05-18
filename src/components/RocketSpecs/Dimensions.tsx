@@ -1,11 +1,11 @@
 import { FC } from "react";
 import { setParagraph } from "../../utils/setParagraph";
 import { Rocket } from "../../service/interfaces/RocketInterface";
-import { SectionWrapper, SecondHeader, List } from "./RocketSections.styled";
+import { SecondHeader, List } from "./RocketSections.styled";
 
-export const DimensionsSection: FC<{ rocket: Rocket }> = ({ rocket }) => {
+export const Dimensions: FC<{ rocket: Rocket }> = ({ rocket }) => {
   return (
-    <SectionWrapper>
+    <>
       <SecondHeader>Height</SecondHeader>
       <List>
         <li>{setParagraph("Meters", rocket.height.meters)}</li>
@@ -21,6 +21,6 @@ export const DimensionsSection: FC<{ rocket: Rocket }> = ({ rocket }) => {
         <li>{setParagraph("Kilograms", rocket.mass.kg)}</li>
         <li>{setParagraph("Pounds", rocket.mass.lb)}</li>
       </List>
-    </SectionWrapper>
+    </>
   );
 };

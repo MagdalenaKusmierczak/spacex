@@ -1,13 +1,13 @@
-@import "../node_modules/modern-normalize/modern-normalize.css";
+@import url("../node_modules/modern-normalize/modern-normalize.css");
 
 :root {
   font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgb(255 255 255 / 87%);
   background-color: #242424;
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -21,9 +21,5 @@ body {
   background: url("./assets/pexels-virat-verma-468191852-27605793.jpg")
     no-repeat center center fixed;
   background-size: cover;
-  background-color: linear-gradient(
-    0deg,
-    hsla(245, 50%, 20%, 1) 40%,
-    hsla(256, 88%, 36%, 1) 79%
-  );
+  background-color: #000;
 }

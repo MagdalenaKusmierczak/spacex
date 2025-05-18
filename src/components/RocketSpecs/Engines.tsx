@@ -9,7 +9,7 @@ import {
   StyledParagraph,
 } from "./RocketSections.styled";
 
-export const EnginesSection: FC<{ rocket: Rocket }> = ({ rocket }) => {
+export const Engines: FC<{ rocket: Rocket }> = ({ rocket }) => {
   return (
     <SectionWrapper>
       {setParagraph("Number of engines", rocket.engines.number)}

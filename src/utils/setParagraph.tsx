@@ -1,13 +1,13 @@
 import {
   StyledParagraph,
   StyledSpan,
-} from "../components/RocketSections/RocketSections.styled";
+} from "../components/RocketSpecs/RocketSections.styled";
 
 // Why not just using the component with props? 🙂
 export const setParagraph = (
   name: string,
   data: number | string | boolean | null,
-  units?: string,
+  units?: string
 ) => {
   return (
     <StyledParagraph>
