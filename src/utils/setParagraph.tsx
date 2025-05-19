@@ -1,7 +1,7 @@
 import {
   StyledParagraph,
   StyledSpan,
-} from "../components/RocketSpecs/RocketSections.styled";
+} from "../components/RocketSpecs/RocketSpecs.styled";
 
 // Why not just using the component with props? 🙂
 export const setParagraph = (

@@ -4,14 +4,17 @@ import { Rocket } from "../../service/interfaces/RocketInterface";
 import {
   SectionWrapper,
   List,
-  ThirdHeader,
+  SecondaryHeader,
+  TernaryHeader,
   StyledSpan,
   StyledParagraph,
-} from "./RocketSections.styled";
+  OutsideList,
+} from "./RocketSpecs.styled";
 
 export const Engines: FC<{ rocket: Rocket }> = ({ rocket }) => {
   return (
     <SectionWrapper>
+      <SecondaryHeader>Engines</SecondaryHeader>
       {setParagraph("Number of engines", rocket.engines.number)}
       {setParagraph("Type", rocket.engines.type)}
       {setParagraph("Version", rocket.engines.version)}
@@ -19,13 +22,13 @@ export const Engines: FC<{ rocket: Rocket }> = ({ rocket }) => {
       {setParagraph("Maximum engine loss", rocket.engines.engine_loss_max)}
       {setParagraph("First propellant", rocket.engines.propellant_1)}
       {setParagraph("Second propellant", rocket.engines.propellant_2)}
-      <ThirdHeader>ISP</ThirdHeader>
-      <List>
+      <TernaryHeader>ISP</TernaryHeader>
+      <OutsideList>
         <li>{setParagraph("Sea level", rocket.engines.isp.sea_level)}</li>
         <li>{setParagraph("Vaccum", rocket.engines.isp.vacuum)}</li>
-      </List>
-      <ThirdHeader>Thrust sea level</ThirdHeader>
-      <List>
+      </OutsideList>
+      <TernaryHeader>Thrust sea level</TernaryHeader>
+      <OutsideList>
         <li>
           {setParagraph(
             "KiloNewtons",
@@ -40,19 +43,19 @@ export const Engines: FC<{ rocket: Rocket }> = ({ rocket }) => {
             "lbf",
           )}
         </li>
-      </List>
-      <ThirdHeader>Thrust vacuum</ThirdHeader>
-      <List>
+      </OutsideList>
+      <TernaryHeader>Thrust vacuum</TernaryHeader>
+      <OutsideList>
         <li>
           {setParagraph("KiloNewtons", rocket.engines.thrust_vacuum.kN, "kN")}
         </li>
         <li>
           {setParagraph("Pound-force", rocket.engines.thrust_vacuum.lbf, "lbf")}
         </li>
-      </List>
+      </OutsideList>
       <List>
         <li>
-          <ThirdHeader>Thrust to weight</ThirdHeader>
+          <TernaryHeader>Thrust to weight</TernaryHeader>
           <StyledParagraph>
             <StyledSpan>{rocket.engines.thrust_to_weight}</StyledSpan>
           </StyledParagraph>

@@ -1,11 +1,12 @@
 import { FC } from "react";
 import { setParagraph } from "../../utils/setParagraph";
 import { Rocket } from "../../service/interfaces/RocketInterface";
-import { SectionWrapper } from "./RocketSections.styled";
+import { SecondaryHeader, SectionWrapper } from "./RocketSpecs.styled";
 
 export const GeneralInfo: FC<{ rocket: Rocket }> = ({ rocket }) => {
   return (
     <SectionWrapper>
+      <SecondaryHeader>General informations</SecondaryHeader>
       {setParagraph("Rocket type", rocket.type)}
       {setParagraph("First flight", rocket.first_flight)}
       {setParagraph("Company", rocket.company)}

@@ -6,7 +6,7 @@ import { Rocket } from "../../service/interfaces/RocketInterface";
 import "yet-another-react-lightbox/styles.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { SectionWrapper, ImageWrapper, Image } from "./RocketSections.styled";
+import { SectionWrapper, ImageWrapper, Image } from "./RocketSpecs.styled";
 
 export interface Slide {
   src: string;

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Rocket } from "../../service/interfaces/RocketInterface";
-import { MoreParagraph } from "./RocketSections.styled";
+import { MoreParagraph } from "./RocketSpecs.styled";
 
 export const More: FC<{ rocket: Rocket }> = ({ rocket }) => {
   return (

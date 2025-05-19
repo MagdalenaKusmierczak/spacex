@@ -16,10 +16,21 @@ export const SectionWrapper = styled.section`
   }
 `;
 
+export const DimensionsFragment = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const DimensionsWrapper = styled.section`
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+`;
 export const ImageWrapper = styled.div``;
 
 // Primary/Secondary/Ternary would be better for these names
-export const FirstHeader = styled.h1`
+export const PrimaryHeader = styled.h1`
   margin-block: 1em;
   text-align: center;
   font-size: 20px;
@@ -28,7 +39,7 @@ export const FirstHeader = styled.h1`
   }
 `;
 
-export const SecondHeader = styled.h2`
+export const SecondaryHeader = styled.h2`
   margin: 10px;
   text-align: center;
   font-size: 19px;
@@ -41,7 +52,22 @@ export const SecondHeader = styled.h2`
   }
 `;
 
-export const ThirdHeader = styled.h3`
+export const TernaryHeader = styled.h3`
+  margin: 10px;
+  text-align: center;
+  font-size: 18px;
+  color: #f4bf69;
+  margin: 0 auto;
+  font-style: italic;
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 22px;
+  }
+`;
+
+export const QuaternaryHeader = styled.h4`
   margin: 10px;
   text-align: center;
   font-size: 18px;
@@ -61,9 +87,7 @@ export const Description = styled.p`
   margin-bottom: 1em;
   text-align: center;
   font-size: 18px;
-  text-shadow:
-    0 0 30px rgb(174 192 200),
-    0 0 40px #949d68;
+
   @media screen and (min-width: 768px) {
     font-size: 20px;
   }
@@ -117,7 +141,6 @@ export const List = styled.ul`
   padding: 0;
   margin-bottom: 40px;
   border-bottom: 1px solid #faf9f6;
-  border-radius: 25%;
   @media screen and (min-width: 768px) {
     text-align: left;
   }
@@ -133,8 +156,10 @@ export const StagesList = styled(List)`
 `;
 
 export const StagesItem = styled.li`
-  border-bottom: 1px solid #faf9f6;
   padding-block: 10px;
+  &:not(:last-child) {
+    border-bottom: 1px solid #faf9f6;
+  }
 `;
 
 export const Image = styled.img`
