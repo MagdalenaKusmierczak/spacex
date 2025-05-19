@@ -1,14 +1,17 @@
-import { FC } from "react";
-import { setParagraph } from "../../utils/setParagraph";
-import { Rocket } from "../../service/interfaces/RocketInterface";
+import { Paragraph } from "../Paragraph";
+import { useRocketContext } from "../RocketProvider/RocketProvider";
+
 import { SecondaryHeader, SectionWrapper } from "./RocketSpecs.styled";
 
-export const LandingLegs: FC<{ rocket: Rocket }> = ({ rocket }) => {
+export const LandingLegs = () => {
+  const { rocket } = useRocketContext();
+
+  if (!rocket) return null;
   return (
-    <SectionWrapper>
+    <SectionWrapper id="landing-legs">
       <SecondaryHeader>Landing legs</SecondaryHeader>
-      {setParagraph("Number of legs", rocket.landing_legs.number)}
-      {setParagraph("Material", rocket.landing_legs.material)}
+      <Paragraph name="Number of legs" data={rocket.landing_legs.number} />
+      <Paragraph name="Material" data={rocket.landing_legs.material} />
     </SectionWrapper>
   );
 };

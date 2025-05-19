@@ -12,18 +12,16 @@ export const Button = styled.button`
   cursor: pointer;
   border-color: #ffc41f;
   transition: all 150ms ease-in-out;
-  border-radius: 10px;
+  border-radius: 2px;
   box-shadow:
     0 0 10px 0 #ffc41f inset,
     0 0 10px 4px #ffc41f;
   &:hover {
-    box-shadow:
-      0 0 40px 40px #29373ce6 inset,
-      0 0 0 0 #29373ce6;
+    box-shadow: none;
   }
 `;
 
-export const MenuButton = styled.div`
+export const Menu = styled.div`
   text-transform: capitalize;
   position: relative;
   background: none;
@@ -33,21 +31,8 @@ export const MenuButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  border-color: #ffc41f;
-  transition: all 150ms ease-in-out;
-  border-radius: 10px;
-  box-shadow:
-    0 0 10px 0 #ffc41f inset,
-    0 0 10px 4px #ffc41f;
   min-width: 150px;
   min-height: 50px;
-  border-radius: 20px;
-  &:hover {
-    box-shadow:
-      0 0 40px 40px #29373ce6 inset,
-      0 0 0 0 #29373ce6;
-  }
   @media screen and (min-width: 768px) {
     min-height: 60px;
     border-radius: 20px;
@@ -58,6 +43,7 @@ export const MenuButton = styled.div`
 `;
 
 export const SectionName = styled.span`
+  text-transform: capitalize;
   margin: 10px;
   text-align: center;
   font-size: 18px;

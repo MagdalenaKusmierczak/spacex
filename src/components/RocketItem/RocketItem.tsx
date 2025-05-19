@@ -32,6 +32,7 @@ export const RocketItem: FC<{ rocket: Rocket }> = ({ rocket }) => {
         <RocketImage
           alt={rocket.name}
           src={rocket.flickr_images[randomIndex(rocket.flickr_images)]}
+          loading="lazy"
         />
       </RocketLink>
     </ListItem>

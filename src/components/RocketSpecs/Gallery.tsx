@@ -1,8 +1,8 @@
-import { FC, useState } from "react";
+import { useState } from "react";
 import Slider from "react-slick";
 import Lightbox from "yet-another-react-lightbox";
 import { Arrow } from "../GalleryArrows/Arrow";
-import { Rocket } from "../../service/interfaces/RocketInterface";
+import { useRocketContext } from "../RocketProvider/RocketProvider";
 import "yet-another-react-lightbox/styles.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -13,9 +13,12 @@ export interface Slide {
   alt: string;
 }
 
-export const Gallery: FC<{ rocket: Rocket }> = ({ rocket }) => {
+export const Gallery = () => {
   const [open, setOpen] = useState(false);
   const [slides, setSlides] = useState<Slide[]>([]);
+  const { rocket } = useRocketContext();
+
+  if (!rocket) return null;
 
   const settings = {
     dots: false,
@@ -40,7 +43,7 @@ export const Gallery: FC<{ rocket: Rocket }> = ({ rocket }) => {
   };
 
   return (
-    <GalleryWrapper>
+    <GalleryWrapper id="gallery">
       <Slider {...settings}>
         {rocket.flickr_images.map((image) => (
           <ImageWrapper key={rocket.flickr_images.indexOf(image)}>
@@ -48,6 +51,7 @@ export const Gallery: FC<{ rocket: Rocket }> = ({ rocket }) => {
               src={image}
               alt={rocket.name}
               onClick={() => handleImageClick(image)}
+              loading="lazy"
             />
           </ImageWrapper>
         ))}

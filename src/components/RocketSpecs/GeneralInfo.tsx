@@ -1,21 +1,21 @@
-import { FC } from "react";
-import { setParagraph } from "../../utils/setParagraph";
-import { Rocket } from "../../service/interfaces/RocketInterface";
+import { useRocketContext } from "../RocketProvider/RocketProvider";
+import { Paragraph } from "../Paragraph";
 import { SecondaryHeader, SectionWrapper } from "./RocketSpecs.styled";
-
-export const GeneralInfo: FC<{ rocket: Rocket }> = ({ rocket }) => {
+export const GeneralInfo = () => {
+  const { rocket } = useRocketContext();
+  if (!rocket) return null;
   return (
-    <SectionWrapper>
+    <SectionWrapper id="general-information">
       <SecondaryHeader>General informations</SecondaryHeader>
-      {setParagraph("Rocket type", rocket.type)}
-      {setParagraph("First flight", rocket.first_flight)}
-      {setParagraph("Company", rocket.company)}
-      {setParagraph("Country", rocket.country)}
-      {setParagraph("Number of stages", rocket.stages)}
-      {setParagraph("Number of boosters", rocket.boosters)}
-      {setParagraph("Cost per launch", rocket.cost_per_launch)}
-      {setParagraph("Success rate", rocket.success_rate_pct)}
-      {setParagraph("Active", rocket.active.toString())}
+      <Paragraph name="Rocket type" data={rocket.type} />
+      <Paragraph name="First flight" data={rocket.first_flight} />
+      <Paragraph name="Company" data={rocket.company} />
+      <Paragraph name="Country" data={rocket.country} />
+      <Paragraph name="Number of stages" data={rocket.stages} />
+      <Paragraph name="Number of boosters" data={rocket.boosters} />
+      <Paragraph name="Cost per launch" data={rocket.cost_per_launch} />
+      <Paragraph name="Success rate" data={rocket.success_rate_pct} />
+      <Paragraph name="Active" data={rocket.active.toString()} />
     </SectionWrapper>
   );
 };

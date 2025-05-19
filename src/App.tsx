@@ -1,6 +1,6 @@
 import { lazy } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Sharedlayout } from "./components/Sharedlayout/Sharedlayout";
+import { Sharedlayout } from "./components/Layouts/Sharedlayout";
 import { HomePage } from "./pages/Home/HomePage";
 // Suspense is working well, but you have a lot of content shifts once the "home" page is loaded, due to how images are loaded
 // Think how you can optimize that:

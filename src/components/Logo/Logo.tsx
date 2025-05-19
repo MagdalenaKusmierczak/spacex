@@ -6,7 +6,13 @@ export const Logo = () => {
   return (
     <ImageWrapper>
       <Link to="../">
-        <img alt="Rocket logo" src={logo} height="70" width="70" />
+        <img
+          alt="Rocket logo"
+          src={logo}
+          height="70"
+          width="70"
+          loading="lazy"
+        />
       </Link>
     </ImageWrapper>
   );

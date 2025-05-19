@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useRocket } from "../../service/API/RocketsAPI";
 import { Loader } from "../../components/Loader/Loader";
-import { Intro } from "../../components/RocketSpecs/Intro";
-import { RocketDetails } from "../../components/RocketDetails/RocketDetails";
+import { RocketContent } from "../../components/Layouts/RocketContent";
+import { RocketProvider } from "../../components/RocketProvider/RocketProvider";
 import { Main } from "../Main.styled";
 
 const shipsIds = {
@@ -29,10 +29,9 @@ export const RocketPage = () => {
   }
 
   return (
-    <Main>
-      <Intro rocket={data} />
-      <RocketDetails rocket={data} />
-    </Main>
+    <RocketProvider rocketId={id as string}>
+      <RocketContent />
+    </RocketProvider>
   );
 };
 

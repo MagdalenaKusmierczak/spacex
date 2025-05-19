@@ -10,6 +10,7 @@ export const ListItem = styled.li`
     0 0 5px 4px #f0ff3836 inset,
     0 0 20px 10px #f0ff3836;
   overflow: hidden;
+
   &:hover {
     box-shadow:
       0 0 10px 3px #ffc41f inset,
@@ -19,13 +20,15 @@ export const ListItem = styled.li`
 
 export const RocketImage = styled.img`
   width: 250px;
-  height: auto;
+  height: 160px;
   padding: 0 0;
   @media screen and (min-width: 768px) {
     width: 500px;
+    height: 360px;
   }
   @media screen and (min-width: 1280px) {
     width: 700px;
+    height: 460px;
   }
 `;
 

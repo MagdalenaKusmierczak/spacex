@@ -1,8 +1,11 @@
-import { FC } from "react";
-import { Rocket } from "../../service/interfaces/RocketInterface";
+import { useRocketContext } from "../RocketProvider/RocketProvider";
 import { IntroWrapper, PrimaryHeader, Description } from "./RocketSpecs.styled";
 
-export const Intro: FC<{ rocket: Rocket }> = ({ rocket }) => {
+export const Intro = () => {
+  const { rocket } = useRocketContext();
+
+  if (!rocket) return null;
+
   return (
     <IntroWrapper>
       <PrimaryHeader>{rocket.name}</PrimaryHeader>
