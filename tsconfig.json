@@ -1,7 +1,4 @@
-{
-  // Generally it's a good idea to simplify configs as much as possible.
-  // This is applicable for TSConfigs, ESLint/Prettier/Vite configs and similar as well
-  "compilerOptions": {
+{  "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
@@ -18,13 +15,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*", "./dist/*", ""],
-      "components/*": ["./src/components/*"],
-      "pages/*": ["./src/pages/*"],
-      "service/*": ["./src/service/*"],
-      "utils/*": ["./src/utils/*"]
-    }
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
