@@ -3,12 +3,13 @@ import { setParagraph } from "../../utils/setParagraph";
 import { Rocket } from "../../service/interfaces/RocketInterface";
 import {
   SectionWrapper,
-  List,
   SecondaryHeader,
   TernaryHeader,
   StyledSpan,
   StyledParagraph,
   OutsideList,
+  Grid,
+  GridFragment,
 } from "./RocketSpecs.styled";
 
 export const Engines: FC<{ rocket: Rocket }> = ({ rocket }) => {
@@ -26,41 +27,58 @@ export const Engines: FC<{ rocket: Rocket }> = ({ rocket }) => {
       <OutsideList>
         <li>{setParagraph("Sea level", rocket.engines.isp.sea_level)}</li>
         <li>{setParagraph("Vaccum", rocket.engines.isp.vacuum)}</li>
-      </OutsideList>
-      <TernaryHeader>Thrust sea level</TernaryHeader>
-      <OutsideList>
-        <li>
-          {setParagraph(
-            "KiloNewtons",
-            rocket.engines.thrust_sea_level.kN,
-            "kN",
-          )}
-        </li>
-        <li>
-          {setParagraph(
-            "Pound-force",
-            rocket.engines.thrust_sea_level.lbf,
-            "lbf",
-          )}
-        </li>
-      </OutsideList>
-      <TernaryHeader>Thrust vacuum</TernaryHeader>
-      <OutsideList>
-        <li>
-          {setParagraph("KiloNewtons", rocket.engines.thrust_vacuum.kN, "kN")}
-        </li>
-        <li>
-          {setParagraph("Pound-force", rocket.engines.thrust_vacuum.lbf, "lbf")}
-        </li>
-      </OutsideList>
-      <List>
-        <li>
+      </OutsideList>{" "}
+      <Grid>
+        <GridFragment>
+          <TernaryHeader>Thrust sea level</TernaryHeader>
+
+          <OutsideList>
+            <li>
+              {setParagraph(
+                "KiloNewtons",
+                rocket.engines.thrust_sea_level.kN,
+                "kN",
+              )}
+            </li>
+            <li>
+              {setParagraph(
+                "Pound-force",
+                rocket.engines.thrust_sea_level.lbf,
+                "lbf",
+              )}
+            </li>
+          </OutsideList>
+        </GridFragment>
+        <GridFragment>
+          <TernaryHeader>Thrust vacuum</TernaryHeader>
+          <OutsideList>
+            <li>
+              {setParagraph(
+                "KiloNewtons",
+                rocket.engines.thrust_vacuum.kN,
+                "kN",
+              )}
+            </li>
+            <li>
+              {setParagraph(
+                "Pound-force",
+                rocket.engines.thrust_vacuum.lbf,
+                "lbf",
+              )}
+            </li>
+          </OutsideList>
+        </GridFragment>
+        <GridFragment>
           <TernaryHeader>Thrust to weight</TernaryHeader>
-          <StyledParagraph>
-            <StyledSpan>{rocket.engines.thrust_to_weight}</StyledSpan>
-          </StyledParagraph>
-        </li>
-      </List>
+          <OutsideList>
+            <li>
+              <StyledParagraph>
+                <StyledSpan>{rocket.engines.thrust_to_weight}</StyledSpan>
+              </StyledParagraph>
+            </li>
+          </OutsideList>
+        </GridFragment>
+      </Grid>
     </SectionWrapper>
   );
 };

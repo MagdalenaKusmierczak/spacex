@@ -7,29 +7,23 @@ export const IntroWrapper = styled.section`
 `;
 
 export const SectionWrapper = styled.section`
-  margin-top: 25px;
-  @media screen and (min-width: 768px) {
-    margin-top: 30px;
-  }
-  @media screen and (min-width: 1280px) {
-    margin-top: 35px;
-  }
+  margin-block: 0;
+  border-bottom: 1px solid #faf9f6;
 `;
 
-export const DimensionsFragment = styled.div`
-  display: flex;
-  flex-direction: column;
+export const GalleryWrapper = styled(SectionWrapper)`
+  border: none;
 `;
 
-export const DimensionsWrapper = styled.section`
+export const GridWrapper = styled.section`
   @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 `;
+
 export const ImageWrapper = styled.div``;
 
-// Primary/Secondary/Ternary would be better for these names
 export const PrimaryHeader = styled.h1`
   margin-block: 1em;
   text-align: center;
@@ -40,10 +34,12 @@ export const PrimaryHeader = styled.h1`
 `;
 
 export const SecondaryHeader = styled.h2`
-  margin: 10px;
+  margin: 0;
+  padding: 25px;
   text-align: center;
   font-size: 19px;
   color: #f4bf69;
+  border-bottom: 1px solid #faf9f6;
   @media screen and (min-width: 768px) {
     font-size: 21px;
   }
@@ -53,12 +49,11 @@ export const SecondaryHeader = styled.h2`
 `;
 
 export const TernaryHeader = styled.h3`
-  margin: 10px;
+  padding: 10px;
   text-align: center;
   font-size: 18px;
   color: #f4bf69;
   margin: 0 auto;
-  font-style: italic;
   @media screen and (min-width: 768px) {
     font-size: 20px;
   }
@@ -70,15 +65,15 @@ export const TernaryHeader = styled.h3`
 export const QuaternaryHeader = styled.h4`
   margin: 10px;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   color: #f4bf69;
   margin: 0 auto;
   font-style: italic;
   @media screen and (min-width: 768px) {
-    font-size: 20px;
+    font-size: 18px;
   }
   @media screen and (min-width: 1280px) {
-    font-size: 22px;
+    font-size: 20px;
   }
 `;
 
@@ -107,12 +102,11 @@ export const StyledParagraph = styled.p`
   gap: 8px;
   @media screen and (min-width: 768px) {
     font-size: 20px;
-    margin-left: 35%;
-    display: block;
+    flex-direction: row;
+    justify-content: center;
   }
   @media screen and (min-width: 1280px) {
     font-size: 22px;
-    margin-left: 40%;
   }
 `;
 
@@ -138,16 +132,70 @@ export const StyledSpan = styled.span`
 
 export const List = styled.ul`
   list-style: none;
-  padding: 0;
-  margin-bottom: 40px;
+  margin: 0;
+  padding-inline: 0;
   border-bottom: 1px solid #faf9f6;
   @media screen and (min-width: 768px) {
     text-align: left;
+    padding-bottom: 40px;
   }
 `;
 
 export const OutsideList = styled(List)`
   border-bottom: none;
+  padding: 0;
+`;
+
+export const InsideItem = styled.li`
+  @media screen and (min-width: 768px) {
+    border-right: 1px solid #faf9f6;
+  }
+`;
+
+export const GridList = styled(List)`
+  border-bottom: none;
+  padding: 0;
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+`;
+
+export const GridListPayload = styled(GridList)`
+  > li {
+    border-top: 1px solid #faf9f6;
+  }
+  @media screen and (min-width: 768px) {
+    > li {
+      border-top: 0;
+    }
+    &:not(:last-child) {
+      border-right: 1px solid #faf9f6;
+    }
+  }
+`;
+
+export const GridListSecondary = styled(GridList)`
+  grid-template-columns: repeat(2, 1fr);
+`;
+
+export const Grid = styled.div`
+  border-bottom: none;
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+`;
+
+export const GridFragment = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    border-top: 1px solid #faf9f6;
+    &:not(:last-child) {
+      border-right: 1px solid #faf9f6;
+    }
+  }
 `;
 
 export const StagesList = styled(List)`
@@ -157,8 +205,11 @@ export const StagesList = styled(List)`
 
 export const StagesItem = styled.li`
   padding-block: 10px;
-  &:not(:last-child) {
-    border-bottom: 1px solid #faf9f6;
+  border-bottom: 1px solid #faf9f6;
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      border-right: 1px solid #faf9f6;
+    }
   }
 `;
 

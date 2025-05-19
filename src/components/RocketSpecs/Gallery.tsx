@@ -6,7 +6,7 @@ import { Rocket } from "../../service/interfaces/RocketInterface";
 import "yet-another-react-lightbox/styles.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { SectionWrapper, ImageWrapper, Image } from "./RocketSpecs.styled";
+import { GalleryWrapper, ImageWrapper, Image } from "./RocketSpecs.styled";
 
 export interface Slide {
   src: string;
@@ -40,7 +40,7 @@ export const Gallery: FC<{ rocket: Rocket }> = ({ rocket }) => {
   };
 
   return (
-    <SectionWrapper>
+    <GalleryWrapper>
       <Slider {...settings}>
         {rocket.flickr_images.map((image) => (
           <ImageWrapper key={rocket.flickr_images.indexOf(image)}>
@@ -67,6 +67,6 @@ export const Gallery: FC<{ rocket: Rocket }> = ({ rocket }) => {
           slides={slides}
         />
       )}
-    </SectionWrapper>
+    </GalleryWrapper>
   );
 };

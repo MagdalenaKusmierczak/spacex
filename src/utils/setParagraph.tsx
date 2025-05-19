@@ -7,11 +7,11 @@ import {
 export const setParagraph = (
   name: string,
   data: number | string | boolean | null,
-  units?: string
+  units?: string,
 ) => {
   return (
     <StyledParagraph>
-      {name}:{" "}
+      {name}:
       <StyledSpan>
         {data !== null && data !== undefined ? data : "Unknown"}{" "}
         {units ? units : ""}

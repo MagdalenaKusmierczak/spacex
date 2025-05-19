@@ -2,7 +2,7 @@ import { FC } from "react";
 import { setParagraph } from "../../utils/setParagraph";
 import { Rocket } from "../../service/interfaces/RocketInterface";
 import {
-  StagesList,
+  GridList,
   StagesItem,
   SecondaryHeader,
   TernaryHeader,
@@ -15,7 +15,7 @@ export const Stages: FC<{ rocket: Rocket }> = ({ rocket }) => {
   return (
     <>
       <SecondaryHeader>Stages</SecondaryHeader>
-      <StagesList>
+      <GridList>
         <StagesItem>
           <TernaryHeader>First stage</TernaryHeader>
           {setParagraph("Reusable", rocket.first_stage.reusable.toString())}
@@ -92,6 +92,8 @@ export const Stages: FC<{ rocket: Rocket }> = ({ rocket }) => {
               )}
             </li>
           </OutsideList>
+        </StagesItem>
+        <StagesItem>
           <TernaryHeader>Payloads</TernaryHeader>
           {setParagraph("First option", rocket.second_stage.payloads.option_1)}
           <QuaternaryHeader>Composite fairing</QuaternaryHeader>
@@ -126,7 +128,7 @@ export const Stages: FC<{ rocket: Rocket }> = ({ rocket }) => {
             </li>
           </OutsideList>
         </StagesItem>
-      </StagesList>
+      </GridList>
     </>
   );
 };
