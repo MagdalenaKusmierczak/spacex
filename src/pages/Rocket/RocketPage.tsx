@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useRocket } from "../../service/API/RocketsAPI";
+import { useRocket } from "../../service/hooks/rocketsHooks";
 import { Loader } from "../../components/Loader/Loader";
 import { RocketContent } from "../../components/Layouts/RocketContent";
 import { RocketProvider } from "../../components/RocketProvider/RocketProvider";
