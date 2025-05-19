@@ -6,7 +6,7 @@ export const Arrow = styled.div`
   color: #ffc41f;
   font-size: 20px;
   line-height: 1;
-  font-family: "slick"; // Always provide meaningful font fallbacks, e.g. arial etc.
+  font-family: "slick", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   display: flex;

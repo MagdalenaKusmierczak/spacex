@@ -1,4 +1,4 @@
-import { useRockets } from "../../service/API/RocketsAPI";
+import { useRockets } from "src/service/hooks/rocketsHooks";
 import { Loader } from "../../components/Loader/Loader";
 import { RocketsList } from "../../components/RocketsList/RocketsList";
 import { Main } from "../Main.styled";

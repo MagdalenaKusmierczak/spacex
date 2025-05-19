@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { useRocket } from "../../service/API/RocketsAPI";
+import { useRocket } from "src/service/hooks/rocketsHooks";
 import { Rocket } from "../../service/interfaces/RocketInterface";
 
 interface RocketContextType {
