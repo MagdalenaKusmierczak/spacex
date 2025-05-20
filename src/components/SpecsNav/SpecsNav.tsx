@@ -1,10 +1,4 @@
-import {
-  Button,
-  Menu,
-  SectionName,
-  ButtonsWrapper,
-  MenuWrapper,
-} from "./SpecsNav.styled";
+import { Button, Menu, SectionName, ButtonsWrapper } from "./SpecsNav.styled";
 
 export enum SectionType {
   GALLERY = "gallery",
@@ -25,26 +19,31 @@ export const SpecsNav = () => {
   const handleClick = (section: SectionType) => {
     const element = document.getElementById(section);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const headerOffset = 280;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
   };
 
   return (
-    <MenuWrapper>
-      <Menu>
-        <ButtonsWrapper>
-          {Object.values(SectionType).map((section) => (
-            <Button
-              key={section}
-              onClick={() => {
-                handleClick(section);
-              }}
-            >
-              <SectionName>{returnName(section)}</SectionName>
-            </Button>
-          ))}
-        </ButtonsWrapper>
-      </Menu>
-    </MenuWrapper>
+    <Menu>
+      <ButtonsWrapper>
+        {Object.values(SectionType).map((section) => (
+          <Button
+            key={section}
+            onClick={() => {
+              handleClick(section);
+            }}
+          >
+            <SectionName>{returnName(section)}</SectionName>
+          </Button>
+        ))}
+      </ButtonsWrapper>
+    </Menu>
   );
 };

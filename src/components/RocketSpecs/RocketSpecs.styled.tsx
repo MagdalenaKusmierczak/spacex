@@ -1,9 +1,18 @@
 import styled from "styled-components";
 
 export const IntroWrapper = styled.section`
+  z-index: 100;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 160px;
+  @media screen and (min-width: 570px) {
+    margin-top: 140px;
+  }
+
+  @media screen and (min-width: 1300px) {
+    margin-top: 80px;
+  }
 `;
 
 export const SectionWrapper = styled.section`
