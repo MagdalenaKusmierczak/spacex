@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  z-index: 1;
   position: relative;
   margin: 150px auto 0;
   width: 100vw;

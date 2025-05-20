@@ -1,16 +1,11 @@
 import styled from "styled-components";
 
 export const IntroWrapper = styled.section`
-  z-index: 100;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 160px;
+  margin-top: 100px;
   @media screen and (min-width: 570px) {
-    margin-top: 140px;
-  }
-
-  @media screen and (min-width: 1300px) {
     margin-top: 80px;
   }
 `;
@@ -22,6 +17,7 @@ export const SectionWrapper = styled.section`
 
 export const GalleryWrapper = styled(SectionWrapper)`
   border: none;
+  position: relative;
 `;
 
 export const GridWrapper = styled.section`

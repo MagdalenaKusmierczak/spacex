@@ -1,6 +1,6 @@
 import { useRocketContext } from "../RocketProvider/RocketProvider";
 import { SectionsWrapper } from "../RocketDetails/RocketDetails.styled";
-import { MoreParagraph } from "./RocketSpecs.styled";
+import { MoreParagraph, SecondaryHeader } from "./RocketSpecs.styled";
 
 export const More = () => {
   const { rocket } = useRocketContext();
@@ -9,6 +9,7 @@ export const More = () => {
 
   return (
     <SectionsWrapper id="more">
+      <SecondaryHeader>More</SecondaryHeader>
       <MoreParagraph>
         For more information go to:
         <a href={rocket.wikipedia} rel="noopener noreferrer" target="_blank">

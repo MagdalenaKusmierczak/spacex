@@ -30,17 +30,17 @@ export const ArrowStyled = styled(Arrow)<{ $direction: "prev" | "next" }>`
     ${({ $direction }) =>
       $direction === "prev" &&
       `
-      top: 90px;
+      top: 95px;
       left: -20px;
       @media screen and (min-width: 600px) {
        left: 5vh;
        }
       @media screen and (min-width: 768px) {
-        top: 250px;
-         left: -25px;
+        top: 255px;
+         left: -35px;
       }
       @media screen and (min-width: 1280px) {
-        top: 350px;
+        top: 370px;
         left: 0;
       }
     `}
@@ -48,13 +48,13 @@ export const ArrowStyled = styled(Arrow)<{ $direction: "prev" | "next" }>`
       $direction === "next" &&
       `
       right: -20px;
-      top: -115px;
+      top: -110px;
        @media screen and (min-width: 600px) {
        right: 5vh;
        }
       @media screen and (min-width: 768px) {
-        top:-250px;
-        right: -30px;
+        top:-255px;
+        right: -35px;
       }
       @media screen and (min-width: 1280px) {
         right: 0;

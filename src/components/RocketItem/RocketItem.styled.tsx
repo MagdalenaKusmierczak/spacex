@@ -13,8 +13,8 @@ export const ListItem = styled.li`
 
   &:hover {
     box-shadow:
-      0 0 10px 3px #ffc41f inset,
-      0 0 20px 10px #ffc41f;
+      0 0 5px 3px #ffc41f inset,
+      0 0 55px 5px #ffc41f;
   }
 `;
 

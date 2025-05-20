@@ -26,26 +26,27 @@ export const Button = styled.button`
 `;
 
 export const Menu = styled.div`
+  margin: 30px 30px;
+  z-index: 2;
+  width: 100%;
   position: fixed;
-  margin-top: 15px;
+  margin: 15px auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
   text-transform: capitalize;
   background: #131319e0;
   color: inherit;
   padding: 0;
   border: none;
-  display: flex;
-
   min-width: 150px;
   min-height: 50px;
+  justify-content: center;
   @media screen and (min-width: 768px) {
     min-height: 60px;
     border-radius: 20px;
   }
   @media screen and (min-width: 1280px) {
     font-size: 22px;
+    width: 1280px;
   }
 `;
 
@@ -64,9 +65,7 @@ export const SectionName = styled.span`
   }
 `;
 
-export const ButtonsWrapper = styled.div`
-  margin-block: 10px;
-  margin-right: 10px;
+export const ButtonsWrapper = styled.nav`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5px;

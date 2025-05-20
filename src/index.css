@@ -23,3 +23,9 @@ body {
   background-size: cover;
   background-color: #000;
 }
+
+
+.slick-slider .slick-list {
+  transform: none !important;
+}
+

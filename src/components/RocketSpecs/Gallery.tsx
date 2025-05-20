@@ -1,12 +1,12 @@
 import { useState } from "react";
-import Slider from "react-slick";
+import Slider, { LazyLoadTypes } from "react-slick";
 import Lightbox from "yet-another-react-lightbox";
 import { Arrow } from "../GalleryArrows/Arrow";
 import { useRocketContext } from "../RocketProvider/RocketProvider";
+import { GalleryWrapper, ImageWrapper, Image } from "./RocketSpecs.styled";
 import "yet-another-react-lightbox/styles.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { GalleryWrapper, ImageWrapper, Image } from "./RocketSpecs.styled";
 
 export interface Slide {
   src: string;
@@ -22,6 +22,7 @@ export const Gallery = () => {
 
   const settings = {
     dots: false,
+    lazyLoad: "ondemand" as LazyLoadTypes,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -51,7 +52,6 @@ export const Gallery = () => {
               src={image}
               alt={rocket.name}
               onClick={() => handleImageClick(image)}
-              loading="lazy"
             />
           </ImageWrapper>
         ))}
