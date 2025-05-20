@@ -1,4 +1,3 @@
-import { SpecsNav } from "../SpecsNav/SpecsNav";
 import {
   GeneralInfo,
   Dimensions,
@@ -14,7 +13,6 @@ import { SectionsWrapper } from "./RocketDetails.styled";
 export const RocketDetails = () => {
   return (
     <>
-      <SpecsNav />
       <SectionsWrapper>
         <Gallery />
         <GeneralInfo />

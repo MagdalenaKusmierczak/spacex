@@ -3,6 +3,7 @@ import { Intro } from "../RocketSpecs";
 import { Loader } from "../Loader/Loader";
 import { Main } from "../../pages/Main.styled";
 import { useRocketContext } from "../RocketProvider/RocketProvider";
+import { SpecsNav } from "../SpecsNav/SpecsNav";
 
 export const RocketContent = () => {
   const { rocket, error } = useRocketContext();
@@ -18,6 +19,7 @@ export const RocketContent = () => {
 
   return (
     <Main>
+      <SpecsNav />
       <Intro />
       <RocketDetails />
     </Main>
