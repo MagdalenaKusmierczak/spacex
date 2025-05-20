@@ -1,4 +1,3 @@
-import { SectionType } from "../RocketDetails/RocketDetails";
 import {
   Button,
   Menu,
@@ -7,15 +6,29 @@ import {
   MenuWrapper,
 } from "./SpecsNav.styled";
 
-interface SpecsNavProps {
-  handleClick: (section: SectionType) => void;
+export enum SectionType {
+  GALLERY = "gallery",
+  GENERAL_INFORMATION = "general-information",
+  DIMENSIONS = "dimensions",
+  ENGINES = "engines",
+  LANDING_LEGS = "landing-legs",
+  PAYLOADS_WEIGHTS = "payloads-weights",
+  STAGES = "stages",
+  MORE = "more",
 }
 
 const returnName = (input: SectionType): string => {
   return input.replace(/-/g, " ");
 };
 
-export const SpecsNav: React.FC<SpecsNavProps> = ({ handleClick }) => {
+export const SpecsNav = () => {
+  const handleClick = (section: SectionType) => {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <MenuWrapper>
       <Menu>

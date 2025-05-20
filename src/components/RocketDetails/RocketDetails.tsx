@@ -11,28 +11,10 @@ import {
 } from "../RocketSpecs";
 import { SectionsWrapper } from "./RocketDetails.styled";
 
-export enum SectionType {
-  GALLERY = "gallery",
-  GENERAL_INFORMATION = "general-information",
-  DIMENSIONS = "dimensions",
-  ENGINES = "engines",
-  LANDING_LEGS = "landing-legs",
-  PAYLOADS_WEIGHTS = "payloads-weights",
-  STAGES = "stages",
-  MORE = "more",
-}
-
 export const RocketDetails = () => {
-  const handleClick = (section: SectionType) => {
-    const element = document.getElementById(section);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <>
-      <SpecsNav handleClick={handleClick} />
+      <SpecsNav />
       <SectionsWrapper>
         <Gallery />
         <GeneralInfo />
