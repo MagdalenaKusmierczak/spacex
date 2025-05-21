@@ -7,7 +7,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(50, 50, 50, 0.2);
+  background-color: var(--main-background);
   @media screen and (min-width: 768px) {
     margin: 100px auto 0;
   }

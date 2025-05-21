@@ -6,19 +6,19 @@ export const Button = styled.button`
   background: none;
   color: inherit;
   padding: 0;
-  border: 1px solid #faf9f6;
+  border: var(--main-border)
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 150ms ease-in-out;
   border-radius: 2px;
-
+border: var(--main-border);
   @media screen and (min-width: 570px) {
     height: 40px;
   }
   &:hover {
-    border: 1px solid #ffc41f;
+    border: var(--accent-border);
   }
 `;
 

@@ -6,11 +6,11 @@ export const ListItem = styled.li`
   flex-direction: column;
   align-items: center;
   margin: 20px 0;
-  border: 1px solid #faf9f6;
+  border: var(--main-border);
   overflow: hidden;
 
   &:hover {
-    border: 1px solid #ffc41f;
+    border: var(--accent-border);
   }
 `;
 
@@ -36,7 +36,7 @@ export const RocketHeader = styled.h2`
   margin: 20px 0;
   width: 200px;
   text-align: center;
-  color: #ffc41f;
+  color: var(--accent-color);
   font-size: 20px;
   @media screen and (min-width: 768px) {
     font-size: 24px;

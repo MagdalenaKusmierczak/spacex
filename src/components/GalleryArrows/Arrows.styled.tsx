@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 export const Arrow = styled.div`
   border-radius: 50%;
   cursor: pointer;
-  color: #ffc41f;
+  color: var(--accent-color);
   font-size: 20px;
   line-height: 1;
   font-family: "slick", sans-serif;

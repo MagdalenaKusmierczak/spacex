@@ -4,12 +4,19 @@
   font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: rgb(255 255 255 / 87%);
+  color: #faf9f6;
   background-color: #242424;
   font-synthesis: none;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --accent-color: #ffc41f;
+  --logo-color: #908058;
+  --main-white: #faf9f6;
+  --main-border: 1px solid #faf9f6;
+  --accent-border: 1px solid #ffc41f;
+  --main-background: #32323233;
 }
 
 body {
@@ -23,9 +30,3 @@ body {
   background-size: cover;
   background-color: #000;
 }
-
-
-.slick-slider .slick-list {
-  transform: none !important;
-}
-

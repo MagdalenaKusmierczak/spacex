@@ -6,6 +6,7 @@ import {
   SecondaryHeader,
   GridListPayload,
   SectionWrapper,
+  InsideItem,
 } from "./RocketSpecs.styled";
 
 export const Payloads = () => {
@@ -18,7 +19,7 @@ export const Payloads = () => {
       <SecondaryHeader>Payloads</SecondaryHeader>
       <GridListPayload>
         {rocket.payload_weights.map((payload) => (
-          <li key={payload.id}>
+          <InsideItem key={payload.id}>
             <Paragraph name="Name" data={payload.name} />
             <Paragraph name="ID" data={payload.id} />
             <OutsideList>
@@ -29,7 +30,7 @@ export const Payloads = () => {
                 <Paragraph name="Pounds" data={payload.lb} units="lb" />
               </li>
             </OutsideList>
-          </li>
+          </InsideItem>
         ))}
       </GridListPayload>
     </SectionWrapper>

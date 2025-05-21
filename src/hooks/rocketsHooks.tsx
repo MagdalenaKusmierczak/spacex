@@ -1,5 +1,5 @@
 import useSWR from "swr";
-import { fetcher } from "../API/RocketsAPI";
+import { fetcher } from "../service/API/RocketsAPI";
 
 export const useRockets = () => {
   const { data, error } = useSWR("rockets", fetcher);

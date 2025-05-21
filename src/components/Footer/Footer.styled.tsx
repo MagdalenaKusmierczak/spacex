@@ -6,9 +6,9 @@ export const FooterContainer = styled.footer`
   align-items: center;
   position: absolute;
   bottom: 0;
-  color: #faf9f6;
+  color: var(--main-white)
   padding: 15px 20px;
-  border-top: 1px solid #faf9f6;
+  border-top: var(--main-border);
   width: 100%;
   @media screen and (min-width: 1280px) {
     width: 1280px;

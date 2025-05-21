@@ -11,7 +11,7 @@ export const HeaderContainer = styled.header`
   gap: 30px;
   align-items: center;
   padding: 15px 20px;
-  border-bottom: 1px solid #faf9f6;
+  border-bottom: var(--main-border);
   @media screen and (min-width: 768px) {
     justify-content: space-between;
     gap: 0;

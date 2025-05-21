@@ -12,7 +12,7 @@ export const IntroWrapper = styled.section`
 
 export const SectionWrapper = styled.section`
   margin-block: 0;
-  border-bottom: 1px solid #faf9f6;
+  border-bottom: var(--main-border);
 `;
 
 export const GalleryWrapper = styled(SectionWrapper)`
@@ -44,7 +44,7 @@ export const SecondaryHeader = styled.h2`
   text-align: center;
   font-size: 19px;
   color: #f4bf69;
-  border-bottom: 1px solid #faf9f6;
+  border-bottom: var(--main-border);
   @media screen and (min-width: 768px) {
     font-size: 21px;
   }
@@ -139,7 +139,7 @@ export const List = styled.ul`
   list-style: none;
   margin: 0;
   padding-inline: 0;
-  border-bottom: 1px solid #faf9f6;
+  border-bottom: var(--main-border);
   @media screen and (min-width: 768px) {
     text-align: left;
   }
@@ -152,7 +152,9 @@ export const OutsideList = styled(List)`
 
 export const InsideItem = styled.li`
   @media screen and (min-width: 768px) {
-    border-right: 1px solid #faf9f6;
+    &:not(:last-child) {
+      border-right: var(--main-border);
+    }
   }
 `;
 
@@ -167,14 +169,14 @@ export const GridList = styled(List)`
 
 export const GridListPayload = styled(GridList)`
   > li {
-    border-top: 1px solid #faf9f6;
+    border-top: var(--main-border);
   }
   @media screen and (min-width: 768px) {
     > li {
       border-top: 0;
     }
     &:not(:last-child) {
-      border-right: 1px solid #faf9f6;
+      border-right: var(--main-border);
     }
   }
 `;
@@ -195,24 +197,24 @@ export const GridFragment = styled.div`
   display: flex;
   flex-direction: column;
   @media screen and (min-width: 768px) {
-    border-top: 1px solid #faf9f6;
+    border-top: var(--main-border);
     &:not(:last-child) {
-      border-right: 1px solid #faf9f6;
+      border-right: var(--main-border);
     }
   }
 `;
 
 export const StagesList = styled(List)`
-  border-bottom: 1px solid #faf9f6;
+  border-bottom: var(--main-border);
   border-radius: 0;
 `;
 
 export const StagesItem = styled.li`
   padding-block: 10px;
-  border-bottom: 1px solid #faf9f6;
+  border-bottom: var(--main-border);
   @media screen and (min-width: 768px) {
     &:not(:last-child) {
-      border-right: 1px solid #faf9f6;
+      border-right: var(--main-border);
     }
   }
 `;
