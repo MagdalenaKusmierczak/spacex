@@ -1,4 +1,5 @@
-import styled, { keyframes } from "styled-components";
+import styled from "@emotion/styled";
+import { keyframes } from "@emotion/react";
 
 const shooting = keyframes`
     0% {
@@ -15,20 +16,15 @@ const shooting = keyframes`
 `;
 
 export const Sky = styled.div`
-  z-index: -1;
-  position: absolute;
-  top: -5px;
-  right: 30%;
-  width: 100vw;
+  position: fixed;
+  width: 50vw;
   height: 100vh;
-  opacity: 30%;
+  opacity: 0.3;
   overflow: hidden;
 `;
 
 export const DefaultSpan = styled.span`
   position: absolute;
-  top: 50%;
-  left: 50%;
   width: 4px;
   height: 4px;
   background: #fff;
@@ -41,7 +37,6 @@ export const DefaultSpan = styled.span`
   &:before {
     content: "";
     position: absolute;
-    top: 50%;
     transform: translateY(-50%);
     width: 300px;
     height: 1px;
@@ -55,9 +50,8 @@ export const Star = styled(DefaultSpan)<{
   $shootDelay: string;
   $position: string;
 }>`
-  top: 0;
+  top: -100px;
   right: ${(props) => props.$position};
-  left: initial;
   animation-delay: ${(props) => (props.$shoot ? props.$shootDelay : "0s")};
   animation-duration: ${(props) => (props.$shoot ? props.$shootTime : "0s")};
 `;
