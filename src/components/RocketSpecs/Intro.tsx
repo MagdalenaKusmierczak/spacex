@@ -7,7 +7,7 @@ export const Intro = () => {
   if (!rocket) return null;
 
   return (
-    <IntroWrapper>
+    <IntroWrapper id="introduction">
       <PrimaryHeader>{rocket.name}</PrimaryHeader>
       <Description>{rocket.description}</Description>
     </IntroWrapper>

@@ -7,6 +7,7 @@ import {
   Payloads,
   LandingLegs,
   More,
+  Intro,
 } from "../RocketSpecs";
 import { SectionsWrapper } from "./RocketDetails.styled";
 
@@ -14,6 +15,7 @@ export const RocketDetails = () => {
   return (
     <>
       <SectionsWrapper>
+        <Intro />
         <Gallery />
         <GeneralInfo />
         <Dimensions />

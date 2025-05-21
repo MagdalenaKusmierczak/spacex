@@ -1,6 +1,7 @@
 import { Button, Menu, SectionName, ButtonsWrapper } from "./SpecsNav.styled";
 
 export enum SectionType {
+  INTRO = "introduction",
   GALLERY = "gallery",
   GENERAL_INFORMATION = "general-information",
   DIMENSIONS = "dimensions",

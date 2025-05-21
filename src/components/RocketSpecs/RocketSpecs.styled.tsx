@@ -142,7 +142,6 @@ export const List = styled.ul`
   border-bottom: 1px solid #faf9f6;
   @media screen and (min-width: 768px) {
     text-align: left;
-    padding-bottom: 40px;
   }
 `;
 

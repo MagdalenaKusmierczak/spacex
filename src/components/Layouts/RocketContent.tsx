@@ -1,5 +1,4 @@
 import { RocketDetails } from "../RocketDetails/RocketDetails";
-import { Intro } from "../RocketSpecs";
 import { Loader } from "../Loader/Loader";
 import { RocketMain } from "../../pages/Main.styled";
 import { useRocketContext } from "../RocketProvider/RocketProvider";
@@ -21,7 +20,6 @@ export const RocketContent = () => {
     <>
       <SpecsNav />
       <RocketMain>
-        <Intro />
         <RocketDetails />
       </RocketMain>
     </>

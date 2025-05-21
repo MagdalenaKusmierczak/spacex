@@ -6,22 +6,19 @@ export const Button = styled.button`
   background: none;
   color: inherit;
   padding: 0;
-  border: none;
+  border: 1px solid #faf9f6;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border-color: #ffc41f;
   transition: all 150ms ease-in-out;
   border-radius: 2px;
-  box-shadow: 0 0 2px 0 #faf9f6;
-  &:hover {
-    box-shadow:
-      0 0 2px 0 #ffc41f inset,
-      0 0 7px 2px #ffc41f;
-  }
+
   @media screen and (min-width: 570px) {
     height: 40px;
+  }
+  &:hover {
+    border: 1px solid #ffc41f;
   }
 `;
 
@@ -69,6 +66,7 @@ export const ButtonsWrapper = styled.nav`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5px;
+  width: 90%;
   @media screen and (min-width: 570px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
@@ -79,5 +77,8 @@ export const ButtonsWrapper = styled.nav`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 1200px;
   }
 `;

@@ -6,15 +6,11 @@ export const ListItem = styled.li`
   flex-direction: column;
   align-items: center;
   margin: 20px 0;
-  box-shadow:
-    0 0 5px 4px #f0ff3836 inset,
-    0 0 20px 10px #f0ff3836;
+  border: 1px solid #faf9f6;
   overflow: hidden;
 
   &:hover {
-    box-shadow:
-      0 0 5px 3px #ffc41f inset,
-      0 0 55px 5px #ffc41f;
+    border: 1px solid #ffc41f;
   }
 `;
 
