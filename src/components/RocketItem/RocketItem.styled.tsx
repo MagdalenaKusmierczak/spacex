@@ -15,9 +15,11 @@ export const ListItem = styled.li`
 `;
 
 export const RocketImage = styled.img`
+  display: block;
   width: 250px;
   height: 160px;
-  padding: 0 0;
+  padding: 0;
+  margin: 0;
   @media screen and (min-width: 768px) {
     width: 500px;
     height: 360px;
@@ -29,8 +31,8 @@ export const RocketImage = styled.img`
 `;
 
 export const RocketLink = styled(Link)`
-  margin: 0;
-  padding: 0 5px;
+  margin: 0 0;
+  height: auto;
 `;
 export const RocketHeader = styled.h2`
   margin: 20px 0;
