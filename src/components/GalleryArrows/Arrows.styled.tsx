@@ -1,12 +1,12 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 export const Arrow = styled.div`
   border-radius: 50%;
   cursor: pointer;
-  color: #ffc41f;
+  color: var(--accent-color);
   font-size: 20px;
   line-height: 1;
-  font-family: "slick"; // Always provide meaningful font fallbacks, e.g. arial etc.
+  font-family: "slick", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   display: flex;
@@ -21,39 +21,45 @@ export const Arrow = styled.div`
   }
 `;
 
-// Both arrows look very similar - what about merging them into one component with a prop of Enum type, e.g. enum Direction { LEFT, RIGHT }
-// And then rendering the chosen arrow?
-export const ArrowPre = styled(Arrow)`
+export const ArrowStyled = styled(Arrow)<{ $direction: "prev" | "next" }>`
   &:before {
     z-index: 1;
     position: absolute;
-    content: "←";
-    top: 90px;
-    left: -30px;
-    @media screen and (min-width: 768px) {
-      top: 250px;
-      left: -30px;
-    }
-    @media screen and (min-width: 1280px) {
-      top: 350px;
-      left: 0;
-    }
-  }
-`;
+    content: ${({ $direction }) => ($direction === "prev" ? '"←"' : '"→"')};
 
-export const ArrowNext = styled(Arrow)`
-  &:before {
-    position: absolute;
-    right: -30px;
-    bottom: 95px;
-    content: "→";
-    @media screen and (min-width: 768px) {
-      bottom: 245px;
-      right: -30px;
-    }
-    @media screen and (min-width: 1280px) {
-      right: 0;
-      bottom: 350px;
-    }
+    ${({ $direction }) =>
+      $direction === "prev" &&
+      `
+      top: 95px;
+      left: -20px;
+      @media screen and (min-width: 600px) {
+       left: 5vh;
+       }
+      @media screen and (min-width: 768px) {
+        top: 255px;
+         left: -35px;
+      }
+      @media screen and (min-width: 1280px) {
+        top: 370px;
+        left: 0;
+      }
+    `}
+    ${({ $direction }) =>
+      $direction === "next" &&
+      `
+      right: -20px;
+      top: -110px;
+       @media screen and (min-width: 600px) {
+       right: 5vh;
+       }
+      @media screen and (min-width: 768px) {
+        top:-255px;
+        right: -35px;
+      }
+      @media screen and (min-width: 1280px) {
+        right: 0;
+         top: -340px;
+      }
+      `}
   }
 `;

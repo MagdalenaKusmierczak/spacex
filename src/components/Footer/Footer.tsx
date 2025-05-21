@@ -9,7 +9,7 @@ import {
   Paragraph,
 } from "./Footer.styled";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <FooterContainer>
       <Paragraph>
@@ -60,5 +60,3 @@ const Footer = () => {
     </FooterContainer>
   );
 };
-
-export default Footer;

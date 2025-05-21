@@ -1,23 +1,51 @@
 import { useState, useEffect } from "react";
-import { Sky, StarOne, StarTwo, StarThree } from "./AnimatedStars.styled";
+import { Sky, Star } from "./AnimatedStars.styled";
 
-const AnimatedStars = () => {
+export const AnimatedStars = () => {
   const [isShooting, setIsShooting] = useState(true);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setIsShooting(!isShooting);
-    }, 15000); // I'd add some random behaviour here, may make it even cooler!, e.g. Math.floor(Math.random() * 15000)
+    const timer = setInterval(
+      () => {
+        setIsShooting(!isShooting);
+      },
+      15000 * Math.floor(Math.random() * 3),
+    );
     return () => clearInterval(timer);
   }, [isShooting]);
 
   return (
     <Sky>
-      <StarOne $shoot={isShooting} />
-      <StarTwo $shoot={isShooting} />
-      <StarThree $shoot={isShooting} />
+      <Star
+        $shoot={isShooting}
+        $shootTime="2s"
+        $shootDelay="0.5s"
+        $position="0"
+      />
+      <Star
+        $shoot={isShooting}
+        $shootTime="2.5s"
+        $shootDelay="2.5s"
+        $position="80px"
+      />
+      <Star
+        $shoot={isShooting}
+        $shootTime="2s"
+        $shootDelay="1.5s"
+        $position="180px"
+      />
+      <Star
+        $shoot={isShooting}
+        $shootTime="2.5s"
+        $shootDelay="2.5s"
+        $position="-280px"
+      />
+      <Star
+        $shoot={isShooting}
+        $shootTime="2s"
+        $shootDelay="3s"
+        $position="-180px"
+      />
     </Sky>
   );
 };
-
-export default AnimatedStars;

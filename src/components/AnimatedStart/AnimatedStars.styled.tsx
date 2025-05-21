@@ -1,4 +1,5 @@
-import styled, { keyframes } from "styled-components";
+import styled from "@emotion/styled";
+import { keyframes } from "@emotion/react";
 
 const shooting = keyframes`
     0% {
@@ -15,18 +16,15 @@ const shooting = keyframes`
 `;
 
 export const Sky = styled.div`
-  z-index: -1;
-  position: absolute;
-  top: -20px;
-  left: 0;
-  width: 100%;
+  position: fixed;
+  width: 50vw;
   height: 100vh;
+  opacity: 0.3;
+  overflow: hidden;
 `;
 
 export const DefaultSpan = styled.span`
   position: absolute;
-  top: 50%;
-  left: 50%;
   width: 4px;
   height: 4px;
   background: #fff;
@@ -39,7 +37,6 @@ export const DefaultSpan = styled.span`
   &:before {
     content: "";
     position: absolute;
-    top: 50%;
     transform: translateY(-50%);
     width: 300px;
     height: 1px;
@@ -47,27 +44,14 @@ export const DefaultSpan = styled.span`
   }
 `;
 
-// These stars are very similar to each other. Try using component props to customize them.
-export const StarOne = styled(DefaultSpan)<{ $shoot: boolean }>`
-  top: 0;
-  right: 0;
-  left: initial;
-  animation-delay: 0.5s;
-  animation-duration: ${(props) => (props.$shoot ? "2s" : "0s")};
-`;
-
-export const StarTwo = styled(DefaultSpan)<{ $shoot: boolean }>`
-  top: 0;
-  right: 80px;
-  left: initial;
-  animation-delay: 2.5s;
-  animation-duration: ${(props) => (props.$shoot ? "3s" : "0s")};
-`;
-
-export const StarThree = styled(DefaultSpan)<{ $shoot: boolean }>`
-  top: 0;
-  right: 180px;
-  left: initial;
-  animation-delay: 1.5s;
-  animation-duration: ${(props) => (props.$shoot ? "2s" : "0s")};
+export const Star = styled(DefaultSpan)<{
+  $shoot: boolean;
+  $shootTime: string;
+  $shootDelay: string;
+  $position: string;
+}>`
+  top: -100px;
+  right: ${(props) => props.$position};
+  animation-delay: ${(props) => (props.$shoot ? props.$shootDelay : "0s")};
+  animation-duration: ${(props) => (props.$shoot ? props.$shootTime : "0s")};
 `;
