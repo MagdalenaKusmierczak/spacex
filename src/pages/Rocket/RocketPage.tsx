@@ -4,6 +4,7 @@ import { Loader } from "../../components/Loader/Loader";
 import { RocketContent } from "../../components/Layouts/RocketContent";
 import { RocketProvider } from "../../components/RocketProvider/RocketProvider";
 import { Main } from "../Main.styled";
+import { useScrollToTop } from "../../utils/useScrollToTop";
 
 const shipsIds = {
   Falcon1: "5e9d0d95eda69955f709d1eb",
@@ -15,6 +16,7 @@ const shipsIds = {
 type ShipName = keyof typeof shipsIds;
 
 export const RocketPage = () => {
+  useScrollToTop();
   const { shipName } = useParams<{ shipName: ShipName }>();
   const id = shipName ? shipsIds[shipName] : "";
   const { data, error } = useRocket(id as string);
