@@ -1,24 +1,25 @@
 {
   "name": "spacex",
   "private": true,
-  "version": "0.0.0",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint:css": "stylelint \"./**/*.css\" --fix"
   },
   "dependencies": {
+    "@emotion/styled": "^11.14.0",
     "axios": "^1.7.7",
     "modern-normalize": "^3.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-loader-spinner": "^6.1.6",
     "react-router-dom": "^6.26.1",
-    "react-slick": "^0.30.2",
+    "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^6.1.13",
     "swr": "^2.2.5",
     "vite": "^5.4.1",
     "yet-another-react-lightbox": "^3.21.6"
@@ -37,6 +38,8 @@
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
     "prettier": "^3.5.3",
+    "stylelint": "^16.19.1",
+    "stylelint-config-standard": "^38.0.0",
     "typescript-eslint": "^8.32.0"
   }
 }

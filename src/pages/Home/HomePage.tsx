@@ -1,11 +1,12 @@
-import { useRockets } from "../../service/API/RocketsAPI";
-import Loader from "../../utils/Loader/Loader";
-import RocketsList from "../../components/RocketsList/RocketsList";
+import { useRockets } from "../../hooks/rocketsHooks";
+import { Loader } from "../../components/Loader/Loader";
+import { useScrollToTop } from "../../utils/useScrollToTop";
+import { RocketsList } from "../../components/RocketsList/RocketsList";
 import { Main } from "../Main.styled";
 
-const HomePage = () => {
+export const HomePage = () => {
   const { data, error } = useRockets();
-
+  useScrollToTop();
   if (error) {
     console.log(error);
     return <Main>Error: {error.message}</Main>;
@@ -21,5 +22,3 @@ const HomePage = () => {
     </Main>
   );
 };
-
-export default HomePage;

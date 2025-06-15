@@ -1,16 +1,22 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 export const HeaderContainer = styled.header`
+  position: fixed;
+  top: 0;
+  background-color: var(--blured-backgound);
+  z-index: 2;
   display: flex;
   width: 100%;
   justify-content: space-evenly;
   gap: 30px;
   align-items: center;
-  margin-bottom: 30px;
-  background-color: rgba(41, 55, 60, 0.9);
-  box-shadow: 0px 0px 15px 20px rgba(41, 55, 60, 0.9);
+  padding: 15px 20px;
+  border-bottom: var(--main-border);
   @media screen and (min-width: 768px) {
     justify-content: space-between;
     gap: 0;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 1280px;
   }
 `;

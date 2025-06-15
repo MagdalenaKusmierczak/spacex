@@ -1,5 +1,5 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 export const SectionsWrapper = styled.div`
-  margin-block: 25px;
+  margin: 30px 20px;
 `;
