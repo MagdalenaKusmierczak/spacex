@@ -22,7 +22,7 @@ export const RocketDetails = () => {
       <LandingLegs />
       <Payloads />
       <Stages />
-      <More />;
+      <More />
     </SectionsWrapper>
   );
 };

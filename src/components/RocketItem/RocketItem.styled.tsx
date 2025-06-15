@@ -8,7 +8,8 @@ export const ListItem = styled.li`
   margin: 20px 0;
   border: var(--main-border);
   overflow: hidden;
-
+  background: var(--blured-backgound);
+  padding: 30px;
   &:hover {
     border: var(--accent-border);
   }
@@ -35,7 +36,7 @@ export const RocketLink = styled(Link)`
   height: auto;
 `;
 export const RocketHeader = styled.h2`
-  margin: 20px 0;
+  margin: 0 0 20px;
   width: 200px;
   text-align: center;
   color: var(--accent-color);

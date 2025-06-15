@@ -23,19 +23,18 @@ border: var(--main-border);
 `;
 
 export const Menu = styled.div`
-  margin: 30px 30px;
   z-index: 2;
   width: 100%;
   position: fixed;
-  margin: 15px auto;
   display: flex;
   text-transform: capitalize;
-  background: #131319e0;
+  background: var(--blured-backgound);
   color: inherit;
   padding: 0;
   border: none;
   min-width: 150px;
   min-height: 50px;
+  margin: 11px auto;
   justify-content: center;
   @media screen and (min-width: 768px) {
     min-height: 60px;
@@ -67,6 +66,8 @@ export const ButtonsWrapper = styled.nav`
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5px;
   width: 90%;
+  padding-top: 15px;
+  background: var(--blured-backgound);
   @media screen and (min-width: 570px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }

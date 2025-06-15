@@ -20,7 +20,7 @@ export const SpecsNav = () => {
   const handleClick = (section: SectionType) => {
     const element = document.getElementById(section);
     if (element) {
-      const headerOffset = 280;
+      const headerOffset = 320;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - headerOffset;
 

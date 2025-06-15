@@ -5,13 +5,13 @@ interface ParagraphProps {
   data: number | string | boolean | null;
   units?: string;
 }
-export const Paragraph: React.FC<ParagraphProps> = ({ name, data, units }) => {
+
+export const Paragraph = ({ name, data, units }: ParagraphProps) => {
   return (
     <StyledParagraph>
       {name}:
       <StyledSpan>
-        {data !== null && data !== undefined ? data : "Unknown"}{" "}
-        {units ? units : ""}
+        {data !== null && data !== undefined ? data : "Unknown"} {units ?? ""}
       </StyledSpan>
     </StyledParagraph>
   );

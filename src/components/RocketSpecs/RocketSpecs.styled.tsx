@@ -4,15 +4,17 @@ export const IntroWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 130px;
   @media screen and (min-width: 570px) {
-    margin-top: 80px;
+    margin-top: 120px;
   }
 `;
 
 export const SectionWrapper = styled.section`
-  margin-block: 0;
-  border-bottom: var(--main-border);
+  margin: 20px 0;
+  @media screen and (min-width: 570px) {
+    margin: 100px 0;
+  }
 `;
 
 export const GalleryWrapper = styled(SectionWrapper)`
@@ -30,26 +32,31 @@ export const GridWrapper = styled.section`
 export const ImageWrapper = styled.div``;
 
 export const PrimaryHeader = styled.h1`
-  margin-block: 1em;
+  margin-block: 3rem;
   text-align: center;
-  font-size: 20px;
+  font-size: 22px;
   @media screen and (min-width: 768px) {
     font-size: 24px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 26px;
   }
 `;
 
 export const SecondaryHeader = styled.h2`
-  margin: 0;
-  padding: 25px;
+  display: block;
+  outline: var(--main-border);
+  padding: 1em;
+  margin: 70px 0;
   text-align: center;
-  font-size: 19px;
+  font-size: 21px;
   color: #f4bf69;
-  border-bottom: var(--main-border);
   @media screen and (min-width: 768px) {
-    font-size: 21px;
+    margin: 100px 0;
+    font-size: 23px;
   }
   @media screen and (min-width: 1280px) {
-    font-size: 23px;
+    font-size: 25px;
   }
 `;
 
@@ -98,12 +105,14 @@ export const Description = styled.p`
 `;
 
 export const StyledParagraph = styled.p`
+  padding: 0 20px;
   font-weight: 400;
   color: rgb(250, 249, 246);
   font-size: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: 8px;
   @media screen and (min-width: 768px) {
     font-size: 20px;
@@ -139,27 +148,27 @@ export const List = styled.ul`
   list-style: none;
   margin: 0;
   padding-inline: 0;
-  border-bottom: var(--main-border);
   @media screen and (min-width: 768px) {
     text-align: left;
   }
 `;
 
 export const OutsideList = styled(List)`
-  border-bottom: none;
   padding: 0;
 `;
 
 export const InsideItem = styled.li`
   @media screen and (min-width: 768px) {
-    &:not(:last-child) {
+    &:not(:nth-of-type(3n)):not(:last-child) {
       border-right: var(--main-border);
+    }
+    &:last-child {
+      border-right: none;
     }
   }
 `;
 
 export const GridList = styled(List)`
-  border-bottom: none;
   padding: 0;
   @media screen and (min-width: 768px) {
     display: grid;
@@ -168,14 +177,8 @@ export const GridList = styled(List)`
 `;
 
 export const GridListPayload = styled(GridList)`
-  > li {
-    border-top: var(--main-border);
-  }
   @media screen and (min-width: 768px) {
-    > li {
-      border-top: 0;
-    }
-    &:not(:last-child) {
+    > ul:not(:nth-of-type(3n)) {
       border-right: var(--main-border);
     }
   }
@@ -186,7 +189,6 @@ export const GridListSecondary = styled(GridList)`
 `;
 
 export const Grid = styled.div`
-  border-bottom: none;
   @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -197,7 +199,6 @@ export const GridFragment = styled.div`
   display: flex;
   flex-direction: column;
   @media screen and (min-width: 768px) {
-    border-top: var(--main-border);
     &:not(:last-child) {
       border-right: var(--main-border);
     }
@@ -205,13 +206,11 @@ export const GridFragment = styled.div`
 `;
 
 export const StagesList = styled(List)`
-  border-bottom: var(--main-border);
   border-radius: 0;
 `;
 
 export const StagesItem = styled.li`
   padding-block: 10px;
-  border-bottom: var(--main-border);
   @media screen and (min-width: 768px) {
     &:not(:last-child) {
       border-right: var(--main-border);

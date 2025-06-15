@@ -6,10 +6,12 @@ export const FooterContainer = styled.footer`
   align-items: center;
   position: absolute;
   bottom: 0;
-  color: var(--main-white)
-  padding: 15px 20px;
+  color: var(--main-white);
+  padding: 40px 0 25px;
+  margin-top: 50px;
   border-top: var(--main-border);
   width: 100%;
+  background-color: #1212126b;
   @media screen and (min-width: 1280px) {
     width: 1280px;
   }

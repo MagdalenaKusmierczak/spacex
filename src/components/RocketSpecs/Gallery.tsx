@@ -30,8 +30,8 @@ export const Gallery = () => {
     autoplay: true,
     centerMode: true,
     centerPadding: "0px",
-    prevArrow: <Arrow $direction="prev" />,
-    nextArrow: <Arrow $direction="next" />,
+    prevArrow: <Arrow direction="prev" />,
+    nextArrow: <Arrow direction="next" />,
   };
 
   const handleImageClick = (image: string) => {

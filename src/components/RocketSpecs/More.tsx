@@ -1,6 +1,9 @@
 import { useRocketContext } from "../RocketProvider/RocketProvider";
-import { SectionsWrapper } from "../RocketDetails/RocketDetails.styled";
-import { MoreParagraph, SecondaryHeader } from "./RocketSpecs.styled";
+import {
+  MoreParagraph,
+  SecondaryHeader,
+  SectionWrapper,
+} from "./RocketSpecs.styled";
 
 export const More = () => {
   const { rocket } = useRocketContext();
@@ -8,7 +11,7 @@ export const More = () => {
   if (!rocket) return null;
 
   return (
-    <SectionsWrapper id="more">
+    <SectionWrapper id="more">
       <SecondaryHeader>More</SecondaryHeader>
       <MoreParagraph>
         For more information go to:
@@ -16,6 +19,6 @@ export const More = () => {
           {rocket.name} Wikipedia
         </a>
       </MoreParagraph>
-    </SectionsWrapper>
+    </SectionWrapper>
   );
 };

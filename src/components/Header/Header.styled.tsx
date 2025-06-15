@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 export const HeaderContainer = styled.header`
   position: fixed;
   top: 0;
-  background-color: #131319e0;
+  background-color: var(--blured-backgound);
   z-index: 2;
   display: flex;
   width: 100%;
