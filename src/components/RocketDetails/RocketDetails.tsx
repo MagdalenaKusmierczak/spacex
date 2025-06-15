@@ -13,18 +13,16 @@ import { SectionsWrapper } from "./RocketDetails.styled";
 
 export const RocketDetails = () => {
   return (
-    <>
-      <SectionsWrapper>
-        <Intro />
-        <Gallery />
-        <GeneralInfo />
-        <Dimensions />
-        <Engines />
-        <LandingLegs />
-        <Payloads />
-        <Stages />
-        <More />;
-      </SectionsWrapper>
-    </>
+    <SectionsWrapper>
+      <Intro />
+      <Gallery />
+      <GeneralInfo />
+      <Dimensions />
+      <Engines />
+      <LandingLegs />
+      <Payloads />
+      <Stages />
+      <More />;
+    </SectionsWrapper>
   );
 };
